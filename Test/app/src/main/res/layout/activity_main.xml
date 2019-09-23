@@ -6,61 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="274dp"
+        android:layout_height="36dp"
+        android:text="EXEMPLO DE SERVIÇO"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.633"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Exemplo de serviço"
-        android:textSize="30dp"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="196dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton"
-        android:layout_centerHorizontal="true"
-        android:text=" Tutorial SIGMA"
-        android:textColor="#ff87ff09"
-        android:textSize="30dp"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="72dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageButton"
-        android:layout_centerHorizontal="true"
-        android:onClick="startService"
-        android:text="Start Serviço"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="326dp" />
+        android:id="@+id/textView"
+        android:layout_width="206dp"
+        android:layout_height="38dp"
+        android:text="TUTORIAL SIGMA"
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.246" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:onClick="stopService"
-        android:text="Stop "
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="416dp" />
+        android:onClick="startService"
+        android:text="START SERVIÇO"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="269dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopService"
+        android:text="STOP"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="358dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
