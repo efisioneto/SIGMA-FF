@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv1 = (TextView) findViewById(R.id.textView2);
+        tv1 = (TextView) findViewById(R.id.tv1);
         tv1.setVisibility(View.GONE);
 
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
