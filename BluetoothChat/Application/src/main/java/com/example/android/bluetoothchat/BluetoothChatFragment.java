@@ -317,11 +317,20 @@ public class BluetoothChatFragment extends Fragment {
                     // construct a string from the valid bytes in the buffer
 
                     //String readMessage = new String(readBuf, 0, msg.arg1);
+
                     String readMessage = new String(readBuf, 0, 74);
+
+                    Mensagem mensagem = new Mensagem();
+
+                    mensagem.setMensagem(readMessage.substring(1, 2));
+
+
+                    //System.out.println(aluno.getNome());
                     //mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
 
                     //mConversationArrayAdapter.add(readMessage);
-                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
+                    //mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
+                    mConversationArrayAdapter.add("XXXXXX "+mensagem+"XXXXXX");
 
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
@@ -420,6 +429,23 @@ public class BluetoothChatFragment extends Fragment {
             }
         }
         return false;
+    }
+
+    public class Mensagem{
+
+        private String mensagem;
+
+        // Getter
+        public String getMessagem(){
+            return mensagem;
+        }
+
+      //Setter
+        public void setMensagem(String m){
+
+            this.mensagem=m;
+        }
+
     }
 
 }
