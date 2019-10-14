@@ -335,38 +335,20 @@ public class BluetoothChatFragment extends Fragment {
                     Mensagem Longitude = new Mensagem();
                     Mensagem GPS = new Mensagem();
                     Mensagem Angle = new Mensagem();
-                    Mensagem mensagem = new Mensagem();
-                    Mensagem mensagem = new Mensagem();
-
-
-                    Operator Id
-                    Message counter
-                    Step Counter
-                    Flag
-                    PositionIMX
-                    PositionIMY
-                            PositionIX
-                    PositionIY
-                            PositionIZ
-                    Altitude
-                            Latitude
-                    Longitude
-                            GPS
-                    angle
-                            drift
-                    CRC
-                            
-
+                    Mensagem Drift = new Mensagem();
+                    Mensagem CRC = new Mensagem();
 
                     mensagem.setMensagem(readMessage.substring(1, 2));
 
+                    //String hex="a";
+                    int decimal=Integer.parseInt(mensagem.getMessagem(),16);
 
                     //System.out.println(aluno.getNome());
                     //mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
 
                     //mConversationArrayAdapter.add(readMessage);
                     //mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
-                    mConversationArrayAdapter.add("XXXXXX "+mensagem+"XXXXXX");
+                    mConversationArrayAdapter.add("XXXXXX "+mensagem.getMessagem()+"XXXXXX"+decimal+"XXXXXX");
 
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
