@@ -338,7 +338,7 @@ public class BluetoothChatFragment extends Fragment {
                     Mensagem Drift = new Mensagem();
                     Mensagem CRC = new Mensagem();
 
-                    mensagem.setMensagem(readMessage.substring(1, 2));
+                    mensagem.setMensagem(readMessage.substring(1, 3));
 
                     //String hex="a";
                     int decimal=Integer.parseInt(mensagem.getMessagem(),16);
