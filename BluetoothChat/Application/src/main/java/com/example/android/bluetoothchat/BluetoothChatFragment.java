@@ -321,24 +321,78 @@ public class BluetoothChatFragment extends Fragment {
                     String readMessage = new String(readBuf, 0, 74);
 
                     Mensagem mensagem = new Mensagem();
+                    //Operator ID, inteiro de 0 a 9
                     Mensagem ID = new Mensagem();
-                    Mensagem MessageCounter = new Mensagem();
-                    Mensagem StepCounter = new Mensagem();
-                    Mensagem Flag = new Mensagem();
-                    Mensagem PositionIMX = new Mensagem();
-                    Mensagem PositionIMY = new Mensagem();
-                    Mensagem PositionIX = new Mensagem();
-                    Mensagem PositionIY = new Mensagem();
-                    Mensagem PositionIZ = new Mensagem();
-                    Mensagem Altitude = new Mensagem();
-                    Mensagem Latitude = new Mensagem();
-                    Mensagem Longitude = new Mensagem();
-                    Mensagem GPS = new Mensagem();
-                    Mensagem Angle = new Mensagem();
-                    Mensagem Drift = new Mensagem();
-                    Mensagem CRC = new Mensagem();
+                    ID.setMensagem(readMessage.substring(1, 3));
 
-                    mensagem.setMensagem(readMessage.substring(1, 3));
+                    //Message counter, inteiro de 0 a 65535
+                    Mensagem MessageCounter = new Mensagem();
+                    MessageCounter.setMensagem(readMessage.substring(3, 7));
+
+                    //Step Counter, inteiro de 0 a 65535
+                    Mensagem StepCounter = new Mensagem();
+                    StepCounter.setMensagem(readMessage.substring(7, 11));
+
+                    //Flag x 16: bit0: initial stance OK, bit1: no magnetic calibration, bit2: operator KO,
+                    // bit3: high temperature
+                    Mensagem Flag = new Mensagem();
+                    Flag.setMensagem(readMessage.substring(11, 15));
+
+                    // Position estimation given by integration of inertial and magnetic data, X (North), LSB 0.1 m,
+                    // value from -52.4288 km to +52.4288 km
+                    Mensagem PositionIMX = new Mensagem();
+                    PositionIMX.setMensagem(readMessage.substring(1, 3));
+
+                    // Position estimation given by integration of inertial and magnetic data, Y (East) , LSB 0.1 m,
+                    // value from -52.4288 km to +52.4288 km
+                    Mensagem PositionIMY = new Mensagem();
+                    PositionIMY.setMensagem(readMessage.substring(1, 3));
+
+                    //Position estimation given by integration of inertial data only, X (North) , LSB 0.1 m,
+                    // value from -52.4288 km to +52.4288 km 8
+                    Mensagem PositionIX = new Mensagem();
+                    PositionIX.setMensagem(readMessage.substring(1, 3));
+
+                    // Position estimation given by integration of inertial data only, Y (East) , LSB 0.1 m,
+                    // value from -52.4288 km to +52.4288 km
+                    Mensagem PositionIY = new Mensagem();
+                    PositionIY.setMensagem(readMessage.substring(1, 3));
+
+                    //Altitude estimation given by integration of inertial data only, Z (Down) , LSB 0.1 m,
+                    // value from -3276.8 m to +3276.8 m
+                    Mensagem PositionIZ = new Mensagem();
+                    PositionIZ.setMensagem(readMessage.substring(1, 3));
+
+                    //Altitude estimation given by pressometer, Z (Down), LSB 0.1 m, value from -3276.8 m to +3276.8 m
+                    Mensagem Altitude = new Mensagem();
+                    Altitude.setMensagem(readMessage.substring(1, 3));
+
+                    // Latitude estimation from GPS, LSB = 2^-29 rad (nearly 1.2 c at sea level),
+                    // value from –PI/2 to +PI/2 rad
+                    Mensagem Latitude = new Mensagem();
+                    Latitude.setMensagem(readMessage.substring(1, 3));
+
+                    // Longitude estimation from GPS, LSB = 2^-29 rad (nearly 1.2 c at sea level),
+                    // value from –PI to +PI rad
+                    Mensagem Longitude = new Mensagem();
+                    Longitude.setMensagem(readMessage.substring(1, 3));
+
+                    //GPS estimation quality, value from 0 to 99
+                    Mensagem GPS = new Mensagem();
+                    GPS.setMensagem(readMessage.substring(1,3));
+
+                    //North alignment angle of inertial path, LSB 2^-13 rad, value from –PI to PI rad
+                    Mensagem Angle = new Mensagem();
+                    Angle.setMensagem(readMessage.substring(1, 3));
+
+                    //Yaw drift of inertial path, in rotation per step, LSB 2^-19 rad,
+                    // value from –3.56 to 3.56 rad
+                    Mensagem Drift = new Mensagem();
+                    Drift.setMensagem(readMessage.substring(1, 3));
+
+                    //CRC-CCITT
+                    Mensagem CRC = new Mensagem();
+                    CRC.setMensagem(readMessage.substring(1, 3));
 
                     //String hex="a";
                     int decimal=Integer.parseInt(mensagem.getMessagem(),16);
@@ -348,7 +402,8 @@ public class BluetoothChatFragment extends Fragment {
 
                     //mConversationArrayAdapter.add(readMessage);
                     //mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
-                    mConversationArrayAdapter.add("XXXXXX "+mensagem.getMessagem()+"XXXXXX"+decimal+"XXXXXX");
+                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()+MessageCounter.getMessagem());
+
 
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
