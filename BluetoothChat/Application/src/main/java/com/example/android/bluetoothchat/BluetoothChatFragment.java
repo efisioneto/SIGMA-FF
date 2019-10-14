@@ -321,6 +321,42 @@ public class BluetoothChatFragment extends Fragment {
                     String readMessage = new String(readBuf, 0, 74);
 
                     Mensagem mensagem = new Mensagem();
+                    Mensagem ID = new Mensagem();
+                    Mensagem MessageCounter = new Mensagem();
+                    Mensagem StepCounter = new Mensagem();
+                    Mensagem Flag = new Mensagem();
+                    Mensagem PositionIMX = new Mensagem();
+                    Mensagem PositionIMY = new Mensagem();
+                    Mensagem PositionIX = new Mensagem();
+                    Mensagem PositionIY = new Mensagem();
+                    Mensagem PositionIZ = new Mensagem();
+                    Mensagem Altitude = new Mensagem();
+                    Mensagem Latitude = new Mensagem();
+                    Mensagem Longitude = new Mensagem();
+                    Mensagem GPS = new Mensagem();
+                    Mensagem Angle = new Mensagem();
+                    Mensagem mensagem = new Mensagem();
+                    Mensagem mensagem = new Mensagem();
+
+
+                    Operator Id
+                    Message counter
+                    Step Counter
+                    Flag
+                    PositionIMX
+                    PositionIMY
+                            PositionIX
+                    PositionIY
+                            PositionIZ
+                    Altitude
+                            Latitude
+                    Longitude
+                            GPS
+                    angle
+                            drift
+                    CRC
+                            
+
 
                     mensagem.setMensagem(readMessage.substring(1, 2));
 
