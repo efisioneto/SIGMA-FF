@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64e1e60d-3dac-4a38-9594-4c6920c0c62f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.google/packaging.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/androidTest/java/com/example/accelerometer/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/androidTest/java/com/example/accelerometer/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/java/com/example/accelerometer/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/java/com/example/accelerometer/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/app/src/test/java/com/example/accelerometer/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/app/src/test/java/com/example/accelerometer/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Accelerometer/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Accelerometer/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/Application.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/generated/source/buildConfig/androidTest/debug/com/example/android/bluetoothchat/test/BuildConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/generated/source/buildConfig/debug/com/example/android/bluetoothchat/BuildConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/apk_list/debug/mainApkListPersistenceDebug/apk-list.gson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/out/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/instant_app_manifest/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/merged_manifests/debugAndroidTest/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/intermediates/metadata_feature_manifest/debug/processDebugManifest/metadata-feature/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/bluetoothchat/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/bluetoothchat/DeviceListActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/bluetoothchat/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/common/activities/SampleActivityBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/common/logger/Log.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/common/logger/LogFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/common/logger/LogNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/common/logger/LogView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/common/logger/LogWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/java/com/example/android/common/logger/MessageOnlyLogFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-hdpi/ic_action_device_access_bluetooth_searching.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-hdpi/tile.9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-mdpi/ic_action_device_access_bluetooth_searching.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-xhdpi/ic_action_device_access_bluetooth_searching.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-xxhdpi/ic_action_device_access_bluetooth_searching.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/layout-w720dp/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/layout/activity_device_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/layout/device_name.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/layout/fragment_bluetooth_chat.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/layout/message.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/menu/bluetooth_chat.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/menu/main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values-sw600dp/template-dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values-sw600dp/template-styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values-v11/template-styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values-v21/base-colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values-v21/base-template-styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values/base-strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values/fragmentview_strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values/template-dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/src/main/res/values/template-styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/androidTest/java/com/example/bleheart/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/androidTest/java/com/example/bleheart/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/java/com/example/bleheart/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/java/com/example/bleheart/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/app/src/test/java/com/example/bleheart/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/app/src/test/java/com/example/bleheart/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BleHeart/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../BleHeart/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/androidTest/java/com/example/bluetooth/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/androidTest/java/com/example/bluetooth/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/java/com/example/bluetooth/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/java/com/example/bluetooth/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/app/src/test/java/com/example/bluetooth/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/app/src/test/java/com/example/bluetooth/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bluetooth/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Bluetooth/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.google/packaging.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.google/packaging.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_core_common_1_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_core_common_1_0_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_common_1_0_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_common_1_0_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_cardview_v7_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_cardview_v7_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_annotations_27_0_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_annotations_27_0_2_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_compat_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_compat_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_ui_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_ui_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_utils_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_utils_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_fragment_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_fragment_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_media_compat_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_media_compat_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v13_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v13_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v13_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v13_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v4_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v4_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_jjoe64_graphview_4_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_jjoe64_graphview_4_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_jjoe64_graphview_4_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/libraries/Gradle__com_jjoe64_graphview_4_2_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/compat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/compat/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreui/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreui/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreutils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreutils/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/fragment/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/fragment/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/graphics/drawable/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/graphics/drawable/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/graphics/drawable/animated/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/graphics/drawable/animated/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/mediacompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/mediacompat/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v13/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v13/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v4/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v4/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/appcompat/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/cardview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/cardview/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/example/android/bluetoothlegatt/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/example/android/bluetoothlegatt/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/jjoe64/graphview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/jjoe64/graphview/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/source/buildConfig/androidTest/debug/com/example/android/bluetoothlegatt/test/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/source/buildConfig/androidTest/debug/com/example/android/bluetoothlegatt/test/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/source/buildConfig/debug/com/example/android/bluetoothlegatt/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/generated/source/buildConfig/debug/com/example/android/bluetoothlegatt/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-af.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-af.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-am.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-am.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-az.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-az.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-b+sr+Latn.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-b+sr+Latn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-be.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-be.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-bg.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-bg.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-bn.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-bn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-bs.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-bs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ca.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-cs.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-cs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-da.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-da.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-de.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-el.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-el.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rAU.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rAU.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rCA.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rCA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rGB.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rGB.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rIN.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rIN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rXC.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-en-rXC.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-es-rUS.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-es-rUS.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-es.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-es.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-et.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-et.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-eu.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-eu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fi.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fr-rCA.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fr-rCA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-fr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-gl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-gl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-gu.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-gu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-h720dp-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-h720dp-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hdpi-v4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hi.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hu.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hy.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-hy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-in.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-in.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-is.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-is.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-it.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-it.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-iw.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-iw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ja.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ja.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ka.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ka.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-kk.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-kk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-km.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-km.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-kn.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-kn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ko.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ko.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ky.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ky.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-land.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-land.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-large-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-large-v4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ldltr-v21.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ldltr-v21.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-lo.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-lo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-lt.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-lt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-lv.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-lv.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-mk.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-mk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ml.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ml.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-mn.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-mn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-mr.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-mr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ms.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ms.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-my.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-my.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-nb.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-nb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ne.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ne.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-night-v8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-night-v8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-nl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pa.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-port.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-port.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pt-rBR.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pt-rBR.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pt-rPT.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pt-rPT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-pt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ro.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ro.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-si.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-si.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sk.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sq.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sq.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sr.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sv.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sv.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sw.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ta.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-te.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-te.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-th.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-th.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-tl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-tl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-tr.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-tr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ur.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-ur.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-uz.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-uz.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v11.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v12.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v12.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v14.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v16.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v17.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v17.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v18.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v18.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v21.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v21.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v22.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v23.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v23.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v24.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v24.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v25.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v25.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v26.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-v26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-vi.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-vi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-xlarge-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-xlarge-v4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zh-rCN.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zh-rCN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zh-rHK.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zh-rHK.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zh-rTW.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zh-rTW.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zu.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values-zu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bn/values-bn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bn/values-bn.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-km/values-km.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-km/values-km.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ne/values-ne.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ne/values-ne.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-th/values-th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-th/values-th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v12/values-v12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v12/values-v12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v13/values-v13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v13/values-v13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/instant_app_manifest/debug/processDebugManifest/instant-app-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/instant_app_manifest/debug/processDebugManifest/instant-app-manifest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/intermediates/symbols/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/BluetoothLeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/BluetoothLeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/DeviceControlActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/DeviceControlActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/DeviceScanActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/DeviceScanActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/SampleGattAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/java/com/example/android/bluetoothlegatt/SampleGattAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/layout/actionbar_indeterminate_progress.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/layout/actionbar_indeterminate_progress.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/layout/gatt_services_characteristics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/layout/gatt_services_characteristics.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/layout/listitem_device.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/layout/listitem_device.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/menu/gatt_services.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/menu/gatt_services.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/menu/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/menu/main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-sw600dp/template-dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-sw600dp/template-dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-sw600dp/template-styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-sw600dp/template-styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-v11/template-styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-v11/template-styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-v21/base-colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-v21/base-colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-v21/base-template-styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values-v21/base-template-styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/base-strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/base-strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/template-dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/template-dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/template-styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/Application/src/main/res/values/template-styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/BluetoothLeGatt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/BluetoothLeGatt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BluetoothLeGatt/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../BluetoothLeGatt/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SIGMA-FF.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/androidTest/java/com/example/sensor/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/androidTest/java/com/example/sensor/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/java/com/example/sensor/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/java/com/example/sensor/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/menu/menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/app/src/test/java/com/example/sensor/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/app/src/test/java/com/example/sensor/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sensor/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Sensor/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/androidTest/java/com/example/test/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/androidTest/java/com/example/test/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/java/com/example/test/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/java/com/example/test/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/java/com/example/test/MyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/java/com/example/test/MyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/test/java/com/example/test/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/app/src/test/java/com/example/test/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../screenshots/1-launch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../screenshots/2-devices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../screenshots/3-chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../screenshots/icon-web.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="714" column="84" selection-start-line="714" selection-start-column="84" selection-end-line="714" selection-end-column="84" />
+              <folding>
+                <element signature="e#0#17331#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6060#6518#0" expanded="true" />
+                <element signature="e#6517#6518#0" expanded="true" />
+                <element signature="e#7638#7660#0" expanded="true" />
+                <element signature="e#8358#8821#0" expanded="true" />
+                <element signature="e#8820#8821#0" expanded="true" />
+                <element signature="e#9858#13613#0" expanded="true" />
+                <element signature="e#10234#10294#0" expanded="true" />
+                <element signature="e#10505#10530#0" expanded="true" />
+                <element signature="e#10736#10764#0" expanded="true" />
+                <element signature="e#13612#13613#0" expanded="true" />
+                <element signature="e#14861#14892#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>unable</find>
+      <find>button_sen</find>
+      <find>mSendButton</find>
+      <find>uuid</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout-w720dp/activity_main.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/MainActivity.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_bluetooth_chat.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatService.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1260" />
+    <option name="height" value="945" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="android" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="bluetoothchat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="BluetoothChat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Application" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="activity_main" type="c431d0b8:AndroidResGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Application" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64e1e60d-3dac-4a38-9594-4c6920c0c62f" name="Default Changelist" comment="" />
+      <created>1570526793194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570526793194</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.32751676" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="Logcat" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3298731" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32719547" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/FragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/DeviceListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/widget/ArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3315">
+          <caret line="228" column="16" selection-start-line="228" selection-start-column="16" selection-end-line="228" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="3241" column="21" selection-start-line="3241" selection-start-column="21" selection-end-line="3241" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/MessageQueue.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="27" column="80" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_device_list.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/device_name.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/message.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout-w720dp/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_bluetooth_chat.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="714" column="84" selection-start-line="714" selection-start-column="84" selection-end-line="714" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#17331#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6060#6518#0" expanded="true" />
+            <element signature="e#6517#6518#0" expanded="true" />
+            <element signature="e#7638#7660#0" expanded="true" />
+            <element signature="e#8358#8821#0" expanded="true" />
+            <element signature="e#8820#8821#0" expanded="true" />
+            <element signature="e#9858#13613#0" expanded="true" />
+            <element signature="e#10234#10294#0" expanded="true" />
+            <element signature="e#10505#10530#0" expanded="true" />
+            <element signature="e#10736#10764#0" expanded="true" />
+            <element signature="e#13612#13613#0" expanded="true" />
+            <element signature="e#14861#14892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
