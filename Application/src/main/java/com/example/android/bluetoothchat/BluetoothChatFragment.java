@@ -312,8 +312,41 @@ public class BluetoothChatFragment extends Fragment {
                 case Constants.MESSAGE_READ:
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
-                    String readMessage = new String(readBuf, 0, msg.arg1);
-                    mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+                   // String readMessage = new String(readBuf, 0, msg.arg1);
+                    String readMessage = new String(readBuf, 0, 80);
+                   //Operator ID, inteiro de 0 a 9
+
+                    Mensagem ID = new Mensagem();
+
+                    ID.setMensagem(readMessage.substring(1, 3));
+
+                    String palavra =ID.getMessagem();
+
+                    //Message counter, inteiro de 0 a 65535
+
+                    Mensagem MessageCounter = new Mensagem();
+
+                    MessageCounter.setMensagem(readMessage.substring(3, 7));
+
+                    //Step Counter, inteiro de 0 a 65535
+
+                    Mensagem StepCounter = new Mensagem();
+
+                    StepCounter.setMensagem(readMessage.substring(7, 11));
+
+                    //Flag x 16: bit0: initial stance OK, bit1: no magnetic calibration, bit2: operator KO,
+
+                    // bit3: high temperature
+                    Mensagem Flag = new Mensagem();
+
+                    Flag.setMensagem(readMessage.substring(11, 15));
+
+
+
+
+                   // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+                   // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
+                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()+MessageCounter.getMessagem()+StepCounter.getMessagem()+Flag.getMessagem());
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name
@@ -412,5 +445,32 @@ public class BluetoothChatFragment extends Fragment {
         }
         return false;
     }
+    public class Mensagem{
 
+
+
+        private String mensagem;
+
+
+
+        // Getter
+
+        public String getMessagem(){
+
+            return mensagem;
+
+        }
+
+
+
+        //Setter
+
+        public void setMensagem(String m){
+
+
+
+            this.mensagem=m;
+
+        }
+}
 }
