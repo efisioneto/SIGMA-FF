@@ -402,7 +402,8 @@ public class BluetoothChatFragment extends Fragment {
 
                     //mConversationArrayAdapter.add(readMessage);
                     //mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
-                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()+MessageCounter.getMessagem());
+                   // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()+MessageCounter.getMessagem());
+                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
 
 
                     break;
