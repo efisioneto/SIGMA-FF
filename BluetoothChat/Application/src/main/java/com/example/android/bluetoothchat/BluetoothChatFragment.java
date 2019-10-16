@@ -707,14 +707,16 @@ public class BluetoothChatFragment extends Fragment {
                     //String hex="FE" ;
                     String hex=PositionIMX.getMessagem() ;
                     int decimal=Integer.parseInt(hex,16);
-                    String valor= Integer.toString(decimal);
+
+                    //String valor= Integer.toString(decimal);
+                    //Long.parseLong("AA0F245C", 16);
                     // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                     // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
 //                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()
 //                            +MessageCounter.getMessagem()+StepCounter.getMessagem()+Flag.getMessagem());
 
                     mConversationArrayAdapter.add("X:"+decimal+" Y:"+PositionIMY.getMessagem());
-
+                    System.out.println(decimal);
 
 
                     break;
