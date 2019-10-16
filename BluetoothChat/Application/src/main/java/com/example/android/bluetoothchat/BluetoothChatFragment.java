@@ -704,15 +704,16 @@ public class BluetoothChatFragment extends Fragment {
                     //CRC-CCITT
                     Mensagem CRC = new Mensagem();
                     CRC.setMensagem(readMessage.substring(69, 73));
-
+                    //String hex="FE" ;
+                    String hex=PositionIMX.getMessagem() ;
+                    int decimal=Integer.parseInt(hex,16);
 
                     // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                     // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
-
 //                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()
 //                            +MessageCounter.getMessagem()+StepCounter.getMessagem()+Flag.getMessagem());
 
-                    mConversationArrayAdapter.add("X:"+PositionIMX.getMessagem()+" Y:"+PositionIMY.getMessagem());
+                    mConversationArrayAdapter.add("X:"+decimal+" Y:"+PositionIMY.getMessagem());
 
 
 
