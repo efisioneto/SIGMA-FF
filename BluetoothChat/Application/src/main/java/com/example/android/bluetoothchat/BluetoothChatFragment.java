@@ -707,7 +707,7 @@ public class BluetoothChatFragment extends Fragment {
                     //String hex="FE" ;
                     String hex=PositionIMX.getMessagem() ;
                     int decimal=Integer.parseInt(hex,16);
-
+                    String valor= Integer.toString(decimal);
                     // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                     // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
 //                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()
