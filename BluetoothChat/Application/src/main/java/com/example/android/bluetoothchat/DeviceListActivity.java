@@ -222,7 +222,7 @@ public class DeviceListActivity extends Activity {
                 /*mSeries.appendData(new DataPoint(graphLastXValue, getRandom()+speed_num),
                         true, 22);*/
 
-                mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorX),
+                mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
                         true, 100);
                 mHandler.postDelayed(this, 330);
             }
