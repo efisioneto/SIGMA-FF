@@ -3,6 +3,7 @@ manifest
 ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:17:1-56:12
 INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:17:1-56:12
 INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:17:1-56:12
+MERGED from [com.jjoe64:graphview:4.0.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\614ece7838a0f8f41be765833fc4d868\jetified-graphview-4.0.0\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\37ec02f661e3547c5499ecdfd9f3cd1f\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\add2bdb41de46d90e5d3bd4e75929820\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\dd07e922b5233b833d82ee834e6becf7\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -57,6 +58,8 @@ ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\An
 		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:29:22-76
 application
 ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:31:5-54:19
+MERGED from [com.jjoe64:graphview:4.0.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\614ece7838a0f8f41be765833fc4d868\jetified-graphview-4.0.0\AndroidManifest.xml:11:5-12:19
+MERGED from [com.jjoe64:graphview:4.0.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\614ece7838a0f8f41be765833fc4d868\jetified-graphview-4.0.0\AndroidManifest.xml:11:5-12:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\c9c8616d74aa0ab3eb457d24b669c685\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
@@ -105,6 +108,8 @@ uses-sdk
 INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml
 INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml
+MERGED from [com.jjoe64:graphview:4.0.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\614ece7838a0f8f41be765833fc4d868\jetified-graphview-4.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jjoe64:graphview:4.0.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\614ece7838a0f8f41be765833fc4d868\jetified-graphview-4.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\37ec02f661e3547c5499ecdfd9f3cd1f\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\37ec02f661e3547c5499ecdfd9f3cd1f\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\add2bdb41de46d90e5d3bd4e75929820\fragment-1.1.0\AndroidManifest.xml:20:5-22:41

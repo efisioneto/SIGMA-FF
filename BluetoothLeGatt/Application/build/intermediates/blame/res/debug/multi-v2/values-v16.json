@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Sigma\\Desktop\\SIGMAFF\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\efisi\\SIGMAFF\\SIGMA-FF\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Sigma\\.gradle\\caches\\transforms-2\\files-2.1\\0ef06e739147798057e23a6750de4f05\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Sigma\\.gradle\\caches\\transforms-2\\files-2.1\\2ada51386fb34f0ec2f919738c8248c3\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\efisi\\.gradle\\caches\\transforms-2\\files-2.1\\513dc26a8b75c3e93f8a81ca49b84e79\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\efisi\\.gradle\\caches\\transforms-2\\files-2.1\\754a231dc91814f2dc364cb16fd5df69\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

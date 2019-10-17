@@ -44,6 +44,7 @@ import android.bluetooth.BluetoothDevice;
 
 import android.content.Intent;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.os.Handler;
@@ -92,6 +93,13 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.example.android.common.logger.Log;
 
+//#graphView
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+import com.jjoe64.graphview.GridLabelRenderer;
+
+import java.util.Random;
 
 
 /**
@@ -100,12 +108,10 @@ import com.example.android.common.logger.Log;
 
  */
 
-public class BluetoothChatFragment extends Fragment {
-
+public class BluetoothChatFragment extends Fragment{
 
 
     private static final String TAG = "BluetoothChatFragment";
-
 
 
     // Intent request codes
@@ -117,7 +123,6 @@ public class BluetoothChatFragment extends Fragment {
     private static final int REQUEST_ENABLE_BT = 3;
 
 
-
     // Layout Views
 
     private ListView mConversationView;
@@ -127,54 +132,42 @@ public class BluetoothChatFragment extends Fragment {
     private Button mSendButton;
 
 
-
     /**
-
      * Name of the connected device
-
      */
 
     private String mConnectedDeviceName = null;
 
 
-
     /**
-
      * Array adapter for the conversation thread
-
      */
 
     private ArrayAdapter<String> mConversationArrayAdapter;
 
 
-
     /**
-
      * String buffer for outgoing messages
-
      */
 
     private StringBuffer mOutStringBuffer;
 
 
-
     /**
-
      * Local Bluetooth adapter
-
      */
 
     private BluetoothAdapter mBluetoothAdapter = null;
 
 
-
     /**
-
      * Member object for the chat services
-
      */
 
     private BluetoothChatService mChatService = null;
+
+    private String hexX, hexY;
+    public static int  decimalX,decimalY;
 
 
 
@@ -191,7 +184,6 @@ public class BluetoothChatFragment extends Fragment {
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
 
-
         // If the adapter is null, then Bluetooth is not supported
 
         FragmentActivity activity = getActivity();
@@ -203,10 +195,13 @@ public class BluetoothChatFragment extends Fragment {
             activity.finish();
 
         }
+        //#graphView https://github.com/jjoe64/GraphView
+        //GraphView graph = (GraphView) findViewById(R.id.graph);
+//        GraphView graph = (GraphView) findViewById(R.id.graph);
+//        initGraph(graph);
+//
 
     }
-
-
 
     @Override
 
@@ -241,7 +236,6 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     @Override
 
     public void onDestroy() {
@@ -263,7 +257,6 @@ public class BluetoothChatFragment extends Fragment {
     public void onResume() {
 
         super.onResume();
-
 
 
         // Performing this check in onResume() covers the case in which BT was
@@ -289,7 +282,6 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     @Override
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -299,7 +291,6 @@ public class BluetoothChatFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_bluetooth_chat, container, false);
 
     }
-
 
 
     @Override
@@ -312,20 +303,18 @@ public class BluetoothChatFragment extends Fragment {
 
         mSendButton = view.findViewById(R.id.button_send);
 
+
+
     }
 
 
-
     /**
-
      * Set up the UI and background operations for chat.
-
      */
 
     private void setupChat() {
 
         Log.d(TAG, "setupChat()");
-
 
 
         // Initialize the array adapter for the conversation thread
@@ -341,15 +330,12 @@ public class BluetoothChatFragment extends Fragment {
         mConversationArrayAdapter = new ArrayAdapter<>(activity, R.layout.message);
 
 
-
         mConversationView.setAdapter(mConversationArrayAdapter);
-
 
 
         // Initialize the compose field with a listener for the return key
 
         mOutEditText.setOnEditorActionListener(mWriteListener);
-
 
 
         // Initialize the send button with a listener that for click events
@@ -377,11 +363,9 @@ public class BluetoothChatFragment extends Fragment {
         });
 
 
-
         // Initialize the BluetoothChatService to perform bluetooth connections
 
         mChatService = new BluetoothChatService(activity, mHandler);
-
 
 
         // Initialize the buffer for outgoing messages
@@ -391,11 +375,8 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     /**
-
      * Makes this device discoverable for 300 seconds (5 minutes).
-
      */
 
     private void ensureDiscoverable() {
@@ -415,15 +396,10 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     /**
-
      * Sends a message.
-
      *
-
      * @param message A string of text to send.
-
      */
 
     private void sendMessage(String message) {
@@ -439,7 +415,6 @@ public class BluetoothChatFragment extends Fragment {
         }
 
 
-
         // Check that there's actually something to send
 
         if (message.length() > 0) {
@@ -449,7 +424,6 @@ public class BluetoothChatFragment extends Fragment {
             byte[] send = message.getBytes();
 
             mChatService.write(send);
-
 
 
             // Reset out string buffer to zero and clear the edit text field
@@ -463,11 +437,8 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     /**
-
      * The action listener for the EditText widget, to listen for the return key
-
      */
 
     private TextView.OnEditorActionListener mWriteListener
@@ -493,15 +464,10 @@ public class BluetoothChatFragment extends Fragment {
     };
 
 
-
     /**
-
      * Updates the status on the action bar.
-
      *
-
      * @param resId a string resource ID
-
      */
 
     private void setStatus(int resId) {
@@ -527,15 +493,10 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     /**
-
      * Updates the status on the action bar.
-
      *
-
      * @param subTitle status
-
      */
 
     private void setStatus(CharSequence subTitle) {
@@ -561,11 +522,8 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     /**
-
      * The Handler that gets information back from the BluetoothChatService
-
      */
 
     private final Handler mHandler = new Handler() {
@@ -634,7 +592,7 @@ public class BluetoothChatFragment extends Fragment {
                     //Operator ID, inteiro de 0 a 9
                     Mensagem ID = new Mensagem();
                     ID.setMensagem(readMessage.substring(1, 3));
-                    String palavra =ID.getMessagem();
+                    String palavra = ID.getMessagem();
 
                     //Message counter, inteiro de 0 a 65535
                     Mensagem MessageCounter = new Mensagem();
@@ -690,7 +648,7 @@ public class BluetoothChatFragment extends Fragment {
 
                     //GPS estimation quality, value from 0 to 99
                     Mensagem GPS = new Mensagem();
-                    GPS.setMensagem(readMessage.substring(59,61));
+                    GPS.setMensagem(readMessage.substring(59, 61));
 
                     //North alignment angle of inertial path, LSB 2^-13 rad, value from –PI to PI rad
                     Mensagem Angle = new Mensagem();
@@ -705,19 +663,32 @@ public class BluetoothChatFragment extends Fragment {
                     Mensagem CRC = new Mensagem();
                     CRC.setMensagem(readMessage.substring(69, 73));
                     //String hex="FE" ;
-                    String hex=PositionIMX.getMessagem() ;
-                    int decimal=Integer.parseInt(hex,16);
+
+
+                    int i=0;
+                    if(i>=3) {
+                        hexX="00000";
+                        hexY="00000";
+                        i++;
+                    }
+                    else {
+                        hexX=PositionIMX.getMessagem();
+                        hexY=PositionIMX.getMessagem();
+                    }
+                    decimalX=Integer.parseInt(hexX,16);
+                    decimalY=Integer.parseInt(hexY,16);
 
                     //String valor= Integer.toString(decimal);
-                    //Long.parseLong("AA0F245C", 16);
                     // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                     // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
 //                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()
 //                            +MessageCounter.getMessagem()+StepCounter.getMessagem()+Flag.getMessagem());
 
-                    mConversationArrayAdapter.add("X:"+decimal+" Y:"+PositionIMY.getMessagem());
-                    System.out.println(decimal);
+                    //mConversationArrayAdapter.add("X:"+PositionIMX.getMessagem()+" Y:"
+                    //      +PositionIMY.getMessagem()+"XX" +decimal);
+                    //System.out.println(decimal);
 
+                    mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
 
                     break;
 
@@ -754,7 +725,6 @@ public class BluetoothChatFragment extends Fragment {
         }
 
     };
-
 
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -820,17 +790,11 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     /**
-
      * Establish connection with other device
-
      *
-
      * @param data   An {@link Intent} with {@link DeviceListActivity#EXTRA_DEVICE_ADDRESS} extra.
-
      * @param secure Socket Security type - Secure (true) , Insecure (false)
-
      */
 
     private void connectDevice(Intent data, boolean secure) {
@@ -858,15 +822,14 @@ public class BluetoothChatFragment extends Fragment {
     }
 
 
-
     @Override
 
     public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
 
+
         inflater.inflate(R.menu.bluetooth_chat, menu);
 
     }
-
 
 
     @Override
@@ -915,21 +878,32 @@ public class BluetoothChatFragment extends Fragment {
 
     }
 
-    public class Mensagem{
+    public class Mensagem {
         private String mensagem;
+
         // Getter
-        public String getMessagem(){
+        public String getMessagem() {
 
             return mensagem;
         }
-        //Setter
-        public void setMensagem(String m){
 
-            this.mensagem=m;
+        //Setter
+        public void setMensagem(String m) {
+
+            this.mensagem = m;
 
 
         }
 
+
+
     }
+
+    public static class Decimal{
+        int ValorX = decimalX;
+        int ValorY = decimalX;
+
+    }
+
 
 }

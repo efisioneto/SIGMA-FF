@@ -23,7 +23,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
+import android.icu.text.Transliterator;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -33,8 +36,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.android.common.logger.Log;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.util.Random;
 import java.util.Set;
+
 
 /**
  * This Activity appears as a dialog. It lists any paired devices and
@@ -43,6 +52,19 @@ import java.util.Set;
  * Activity in the result Intent.
  */
 public class DeviceListActivity extends Activity {
+
+
+
+
+
+    //#graphView
+
+    private final Handler mHandler = new Handler();
+    private Runnable mTimer;
+    private double graphLastXValue = 5d;
+    private double yvalue = 5d;
+    private LineGraphSeries<DataPoint> mSeries;
+
 
     /**
      * Tag for Log
@@ -64,9 +86,15 @@ public class DeviceListActivity extends Activity {
      */
     private ArrayAdapter<String> mNewDevicesArrayAdapter;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        GraphView graph = (GraphView) findViewById(R.id.graph);
+        initGraph(graph);
+
 
         // Setup the window
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
@@ -124,7 +152,87 @@ public class DeviceListActivity extends Activity {
             String noDevices = getResources().getText(R.string.none_paired).toString();
             pairedDevicesArrayAdapter.add(noDevices);
         }
+
+
     }
+
+
+    public void initGraph(GraphView graph)
+    {
+        graph.getViewport().setXAxisBoundsManual(true);
+
+        graph.getViewport().setMinX(0);
+        graph.getViewport().setMaxX(1048575);
+
+        graph.getViewport().setYAxisBoundsManual(true);
+        graph.getViewport().setMinY(0);
+        graph.getViewport().setMaxY(1048575);
+
+        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
+
+
+        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
+        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+        gridLabel.setHorizontalAxisTitle("x axis");
+        gridLabel.setVerticalAxisTitle("y axis");
+
+        // first mSeries is a line
+        mSeries = new LineGraphSeries<>();
+        mSeries.setDrawDataPoints(false);
+        mSeries.setDrawBackground(true);
+        graph.addSeries(mSeries);
+        mSeries.setColor(Color.RED);
+    }
+
+
+    //#graphView
+    double mLastRandom = 2;
+    // String sharedFact = mDataField.getText().toString();
+    //double yvalue = Double.parseDouble(data);
+    Random mRand = new Random();
+    private double getRandom()
+    {
+        mLastRandom += mRand.nextDouble()*0.05 - 0.05;
+        return mLastRandom ;
+    }
+
+
+
+    @Override
+
+    public void onResume() {
+
+        super.onResume();
+
+        //#graphView
+        mTimer = new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                graphLastXValue += 1.0;
+
+                BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
+                BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
+
+
+
+
+                /*mSeries.appendData(new DataPoint(graphLastXValue, getRandom()+speed_num),
+                        true, 22);*/
+
+                mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorX),
+                        true, 100);
+                mHandler.postDelayed(this, 330);
+            }
+        };
+        mHandler.postDelayed(mTimer, 1500);
+
+
+
+    }
+
 
     @Override
     protected void onDestroy() {

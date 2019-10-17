@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Sigma\\Desktop\\SIGMAFF\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "C:\\Users\\efisi\\SIGMAFF\\SIGMA-FF\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Sigma\\.gradle\\caches\\transforms-2\\files-2.1\\2ada51386fb34f0ec2f919738c8248c3\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\efisi\\.gradle\\caches\\transforms-2\\files-2.1\\513dc26a8b75c3e93f8a81ca49b84e79\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

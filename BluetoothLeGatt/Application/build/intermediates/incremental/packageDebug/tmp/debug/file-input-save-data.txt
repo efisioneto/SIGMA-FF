@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Thu Oct 03 17:10:13 CEST 2019
+#Thu Oct 17 05:36:28 BRT 2019
 0.baseType=DIRECTORY
-0.base=C\:\\Users\\Sigma\\Desktop\\SIGMAFF\\BluetoothLeGatt\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.base=C\:\\Users\\efisi\\SIGMAFF\\SIGMA-FF\\BluetoothLeGatt\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 0.path=classes.dex
 0.set=DEX
 count=1
