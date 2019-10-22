@@ -1,7 +1,4 @@
-#Thu Oct 17 07:26:20 BRT 2019
-base.0=C\:\\Users\\Sigma\\Desktop\\SIGMAFF\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
+#Tue Oct 22 15:36:34 CEST 2019
+base.0=C\:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\efisi\\SIGMAFF\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex

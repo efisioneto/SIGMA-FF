@@ -54,7 +54,7 @@ import java.util.Set;
 public class DeviceListActivity extends Activity {
 
 
-
+    public int i =0;
 
 
     //#graphView
@@ -92,8 +92,15 @@ public class DeviceListActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        GraphView graph = (GraphView) findViewById(R.id.graph);
-        initGraph(graph);
+
+        if(i<=3) {
+            i++;
+        }
+        else {
+            GraphView graph = (GraphView) findViewById(R.id.graph);
+            initGraph(graph);
+        }
+
 
 
         // Setup the window
@@ -161,41 +168,64 @@ public class DeviceListActivity extends Activity {
     {
         graph.getViewport().setXAxisBoundsManual(true);
 
+
+
         graph.getViewport().setMinX(0);
+
         graph.getViewport().setMaxX(1048575);
 
+
+
         graph.getViewport().setYAxisBoundsManual(true);
+
         graph.getViewport().setMinY(0);
+
         graph.getViewport().setMaxY(1048575);
 
+
+
         graph.getViewport().setScrollable(true); // enables horizontal scrolling
+
         graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
 
 
+
+
+
         //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
+
         GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+
         gridLabel.setHorizontalAxisTitle("x axis");
+
         gridLabel.setVerticalAxisTitle("y axis");
 
+
+
         // first mSeries is a line
+
         mSeries = new LineGraphSeries<>();
+
         mSeries.setDrawDataPoints(false);
+
         mSeries.setDrawBackground(true);
+
         graph.addSeries(mSeries);
+
         mSeries.setColor(Color.RED);
     }
 
 
     //#graphView
-    double mLastRandom = 2;
+   // double mLastRandom = 2;
     // String sharedFact = mDataField.getText().toString();
     //double yvalue = Double.parseDouble(data);
-    Random mRand = new Random();
-    private double getRandom()
-    {
-        mLastRandom += mRand.nextDouble()*0.05 - 0.05;
-        return mLastRandom ;
-    }
+    //Random mRand = new Random();
+   // private double getRandom()
+    //{
+  //      mLastRandom += mRand.nextDouble()*0.05 - 0.05;
+  //      return mLastRandom ;
+  //  }
 
 
 
@@ -213,18 +243,20 @@ public class DeviceListActivity extends Activity {
             {
                 graphLastXValue += 1.0;
 
-                BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
-                BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
+              BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
+              BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
 
 
 
+                double a =Xvalue.ValorX;
+                double b =Yvalue.ValorY;
+                mSeries.appendData(new DataPoint(graphLastXValue, graphLastXValue),
+                       true, 22);
 
-                /*mSeries.appendData(new DataPoint(graphLastXValue, getRandom()+speed_num),
-                        true, 22);*/
+               //mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
+                //       true, 100);
 
-                mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
-                        true, 100);
-                mHandler.postDelayed(this, 330);
+               // mHandler.postDelayed(this, 330);
             }
         };
         mHandler.postDelayed(mTimer, 1500);

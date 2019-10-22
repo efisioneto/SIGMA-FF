@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
 MERGED from [com.android.support:support-v13:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\17b1ea2321db87cf4295ad87426094c2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\65fc3a0fae40e875d8798df6b8ce831e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\a1359431f0f9d9ab90c528cb57158ac5\AndroidManifest.xml:17:1-22:12
@@ -16,82 +16,82 @@ MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\efisi\.gradle\
 MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\56ceae9e7258622cf396806093895251\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\754a231dc91814f2dc364cb16fd5df69\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\bf04bcdf2df032def3a4debf4552ef6a\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:1-38:12
 	package
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:6:5-50
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:6:5-50
 	android:versionName
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:8:5-30
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:8:5-30
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:11-69
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:5:11-69
 	android:versionCode
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:7:5-28
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:7:5-28
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
 uses-feature#android.hardware.bluetooth_le
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:17:5-89
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:17:5-89
 	android:required
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:17:64-87
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:17:64-87
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:17:19-63
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:17:19-63
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:18:5-67
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:18:5-67
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:18:22-65
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:18:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:19:5-73
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:19:5-73
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:19:22-71
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:19:22-71
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:20:5-78
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:20:5-78
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:20:22-76
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:20:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:21:5-80
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:21:5-80
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:21:22-78
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:21:22-78
 application
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:24:5-36:19
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:24:5-36:19
 MERGED from [com.jjoe64:graphview:4.0.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\f8d9be19cd6a9a374d3852fad2b53396\AndroidManifest.xml:11:5-12:19
 MERGED from [com.jjoe64:graphview:4.0.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\f8d9be19cd6a9a374d3852fad2b53396\AndroidManifest.xml:11:5-12:19
 	android:label
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:24:18-50
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:24:18-50
 	android:icon
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:25:9-45
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:25:9-45
 	android:theme
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:26:9-56
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:26:9-56
 activity#com.example.android.bluetoothlegatt.DeviceScanActivity
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:27:9-33:20
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:27:9-33:20
 	android:label
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:28:13-45
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:28:13-45
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:27:19-53
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:27:19-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:29:13-32:29
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:29:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:30:17-68
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:30:17-68
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:30:25-66
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:17-76
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:17-76
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:27-74
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:27-74
 activity#com.example.android.bluetoothlegatt.DeviceControlActivity
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:9-58
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:9-58
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:19-56
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:19-56
 service#com.example.android.bluetoothlegatt.BluetoothLeService
-ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:9-77
+ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:9-77
 	android:enabled
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:53-75
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:53-75
 	android:name
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:18-52
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:18-52
 uses-sdk
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
 MERGED from [com.android.support:support-v13:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\17b1ea2321db87cf4295ad87426094c2\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v13:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\17b1ea2321db87cf4295ad87426094c2\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\65fc3a0fae40e875d8798df6b8ce831e\AndroidManifest.xml:20:5-44
@@ -118,13 +118,13 @@ MERGED from [com.android.support:support-compat:27.0.2] C:\Users\efisi\.gradle\c
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\754a231dc91814f2dc364cb16fd5df69\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\bf04bcdf2df032def3a4debf4552ef6a\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\bf04bcdf2df032def3a4debf4552ef6a\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-		ADDED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\efisi\SIGMAFF\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		ADDED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothLeGatt\Application\src\main\AndroidManifest.xml

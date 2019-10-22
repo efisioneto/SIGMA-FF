@@ -123,6 +123,7 @@ public class BluetoothChatFragment extends Fragment{
     private static final int REQUEST_ENABLE_BT = 3;
 
 
+
     // Layout Views
 
     private ListView mConversationView;
@@ -168,6 +169,7 @@ public class BluetoothChatFragment extends Fragment{
 
     private String hexX, hexY;
     public static int  decimalX,decimalY;
+    public int i =0;
 
 
 
@@ -665,8 +667,8 @@ public class BluetoothChatFragment extends Fragment{
                     //String hex="FE" ;
 
 
-                    int i=0;
-                    if(i>=3) {
+
+                    if(i<=3) {
                         hexX="00000";
                         hexY="00000";
                         i++;
@@ -901,7 +903,7 @@ public class BluetoothChatFragment extends Fragment{
 
     public static class Decimal{
         int ValorX = decimalX;
-        int ValorY = decimalX;
+        int ValorY = decimalY;
 
     }
 

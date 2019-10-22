@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\efisi\\SIGMAFF\\SIGMA-FF\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
                     "source": "C:\\Users\\efisi\\.gradle\\caches\\transforms-2\\files-2.1\\513dc26a8b75c3e93f8a81ca49b84e79\\res\\values-en-rAU\\values-en-rAU.xml",
