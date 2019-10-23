@@ -17,6 +17,7 @@
 
 package com.example.android.bluetoothchat;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,6 +31,10 @@ import com.example.android.common.logger.Log;
 import com.example.android.common.logger.LogFragment;
 import com.example.android.common.logger.LogWrapper;
 import com.example.android.common.logger.MessageOnlyLogFilter;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 /**
  * A simple launcher activity containing a summary sample description, sample log and a custom
@@ -39,16 +44,74 @@ import com.example.android.common.logger.MessageOnlyLogFilter;
  * on other devices it's visibility is controlled by an item on the Action Bar.
  */
 public class MainActivity extends SampleActivityBase {
-
+    public LineGraphSeries<DataPoint> Series;
+    int i;
     public static final String TAG = "MainActivity";
 
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BluetoothChatFragment grafico = new BluetoothChatFragment();
+
         setContentView(R.layout.activity_main);
+        GraphView graph = (GraphView) findViewById(R.id.graph);
+
+        grafico.initGraph(graph);
+
+        BluetoothChatFragment x = new BluetoothChatFragment();
+
+
+
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+
+             //  new DataPoint(0, 1),
+             // new DataPoint(1, 5),
+              //  new DataPoint(2, 3),
+
+       });
+
+        series.appendData(new DataPoint(0, 1),
+                true, 22);
+        series.appendData(new DataPoint(1, 5),
+                true, 22);
+        series.appendData(new DataPoint(2, 3),
+                true, 22);
+        series.appendData(new DataPoint(20, 20),
+                true, 22);
+
+
+       graph.addSeries(series);
+        series.setColor(Color.RED);
+        series.setDrawDataPoints(true);
+        series.setDrawBackground(true);
+
+        graph.getViewport().setMinX(0);
+        graph.getViewport().setMaxX(50);
+
+        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
+        graph.getViewport().setMinY(0);
+        graph.getViewport().setMaxY(50.0);
+
+        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+
+        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
+
+
+        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
+
+        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+
+        gridLabel.setHorizontalAxisTitle("x axis");
+
+        gridLabel.setVerticalAxisTitle("y axis");
+
+
+
 
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -56,7 +119,8 @@ public class MainActivity extends SampleActivityBase {
             transaction.replace(R.id.sample_content_fragment, fragment);
             transaction.commit();
         }
-    }
+        }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,6 +130,8 @@ public class MainActivity extends SampleActivityBase {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+
+
         MenuItem logToggle = menu.findItem(R.id.menu_toggle_log);
         logToggle.setVisible(findViewById(R.id.sample_output) instanceof ViewAnimator);
         logToggle.setTitle(mLogShown ? R.string.sample_hide_log : R.string.sample_show_log);

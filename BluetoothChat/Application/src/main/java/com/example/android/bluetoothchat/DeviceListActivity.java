@@ -54,16 +54,16 @@ import java.util.Set;
 public class DeviceListActivity extends Activity {
 
 
-    public int i =0;
+    public int a;
 
 
     //#graphView
 
     private final Handler mHandler = new Handler();
-    private Runnable mTimer;
-    private double graphLastXValue = 5d;
-    private double yvalue = 5d;
-    private LineGraphSeries<DataPoint> mSeries;
+  //  private Runnable mTimer;
+   // private double graphLastXValue = 5d;
+  //  private double yvalue = 5d;
+
 
 
     /**
@@ -92,14 +92,18 @@ public class DeviceListActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+//Loop incial para a primeira leitura nao ser feita
 
-        if(i<=3) {
-            i++;
-        }
-        else {
-            GraphView graph = (GraphView) findViewById(R.id.graph);
-            initGraph(graph);
-        }
+
+
+       // GraphView graph = (GraphView) findViewById(R.id.graph);
+
+
+
+            //initGraph(graph);
+
+
+
 
 
 
@@ -164,56 +168,6 @@ public class DeviceListActivity extends Activity {
     }
 
 
-    public void initGraph(GraphView graph)
-    {
-        graph.getViewport().setXAxisBoundsManual(true);
-
-
-
-        graph.getViewport().setMinX(0);
-
-        graph.getViewport().setMaxX(1048575);
-
-
-
-        graph.getViewport().setYAxisBoundsManual(true);
-
-        graph.getViewport().setMinY(0);
-
-        graph.getViewport().setMaxY(1048575);
-
-
-
-        graph.getViewport().setScrollable(true); // enables horizontal scrolling
-
-        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
-
-
-
-
-
-        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
-
-        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-
-        gridLabel.setHorizontalAxisTitle("x axis");
-
-        gridLabel.setVerticalAxisTitle("y axis");
-
-
-
-        // first mSeries is a line
-
-        mSeries = new LineGraphSeries<>();
-
-        mSeries.setDrawDataPoints(false);
-
-        mSeries.setDrawBackground(true);
-
-        graph.addSeries(mSeries);
-
-        mSeries.setColor(Color.RED);
-    }
 
 
     //#graphView
@@ -230,37 +184,10 @@ public class DeviceListActivity extends Activity {
 
 
     @Override
-
+// Quando clica no icone de bluetooth
     public void onResume() {
 
-        super.onResume();
-
-        //#graphView
-        mTimer = new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                graphLastXValue += 1.0;
-
-              BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
-              BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
-
-
-
-                double a =Xvalue.ValorX;
-                double b =Yvalue.ValorY;
-                mSeries.appendData(new DataPoint(graphLastXValue, graphLastXValue),
-                       true, 22);
-
-               //mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
-                //       true, 100);
-
-               // mHandler.postDelayed(this, 330);
-            }
-        };
-        mHandler.postDelayed(mTimer, 1500);
-
+super.onResume();
 
 
     }

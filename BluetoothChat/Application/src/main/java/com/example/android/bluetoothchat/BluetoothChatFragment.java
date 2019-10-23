@@ -102,6 +102,7 @@ import com.jjoe64.graphview.GridLabelRenderer;
 import java.util.Random;
 
 
+
 /**
 
  * This fragment controls Bluetooth to communicate with other devices.
@@ -110,6 +111,13 @@ import java.util.Random;
 
 public class BluetoothChatFragment extends Fragment{
 
+
+
+    public Runnable mTimer;
+    public double graphLastXValue = 5d;
+    public double yvalue = 5d;
+
+    public LineGraphSeries<DataPoint> mSeries;
 
     private static final String TAG = "BluetoothChatFragment";
 
@@ -168,14 +176,73 @@ public class BluetoothChatFragment extends Fragment{
     private BluetoothChatService mChatService = null;
 
     private String hexX, hexY;
-    public static int  decimalX,decimalY;
+    public int  decimalX,decimalY;
     public int i =0;
 
+    public void initGraph(GraphView graph)
+    {
+        graph.getViewport().setXAxisBoundsManual(true);
 
+
+
+      //  graph.getViewport().setMinX(0);
+
+       // graph.getViewport().setMaxX(1048575);
+
+
+
+      //  graph.getViewport().setYAxisBoundsManual(true);
+
+        //graph.getViewport().setMinY(0);
+
+       // graph.getViewport().setMaxY(1048575);
+
+        graph.getViewport().setMinX(1);
+        graph.getViewport().setMaxX(50);
+
+        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
+        graph.getViewport().setMinY(2.0);
+        graph.getViewport().setMaxY(15.0);
+
+
+        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+
+        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
+
+
+
+
+
+        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
+
+        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+
+        gridLabel.setHorizontalAxisTitle("x axis");
+
+        gridLabel.setVerticalAxisTitle("y axis");
+
+
+
+
+        // first mSeries is a line
+
+        mSeries = new LineGraphSeries<>();
+
+        mSeries.setDrawDataPoints(true);
+
+        mSeries.setDrawBackground(true);
+
+        graph.addSeries(mSeries);
+
+        mSeries.setColor(Color.RED);
+    }
 
     @Override
 
     public void onCreate(Bundle savedInstanceState) {
+
+
+
 
         super.onCreate(savedInstanceState);
 
@@ -208,6 +275,7 @@ public class BluetoothChatFragment extends Fragment{
     @Override
 
     public void onStart() {
+
 
         super.onStart();
 
@@ -534,6 +602,10 @@ public class BluetoothChatFragment extends Fragment{
 
         public void handleMessage(Message msg) {
 
+
+
+
+
             FragmentActivity activity = getActivity();
 
             switch (msg.what) {
@@ -667,7 +739,7 @@ public class BluetoothChatFragment extends Fragment{
                     //String hex="FE" ;
 
 
-
+                  //Loop inicial apenas para a primeira string nao ser lida
                     if(i<=3) {
                         hexX="00000";
                         hexY="00000";
@@ -677,8 +749,44 @@ public class BluetoothChatFragment extends Fragment{
                         hexX=PositionIMX.getMessagem();
                         hexY=PositionIMX.getMessagem();
                     }
+
+                    // Converter hexadecimal em decimal
                     decimalX=Integer.parseInt(hexX,16);
                     decimalY=Integer.parseInt(hexY,16);
+
+
+                    //#graphView
+                    mTimer = new Runnable()
+                    {
+
+                        public void run()
+                        {
+                            graphLastXValue += 1.0;
+
+                           // BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
+                         //   BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
+
+
+
+                           //double a =Xvalue.ValorX;
+                           //double b =Yvalue.ValorY;
+
+
+
+                            double a =decimalX;
+                            double b =decimalY;
+
+                           // mSeries.appendData(new DataPoint(a, b),
+                             //     true, 22);
+
+                            //mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
+                            //       true, 100);
+
+                            // mHandler.postDelayed(this, 330);
+                        }
+                    };
+                    mHandler.postDelayed(mTimer, 1500);
+
 
                     //String valor= Integer.toString(decimal);
                     // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
@@ -690,6 +798,7 @@ public class BluetoothChatFragment extends Fragment{
                     //      +PositionIMY.getMessagem()+"XX" +decimal);
                     //System.out.println(decimal);
 
+                    //Printar os dados
                     mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
 
                     break;
@@ -902,8 +1011,8 @@ public class BluetoothChatFragment extends Fragment{
     }
 
     public static class Decimal{
-        int ValorX = decimalX;
-        int ValorY = decimalY;
+       // int ValorX = decimalX;
+       // int ValorY = decimalY;
 
     }
 
