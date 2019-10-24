@@ -18,7 +18,8 @@
 <LinearLayout
 
       xmlns:android="http://schemas.android.com/apk/res/android"
-      android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/sample_main_layout">
@@ -53,19 +54,20 @@
 
     <!-- </ViewAnimator>-->
 
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <com.jjoe64.graphview.GraphView
             android:id="@+id/graph"
             android:layout_width="match_parent"
-            android:layout_height="400dp" />
+            android:layout_height="450sp"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
     </LinearLayout>
-
-
 
     <View
             android:layout_width="match_parent"

@@ -111,13 +111,13 @@ import java.util.Random;
 
 public class BluetoothChatFragment extends Fragment{
 
-
-
-    public Runnable mTimer;
     public double graphLastXValue = 5d;
+
+  // private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
+    public Runnable mTimer;
     public double yvalue = 5d;
 
-    public LineGraphSeries<DataPoint> mSeries;
+    public LineGraphSeries<DataPoint> mSeries= new LineGraphSeries<DataPoint>();
 
     private static final String TAG = "BluetoothChatFragment";
 
@@ -176,12 +176,17 @@ public class BluetoothChatFragment extends Fragment{
     private BluetoothChatService mChatService = null;
 
     private String hexX, hexY;
-    public int  decimalX,decimalY;
+    public static int  decimalX,decimalY;
     public int i =0;
 
     public void initGraph(GraphView graph)
     {
         graph.getViewport().setXAxisBoundsManual(true);
+        graph.getViewport().setYAxisBoundsManual(true);
+//       graph.getViewport().setScalable(true);// enables horizontal zooming and scrolling
+//        graph.getViewport().setScalableY(true);
+        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+        graph.getViewport().setScrollableY(true); // enables horizontal scrolling
 
 
 
@@ -197,17 +202,14 @@ public class BluetoothChatFragment extends Fragment{
 
        // graph.getViewport().setMaxY(1048575);
 
-        graph.getViewport().setMinX(1);
-        graph.getViewport().setMaxX(50);
-
-        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
-        graph.getViewport().setMinY(2.0);
-        graph.getViewport().setMaxY(15.0);
+        graph.getViewport().setMinX(0);
+        graph.getViewport().setMaxX(10000);
 
 
-        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+        graph.getViewport().setMinY(0);
+        graph.getViewport().setMaxY(10000);
 
-        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
+
 
 
 
@@ -215,11 +217,11 @@ public class BluetoothChatFragment extends Fragment{
 
         //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
 
-        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+       GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
 
-        gridLabel.setHorizontalAxisTitle("x axis");
-
-        gridLabel.setVerticalAxisTitle("y axis");
+//        gridLabel.setHorizontalAxisTitle("x axis");
+//
+//        gridLabel.setVerticalAxisTitle("y axis");
 
 
 
@@ -605,7 +607,6 @@ public class BluetoothChatFragment extends Fragment{
 
 
 
-
             FragmentActivity activity = getActivity();
 
             switch (msg.what) {
@@ -740,7 +741,7 @@ public class BluetoothChatFragment extends Fragment{
 
 
                   //Loop inicial apenas para a primeira string nao ser lida
-                    if(i<=3) {
+                    if(i<=2) {
                         hexX="00000";
                         hexY="00000";
                         i++;
@@ -756,38 +757,46 @@ public class BluetoothChatFragment extends Fragment{
 
 
                     //#graphView
-                    mTimer = new Runnable()
-                    {
+//                    mTimer = new Runnable()
+//                    {
+//
+//                        public void run()
+//                        {
+//
+//
+//                           // BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
+//                         //   BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
+//
+//
+//
+//                           //double a =Xvalue.ValorX;
+//                           //double b =Yvalue.ValorY;
+//
+//
+//
+//
+////                            mSeries.appendData(new DataPoint(a, b),
+////                                  true, 22);
+//
+//                            //mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
+//                            //       true, 100);
+//
+//                            // mHandler.postDelayed(this, 330);
+//
+//
+//                /*mSeries.appendData(new DataPoint(graphLastXValue, getRandom()+speed_num),
+//                        true, 22);*/
+//
+//
+//
+//
+//                        }
+//                    };
+//                  //  mHandler.postDelayed(mTimer, 1000);
 
-                        public void run()
-                        {
-                            graphLastXValue += 1.0;
 
-                           // BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
-                         //   BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
-
-
-
-                           //double a =Xvalue.ValorX;
-                           //double b =Yvalue.ValorY;
-
-
-
-                            double a =decimalX;
-                            double b =decimalY;
-
-                           // mSeries.appendData(new DataPoint(a, b),
-                             //     true, 22);
-
-                            //mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
-                            //       true, 100);
-
-                            // mHandler.postDelayed(this, 330);
-                        }
-                    };
-                    mHandler.postDelayed(mTimer, 1500);
-
-
+                    double a =decimalX;
+                    double b =decimalY;
                     //String valor= Integer.toString(decimal);
                     // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                     // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
@@ -1011,8 +1020,8 @@ public class BluetoothChatFragment extends Fragment{
     }
 
     public static class Decimal{
-       // int ValorX = decimalX;
-       // int ValorY = decimalY;
+       int ValorX = decimalX;
+       int ValorY = decimalY;
 
     }
 

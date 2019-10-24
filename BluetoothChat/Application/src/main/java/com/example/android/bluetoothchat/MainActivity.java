@@ -51,13 +51,18 @@ public class MainActivity extends SampleActivityBase {
     int i;
     public static final String TAG = "MainActivity";
 
+    public double graphLastXValue = 5d;
+    private final Handler mHandler = new Handler();
+    // private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
+    public Runnable mTimer;
+    public double yvalue = 5d;
+
+    public LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();;
+
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
 
-    public Runnable mTimer;
-    public double graphLastXValue = 5d;
-    private final Handler mHandler = new Handler();
-    private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +70,9 @@ public class MainActivity extends SampleActivityBase {
         BluetoothChatFragment grafico = new BluetoothChatFragment();
 
         setContentView(R.layout.activity_main);
-        GraphView graph = (GraphView) findViewById(R.id.graph);
+       final GraphView graph = (GraphView) findViewById(R.id.graph);
 
-        grafico.initGraph(graph);
+       grafico.initGraph(graph);
 
         BluetoothChatFragment x = new BluetoothChatFragment();
 
@@ -126,62 +131,75 @@ public class MainActivity extends SampleActivityBase {
             @Override
             public void run()
             {
+
                 graphLastXValue += 1.0;
-
-                /*mSeries.appendData(new DataPoint(graphLastXValue, getRandom()+speed_num),
-                        true, 22);*/
-
-
 
                 try{
 
-                    series.appendData(new DataPoint(0, 20),
+//                                mSeries.appendData(new DataPoint(0, 10),
+//                                        true, 22);
+
+
+
+                    BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
+
+                    BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
+
+//                    series.appendData(new DataPoint( Xvalue.ValorX,Yvalue.ValorY),
+//                            true, 100);
+
+                    series.appendData(new DataPoint(0,Yvalue.ValorY),
+
                             true, 100);
 
+                    graph.removeAllSeries();
 
+                    graph.addSeries(series);
 
                 }catch (NullPointerException ignored){
 
                 }
 
 
+
                 mHandler.postDelayed(this, 330);
             }
         };
+
+
         mHandler.postDelayed(mTimer, 1500);
 
-        try{
-            graph.addSeries(series);
-            series.setColor(Color.RED);
-            series.setDrawDataPoints(true);
-            series.setDrawBackground(true);
-
-        }catch (NullPointerException ignored){
-
-        }
+//        try{
+//
+//        }catch (NullPointerException ignored){
+//
+//        }
 
         //graph.addSeries(series);
 
 
-        graph.getViewport().setMinX(0);
-        graph.getViewport().setMaxX(50);
+        series.setColor(Color.RED);
+        series.setDrawDataPoints(true);
+        series.setDrawBackground(true);
 
-        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
-        graph.getViewport().setMinY(0);
-        graph.getViewport().setMaxY(50.0);
+//        graph.getViewport().setMinX(0);
+//        graph.getViewport().setMaxX(10000);
+//
+//        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
+//        graph.getViewport().setXAxisBoundsManual(true); // These lines seem to be causing it
+//        graph.getViewport().setMinY(0);
+//        graph.getViewport().setMaxY(10000);
 
-        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+//        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+//
+//        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
 
-        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
 
+      //  graph.getGridLabelRenderer().setLabelVerticalWidth(0);
 
-        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
-
-        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-
-        gridLabel.setHorizontalAxisTitle("x axis");
-
-        gridLabel.setVerticalAxisTitle("y axis");
+//        gridLabel.setHorizontalAxisTitle("x axis");
+//
+//        gridLabel.setVerticalAxisTitle("y axis");
 
 
         if (savedInstanceState == null) {
