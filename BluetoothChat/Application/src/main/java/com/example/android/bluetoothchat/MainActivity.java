@@ -19,6 +19,7 @@ package com.example.android.bluetoothchat;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ViewAnimator;
@@ -36,6 +37,8 @@ import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.util.Random;
+
 /**
  * A simple launcher activity containing a summary sample description, sample log and a custom
  * {@link Fragment} which can display a view.
@@ -51,7 +54,10 @@ public class MainActivity extends SampleActivityBase {
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
 
-
+    public Runnable mTimer;
+    public double graphLastXValue = 5d;
+    private final Handler mHandler = new Handler();
+    private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,28 +73,95 @@ public class MainActivity extends SampleActivityBase {
 
 
 
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+//        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+//
+//             //  new DataPoint(0, 1),
+//             // new DataPoint(1, 5),
+//              //  new DataPoint(2, 3),
+//
+//       });
+//
+//
+//
+//        series.appendData(new DataPoint(0, 1),
+//                true, 22);
+//        series.appendData(new DataPoint(1, 5),
+//                true, 22);
+//        series.appendData(new DataPoint(2, 3),
+//                true, 22);
+//        series.appendData(new DataPoint(20, 20),
+//                true, 22);
+//
+//
+//
+//       graph.addSeries(series);
+//        series.setColor(Color.RED);
+//        series.setDrawDataPoints(true);
+//        series.setDrawBackground(true);
+//
+//        graph.getViewport().setMinX(0);
+//        graph.getViewport().setMaxX(50);
+//
+//        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
+//        graph.getViewport().setMinY(0);
+//        graph.getViewport().setMaxY(50.0);
+//
+//        graph.getViewport().setScrollable(true); // enables horizontal scrolling
+//
+//        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
+//
+//
+//        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
+//
+//        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+//
+//        gridLabel.setHorizontalAxisTitle("x axis");
+//
+//        gridLabel.setVerticalAxisTitle("y axis");
 
-             //  new DataPoint(0, 1),
-             // new DataPoint(1, 5),
-              //  new DataPoint(2, 3),
-
-       });
-
-        series.appendData(new DataPoint(0, 1),
-                true, 22);
-        series.appendData(new DataPoint(1, 5),
-                true, 22);
-        series.appendData(new DataPoint(2, 3),
-                true, 22);
-        series.appendData(new DataPoint(20, 20),
-                true, 22);
 
 
-       graph.addSeries(series);
-        series.setColor(Color.RED);
-        series.setDrawDataPoints(true);
-        series.setDrawBackground(true);
+        mTimer = new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                graphLastXValue += 1.0;
+
+                /*mSeries.appendData(new DataPoint(graphLastXValue, getRandom()+speed_num),
+                        true, 22);*/
+
+
+
+                try{
+
+                    series.appendData(new DataPoint(0, 20),
+                            true, 100);
+
+
+
+                }catch (NullPointerException ignored){
+
+                }
+
+
+                mHandler.postDelayed(this, 330);
+            }
+        };
+        mHandler.postDelayed(mTimer, 1500);
+
+        try{
+            graph.addSeries(series);
+            series.setColor(Color.RED);
+            series.setDrawDataPoints(true);
+            series.setDrawBackground(true);
+
+        }catch (NullPointerException ignored){
+
+        }
+
+        //graph.addSeries(series);
+
 
         graph.getViewport().setMinX(0);
         graph.getViewport().setMaxX(50);
@@ -111,8 +184,6 @@ public class MainActivity extends SampleActivityBase {
         gridLabel.setVerticalAxisTitle("y axis");
 
 
-
-
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             BluetoothChatFragment fragment = new BluetoothChatFragment();
@@ -121,6 +192,16 @@ public class MainActivity extends SampleActivityBase {
         }
         }
 
+    //#graphView
+    double mLastRandom = 2;
+    // String sharedFact = mDataField.getText().toString();
+    //double yvalue = Double.parseDouble(data);
+    Random mRand = new Random();
+    private double getRandom()
+    {
+        mLastRandom += mRand.nextDouble()*0.05 - 0.05;
+        return mLastRandom ;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
