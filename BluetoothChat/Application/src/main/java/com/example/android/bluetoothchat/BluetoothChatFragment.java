@@ -99,6 +99,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.GridLabelRenderer;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -181,16 +182,20 @@ public class BluetoothChatFragment extends Fragment{
 
     public void initGraph(GraphView graph)
     {
-        graph.getViewport().setXAxisBoundsManual(true);
-        graph.getViewport().setYAxisBoundsManual(true);
-//       graph.getViewport().setScalable(true);// enables horizontal zooming and scrolling
+
+//set Scrollable and Scaleable
+
+//        graph.getViewport().setScalable(true);
+//
 //        graph.getViewport().setScalableY(true);
-        graph.getViewport().setScrollable(true); // enables horizontal scrolling
-        graph.getViewport().setScrollableY(true); // enables horizontal scrolling
+//
+//        graph.getViewport().setScrollable(true);
+//
+//        graph.getViewport().setScrollableY(true);
 
 
 
-      //  graph.getViewport().setMinX(0);
+        //  graph.getViewport().setMinX(0);
 
        // graph.getViewport().setMaxX(1048575);
 
@@ -201,13 +206,24 @@ public class BluetoothChatFragment extends Fragment{
         //graph.getViewport().setMinY(0);
 
        // graph.getViewport().setMaxY(1048575);
+        //set manual x bounds
 
-        graph.getViewport().setMinX(0);
+        graph.getViewport().setYAxisBoundsManual(true);
+
+        graph.getViewport().setMaxY(10000);
+
+      graph.getViewport().setMinY(0);
+
+
+
+        //set manual y bounds
+
+        graph.getViewport().setXAxisBoundsManual(true);
+
         graph.getViewport().setMaxX(10000);
 
+        graph.getViewport().setMinX(0);
 
-        graph.getViewport().setMinY(0);
-        graph.getViewport().setMaxY(10000);
 
 
 
@@ -741,7 +757,7 @@ public class BluetoothChatFragment extends Fragment{
 
 
                   //Loop inicial apenas para a primeira string nao ser lida
-                    if(i<=2) {
+                    if(i<=5) {
                         hexX="00000";
                         hexY="00000";
                         i++;
@@ -795,8 +811,12 @@ public class BluetoothChatFragment extends Fragment{
 //                  //  mHandler.postDelayed(mTimer, 1000);
 
 
+
                     double a =decimalX;
                     double b =decimalY;
+
+
+
                     //String valor= Integer.toString(decimal);
                     // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                     // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
@@ -811,6 +831,7 @@ public class BluetoothChatFragment extends Fragment{
                     mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
 
                     break;
+
 
                 case Constants.MESSAGE_DEVICE_NAME:
 
@@ -846,6 +867,106 @@ public class BluetoothChatFragment extends Fragment{
 
     };
 
+
+    private ArrayList<XYValue> sortArray(ArrayList<XYValue> array){
+
+        /*
+
+        //Sorts the xyValues in Ascending order to prepare them for the PointsGraphSeries<DataSet>
+
+         */
+
+        int factor = Integer.parseInt(String.valueOf(Math.round(Math.pow(array.size(),2))));
+
+        int m = array.size()-1;
+
+        int count = 0;
+
+        android.util.Log.d(TAG, "sortArray: Sorting the XYArray.");
+
+
+
+        while(true){
+
+            m--;
+
+            if(m <= 0){
+
+                m = array.size() - 1;
+
+            }
+
+            android.util.Log.d(TAG, "sortArray: m = " + m);
+
+            try{
+
+                //print out the y entrys so we know what the order looks like
+
+                //Log.d(TAG, "sortArray: Order:");
+
+                //for(int n = 0;n < array.size();n++){
+
+                //Log.d(TAG, "sortArray: " + array.get(n).getY());
+
+                //}
+
+                double tempY = array.get(m-1).getY();
+
+                double tempX = array.get(m-1).getX();
+
+                if(tempX > array.get(m).getX() ){
+
+                    array.get(m-1).setY(array.get(m).getY());
+
+                    array.get(m).setY(tempY);
+
+                    array.get(m-1).setX(array.get(m).getX());
+
+                    array.get(m).setX(tempX);
+
+                }
+
+                else if(tempY == array.get(m).getY()){
+
+                    count++;
+
+                    android.util.Log.d(TAG, "sortArray: count = " + count);
+
+                }
+
+
+
+                else if(array.get(m).getX() > array.get(m-1).getX()){
+
+                    count++;
+
+                    android.util.Log.d(TAG, "sortArray: count = " + count);
+
+                }
+
+                //break when factorial is done
+
+                if(count == factor ){
+
+                    break;
+
+                }
+
+            }catch(ArrayIndexOutOfBoundsException e){
+
+                android.util.Log.e(TAG, "sortArray: ArrayIndexOutOfBoundsException. Need more than 1 data point to create Plot." +
+
+                        e.getMessage());
+
+                break;
+
+            }
+
+        }
+
+        return array;
+
+    }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 

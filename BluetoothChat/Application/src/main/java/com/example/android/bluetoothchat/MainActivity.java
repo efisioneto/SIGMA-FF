@@ -36,7 +36,9 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.jjoe64.graphview.series.PointsGraphSeries;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -62,7 +64,9 @@ public class MainActivity extends SampleActivityBase {
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
 
-
+    //Parte nova
+    private ArrayList<XYValue> xyValueArray;
+    PointsGraphSeries<DataPoint> xySeries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +78,7 @@ public class MainActivity extends SampleActivityBase {
 
        grafico.initGraph(graph);
 
-        BluetoothChatFragment x = new BluetoothChatFragment();
+        BluetoothChatFragment k = new BluetoothChatFragment();
 
 
 
@@ -125,6 +129,20 @@ public class MainActivity extends SampleActivityBase {
 //        gridLabel.setVerticalAxisTitle("y axis");
 
 
+        final ArrayList<XYValue>[] xyValueArray = new ArrayList[]{new ArrayList<>()};
+
+
+
+//        BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
+//
+//        BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
+//
+//        xyValueArray.add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
+//
+//        xyValueArray= sortArray(xyValueArray);
+
+
+
 
         mTimer = new Runnable()
         {
@@ -141,6 +159,7 @@ public class MainActivity extends SampleActivityBase {
 
 
 
+
                     BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
 
                     BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
@@ -148,13 +167,16 @@ public class MainActivity extends SampleActivityBase {
 //                    series.appendData(new DataPoint( Xvalue.ValorX,Yvalue.ValorY),
 //                            true, 100);
 
-                    series.appendData(new DataPoint(0,Yvalue.ValorY),
 
-                            true, 100);
+                    xyValueArray[0].add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
 
-                    graph.removeAllSeries();
-
-                    graph.addSeries(series);
+//                    series.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
+//
+//                            true, 100);
+//
+//                    graph.removeAllSeries();
+//
+//                    graph.addSeries(series);
 
                 }catch (NullPointerException ignored){
 
@@ -162,25 +184,41 @@ public class MainActivity extends SampleActivityBase {
 
 
 
-                mHandler.postDelayed(this, 330);
+                //sort it in ASC order
+                xyValueArray[0] = sortArray(xyValueArray[0]);
+
+                for(int i = 0; i< xyValueArray[0].size(); i++){
+
+                    double x = xyValueArray[0].get(i).getX();
+                    double y = xyValueArray[0].get(i).getY();
+                    series.appendData(new DataPoint(-x,y),true,1000);
+
+                }
+
+                // mHandler.postDelayed(this, 330);
             }
+
+
         };
 
 
         mHandler.postDelayed(mTimer, 1500);
 
-//        try{
-//
-//        }catch (NullPointerException ignored){
-//
-//        }
+        try{
 
-        //graph.addSeries(series);
+        }catch (NullPointerException ignored){
+
+        }
+
+
+
+        graph.addSeries(series);
 
 
         series.setColor(Color.RED);
         series.setDrawDataPoints(true);
         series.setDrawBackground(true);
+
 
 //        graph.getViewport().setMinX(0);
 //        graph.getViewport().setMaxX(10000);
@@ -274,5 +312,115 @@ public class MainActivity extends SampleActivityBase {
         //  msgFilter.setNext(logFragment.getLogView());
 
        // Log.i(TAG, "Ready");
+    }
+
+    /**
+
+     * Sorts an ArrayList<XYValue> with respect to the x values.
+
+     * @param array
+
+     * @return
+
+     */
+
+    private ArrayList<XYValue> sortArray(ArrayList<XYValue> array){
+
+        /*
+
+        //Sorts the xyValues in Ascending order to prepare them for the PointsGraphSeries<DataSet>
+
+         */
+
+        int factor = Integer.parseInt(String.valueOf(Math.round(Math.pow(array.size(),2))));
+
+        int m = array.size()-1;
+
+        int count = 0;
+
+        android.util.Log.d(TAG, "sortArray: Sorting the XYArray.");
+
+
+
+        while(true){
+
+            m--;
+
+            if(m <= 0){
+
+                m = array.size() - 1;
+
+            }
+
+            android.util.Log.d(TAG, "sortArray: m = " + m);
+
+            try{
+
+                //print out the y entrys so we know what the order looks like
+
+                //Log.d(TAG, "sortArray: Order:");
+
+                //for(int n = 0;n < array.size();n++){
+
+                //Log.d(TAG, "sortArray: " + array.get(n).getY());
+
+                //}
+
+                double tempY = array.get(m-1).getY();
+
+                double tempX = array.get(m-1).getX();
+
+                if(tempX > array.get(m).getX() ){
+
+                    array.get(m-1).setY(array.get(m).getY());
+
+                    array.get(m).setY(tempY);
+
+                    array.get(m-1).setX(array.get(m).getX());
+
+                    array.get(m).setX(tempX);
+
+                }
+
+                else if(tempY == array.get(m).getY()){
+
+                    count++;
+
+                    android.util.Log.d(TAG, "sortArray: count = " + count);
+
+                }
+
+
+
+                else if(array.get(m).getX() > array.get(m-1).getX()){
+
+                    count++;
+
+                    android.util.Log.d(TAG, "sortArray: count = " + count);
+
+                }
+
+                //break when factorial is done
+
+                if(count == factor ){
+
+                    break;
+
+                }
+
+            }catch(ArrayIndexOutOfBoundsException e){
+
+                android.util.Log.e(TAG, "sortArray: ArrayIndexOutOfBoundsException. Need more than 1 data point to create Plot." +
+
+                        e.getMessage());
+
+                break;
+
+            }
+
+        }
+
+        return array;
+
     }
 }
