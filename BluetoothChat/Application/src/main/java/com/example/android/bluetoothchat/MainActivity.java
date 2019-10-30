@@ -17,6 +17,7 @@
 
 package com.example.android.bluetoothchat;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -39,6 +40,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.series.PointsGraphSeries;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.Random;
 
 /**
@@ -53,109 +55,57 @@ public class MainActivity extends SampleActivityBase {
     int i;
     public static final String TAG = "MainActivity";
 
-    public double graphLastXValue = 5d;
+    public int graphLastXValue = 0;
     private final Handler mHandler = new Handler();
     // private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
     public Runnable mTimer;
     public double yvalue = 5d;
 
-    public LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();;
+    public LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
 
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
 
     //Parte nova
-    private ArrayList<XYValue> xyValueArray;
+   // public ArrayList<XYValue> xyValueArray;
+
+    GraphView mScatterPlot;
     PointsGraphSeries<DataPoint> xySeries;
 
+    //make xyValue global
+    private ArrayList<XYValue> xyValueArray;
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+   public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         BluetoothChatFragment grafico = new BluetoothChatFragment();
 
         setContentView(R.layout.activity_main);
-       final GraphView graph = (GraphView) findViewById(R.id.graph);
 
-       grafico.initGraph(graph);
+        //Declarar variaveis
 
-        BluetoothChatFragment k = new BluetoothChatFragment();
+        mScatterPlot = (GraphView) findViewById(R.id.graph);
+        xyValueArray = new ArrayList<>();
 
-
-
-//        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
-//
-//             //  new DataPoint(0, 1),
-//             // new DataPoint(1, 5),
-//              //  new DataPoint(2, 3),
-//
-//       });
-//
-//
-//
-//        series.appendData(new DataPoint(0, 1),
-//                true, 22);
-//        series.appendData(new DataPoint(1, 5),
-//                true, 22);
-//        series.appendData(new DataPoint(2, 3),
-//                true, 22);
-//        series.appendData(new DataPoint(20, 20),
-//                true, 22);
-//
-//
-//
-//       graph.addSeries(series);
-//        series.setColor(Color.RED);
-//        series.setDrawDataPoints(true);
-//        series.setDrawBackground(true);
-//
-//        graph.getViewport().setMinX(0);
-//        graph.getViewport().setMaxX(50);
-//
-//        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
-//        graph.getViewport().setMinY(0);
-//        graph.getViewport().setMaxY(50.0);
-//
-//        graph.getViewport().setScrollable(true); // enables horizontal scrolling
-//
-//        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
-//
-//
-//        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
-//
-//        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-//
-//        gridLabel.setHorizontalAxisTitle("x axis");
-//
-//        gridLabel.setVerticalAxisTitle("y axis");
-
-
-        final ArrayList<XYValue>[] xyValueArray = new ArrayList[]{new ArrayList<>()};
-
-
-
-//        BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
-//
-//        BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
-//
-//        xyValueArray.add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
-//
-//        xyValueArray= sortArray(xyValueArray);
-
-
-
+        //Parte antiga
+        //graph = (GraphView) findViewById(R.id.graph);
+        //grafico.initGraph(graph);
+        //BluetoothChatFragment k = new BluetoothChatFragment();
+         xySeries = new PointsGraphSeries<>();
 
         mTimer = new Runnable()
         {
+
+
             @Override
             public void run()
             {
 
-                graphLastXValue += 1.0;
+
 
                 try{
 
-//                                mSeries.appendData(new DataPoint(0, 10),
-//                                        true, 22);
 
 
 
@@ -164,80 +114,62 @@ public class MainActivity extends SampleActivityBase {
 
                     BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
 
+                    xyValueArray.add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
+
+
+
 //                    series.appendData(new DataPoint( Xvalue.ValorX,Yvalue.ValorY),
 //                            true, 100);
 
 
-                    xyValueArray[0].add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
+//
+//                    xyValueArray.add(new XYValue(50,2));
+//                    xyValueArray.add(new XYValue(100,3));
+//                    xyValueArray.add(new XYValue(150,4));
+
+
+//                    xyValueArray.add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
 
 //                    series.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
 //
 //                            true, 100);
 //
-//                    graph.removeAllSeries();
+
 //
-//                    graph.addSeries(series);
+             //
+
+
 
                 }catch (NullPointerException ignored){
 
+
+
                 }
 
 
 
-                //sort it in ASC order
-                xyValueArray[0] = sortArray(xyValueArray[0]);
 
-                for(int i = 0; i< xyValueArray[0].size(); i++){
+                graphLastXValue += 1.0;
+                if(xyValueArray.size()!=0 && xyValueArray!=null){
 
-                    double x = xyValueArray[0].get(i).getX();
-                    double y = xyValueArray[0].get(i).getY();
-                    series.appendData(new DataPoint(-x,y),true,1000);
+                   createScatterPlot();
 
+                }else{
+                    Log.d(TAG, "No data plot");
                 }
 
-                // mHandler.postDelayed(this, 330);
+
+              mHandler.postDelayed(this, 330);
             }
 
 
         };
 
 
-        mHandler.postDelayed(mTimer, 1500);
-
-        try{
-
-        }catch (NullPointerException ignored){
-
-        }
+      mHandler.postDelayed(mTimer, 1500);
 
 
 
-        graph.addSeries(series);
-
-
-        series.setColor(Color.RED);
-        series.setDrawDataPoints(true);
-        series.setDrawBackground(true);
-
-
-//        graph.getViewport().setMinX(0);
-//        graph.getViewport().setMaxX(10000);
-//
-//        graph.getViewport().setYAxisBoundsManual(true); // These lines seem to be causing it
-//        graph.getViewport().setXAxisBoundsManual(true); // These lines seem to be causing it
-//        graph.getViewport().setMinY(0);
-//        graph.getViewport().setMaxY(10000);
-
-//        graph.getViewport().setScrollable(true); // enables horizontal scrolling
-//
-//        graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
-
-
-      //  graph.getGridLabelRenderer().setLabelVerticalWidth(0);
-
-//        gridLabel.setHorizontalAxisTitle("x axis");
-//
-//        gridLabel.setVerticalAxisTitle("y axis");
 
 
         if (savedInstanceState == null) {
@@ -247,6 +179,72 @@ public class MainActivity extends SampleActivityBase {
             transaction.commit();
         }
         }
+
+    public void createScatterPlot() {
+        android.util.Log.d(TAG, "Fazendo o grafico");
+        //Colocar a array na ordem
+
+        xyValueArray=sortArray(xyValueArray);
+
+
+        for(int i=0; i<xyValueArray.size();i++){
+
+            try {
+                double x = xyValueArray.get(i).getX();
+                double y = xyValueArray.get(i).getY();
+                xySeries.appendData(new DataPoint(x,y),true,1000);
+
+            }catch (IllegalArgumentException e){
+
+                android.util.Log.e(TAG,"Deu ruim "+e.getMessage() );
+
+            }
+
+
+
+}
+        xySeries.setColor(Color.RED);
+
+        xySeries.setSize(10f);
+        //set Scrollable and Scaleable
+
+        mScatterPlot.getViewport().setScalable(true);
+
+        mScatterPlot.getViewport().setScalableY(true);
+
+        mScatterPlot.getViewport().setScrollable(true);
+
+        mScatterPlot.getViewport().setScrollableY(true);
+
+
+
+        //set manual x bounds
+
+        mScatterPlot.getViewport().setYAxisBoundsManual(true);
+
+        mScatterPlot.getViewport().setMaxY(2000000);
+
+        mScatterPlot.getViewport().setMinY(0);
+
+
+
+        //set manual y bounds
+
+        mScatterPlot.getViewport().setXAxisBoundsManual(true);
+
+        mScatterPlot.getViewport().setMaxX(2000000);
+
+        mScatterPlot.getViewport().setMinX(0);
+
+
+
+        mScatterPlot.addSeries(xySeries);
+
+
+
+
+
+    }
 
     //#graphView
     double mLastRandom = 2;
@@ -265,6 +263,7 @@ public class MainActivity extends SampleActivityBase {
         return true;
     }
 
+    @SuppressLint("WrongViewCast")
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
 
@@ -281,7 +280,7 @@ public class MainActivity extends SampleActivityBase {
         switch (item.getItemId()) {
             case R.id.menu_toggle_log:
                 mLogShown = !mLogShown;
-                ViewAnimator output = findViewById(R.id.sample_output);
+                @SuppressLint("WrongViewCast") ViewAnimator output = findViewById(R.id.sample_output);
                 if (mLogShown) {
                     output.setDisplayedChild(1);
                 } else {

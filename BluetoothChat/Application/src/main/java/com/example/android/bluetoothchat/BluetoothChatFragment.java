@@ -180,80 +180,80 @@ public class BluetoothChatFragment extends Fragment{
     public static int  decimalX,decimalY;
     public int i =0;
 
-    public void initGraph(GraphView graph)
-    {
-
-//set Scrollable and Scaleable
-
-//        graph.getViewport().setScalable(true);
+//    public void initGraph(GraphView graph)
+//    {
 //
-//        graph.getViewport().setScalableY(true);
+////set Scrollable and Scaleable
 //
-//        graph.getViewport().setScrollable(true);
+////        graph.getViewport().setScalable(true);
+////
+////        graph.getViewport().setScalableY(true);
+////
+////        graph.getViewport().setScrollable(true);
+////
+////        graph.getViewport().setScrollableY(true);
 //
-//        graph.getViewport().setScrollableY(true);
-
-
-
-        //  graph.getViewport().setMinX(0);
-
-       // graph.getViewport().setMaxX(1048575);
-
-
-
-      //  graph.getViewport().setYAxisBoundsManual(true);
-
-        //graph.getViewport().setMinY(0);
-
-       // graph.getViewport().setMaxY(1048575);
-        //set manual x bounds
-
-        graph.getViewport().setYAxisBoundsManual(true);
-
-        graph.getViewport().setMaxY(10000);
-
-      graph.getViewport().setMinY(0);
-
-
-
-        //set manual y bounds
-
-        graph.getViewport().setXAxisBoundsManual(true);
-
-        graph.getViewport().setMaxX(10000);
-
-        graph.getViewport().setMinX(0);
-
-
-
-
-
-
-
-
-        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
-
-       GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-
-//        gridLabel.setHorizontalAxisTitle("x axis");
 //
-//        gridLabel.setVerticalAxisTitle("y axis");
-
-
-
-
-        // first mSeries is a line
-
-        mSeries = new LineGraphSeries<>();
-
-        mSeries.setDrawDataPoints(true);
-
-        mSeries.setDrawBackground(true);
-
-        graph.addSeries(mSeries);
-
-        mSeries.setColor(Color.RED);
-    }
+//
+//        //  graph.getViewport().setMinX(0);
+//
+//       // graph.getViewport().setMaxX(1048575);
+//
+//
+//
+//      //  graph.getViewport().setYAxisBoundsManual(true);
+//
+//        //graph.getViewport().setMinY(0);
+//
+//       // graph.getViewport().setMaxY(1048575);
+//        //set manual x bounds
+//
+//        graph.getViewport().setYAxisBoundsManual(true);
+//
+//        graph.getViewport().setMaxY(2000000);
+//
+//      graph.getViewport().setMinY(0);
+//
+//
+//
+//        //set manual y bounds
+//
+//        graph.getViewport().setXAxisBoundsManual(true);
+//
+//        graph.getViewport().setMaxX(2000000);
+//
+//        graph.getViewport().setMinX(0);
+//
+//
+//
+//
+//
+//
+//
+//
+//        //graph.getGridLabelRenderer().setLabelVerticalWidth(100);
+//
+//       GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+//
+////        gridLabel.setHorizontalAxisTitle("x axis");
+////
+////        gridLabel.setVerticalAxisTitle("y axis");
+//
+//
+//
+//
+//        // first mSeries is a line
+//
+//        mSeries = new LineGraphSeries<>();
+//
+//        mSeries.setDrawDataPoints(true);
+//
+//        mSeries.setDrawBackground(true);
+//
+//        graph.addSeries(mSeries);
+//
+//        mSeries.setColor(Color.RED);
+//    }
 
     @Override
 
