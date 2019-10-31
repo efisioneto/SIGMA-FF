@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 import android.widget.ViewAnimator;
 
 import androidx.fragment.app.Fragment;
@@ -52,7 +53,6 @@ import java.util.Random;
  */
 public class MainActivity extends SampleActivityBase {
     public LineGraphSeries<DataPoint> Series;
-    int i;
     public static final String TAG = "MainActivity";
 
     public int graphLastXValue = 0;
@@ -93,9 +93,11 @@ public class MainActivity extends SampleActivityBase {
         //grafico.initGraph(graph);
         //BluetoothChatFragment k = new BluetoothChatFragment();
          xySeries = new PointsGraphSeries<>();
+         init();
 
-        mTimer = new Runnable()
-        {
+        mTimer = new Runnable(){
+         double x2= 5d;
+         double y2= 5d;
 
 
             @Override
@@ -104,39 +106,31 @@ public class MainActivity extends SampleActivityBase {
 
 
 
+
                 try{
-
-
-
-
 
                     BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
 
                     BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
 
-                    xyValueArray.add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
+                    double x1= Xvalue.ValorX;
+                    double y1= Yvalue.ValorY;
 
+                    if(x1 !=x2 || y1 !=y2 ){
 
+                        x2= x1;
+                        y2= y1;
+                        xyValueArray.add(new XYValue(x2,y2));
 
-//                    series.appendData(new DataPoint( Xvalue.ValorX,Yvalue.ValorY),
-//                            true, 100);
+                        if(xyValueArray.size()!=0 && xyValueArray!=null){
 
+                            createScatterPlot();
 
-//
-//                    xyValueArray.add(new XYValue(50,2));
-//                    xyValueArray.add(new XYValue(100,3));
-//                    xyValueArray.add(new XYValue(150,4));
+                        }else{
+                            Log.d(TAG, "No data plot");
+                        }
 
-
-//                    xyValueArray.add(new XYValue(Xvalue.ValorX,Yvalue.ValorY));
-
-//                    series.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
-//
-//                            true, 100);
-//
-
-//
-             //
+                    }
 
 
 
@@ -149,14 +143,8 @@ public class MainActivity extends SampleActivityBase {
 
 
 
-                graphLastXValue += 1.0;
-                if(xyValueArray.size()!=0 && xyValueArray!=null){
+           //     graphLastXValue += 1.0;
 
-                   createScatterPlot();
-
-                }else{
-                    Log.d(TAG, "No data plot");
-                }
 
 
               mHandler.postDelayed(this, 330);
@@ -180,6 +168,15 @@ public class MainActivity extends SampleActivityBase {
         }
         }
 
+    private void init (){
+
+
+
+
+
+
+    }
+
     public void createScatterPlot() {
         android.util.Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
@@ -190,13 +187,14 @@ public class MainActivity extends SampleActivityBase {
         for(int i=0; i<xyValueArray.size();i++){
 
             try {
+
                 double x = xyValueArray.get(i).getX();
                 double y = xyValueArray.get(i).getY();
                 xySeries.appendData(new DataPoint(x,y),true,1000);
 
             }catch (IllegalArgumentException e){
 
-                android.util.Log.e(TAG,"Deu ruim "+e.getMessage() );
+                Log.e(TAG,"Deu ruim "+e.getMessage() );
 
             }
 
@@ -422,4 +420,11 @@ public class MainActivity extends SampleActivityBase {
         return array;
 
     }
+
+    private void toastMessage(String message){
+
+        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+
+    }
+
 }
