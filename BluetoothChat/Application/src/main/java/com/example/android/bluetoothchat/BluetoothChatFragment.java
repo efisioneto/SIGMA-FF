@@ -137,7 +137,7 @@ public class BluetoothChatFragment extends Fragment{
 
     private ListView mConversationView;
 
-    private EditText mOutEditText;
+   // private EditText mOutEditText;
 
     private Button mSendButton;
 
@@ -387,7 +387,7 @@ public class BluetoothChatFragment extends Fragment{
 
         mConversationView = view.findViewById(R.id.in);
 
-        mOutEditText = view.findViewById(R.id.edit_text_out);
+      //  mOutEditText = view.findViewById(R.id.edit_text_out);
 
         mSendButton = view.findViewById(R.id.button_send);
 
@@ -423,7 +423,7 @@ public class BluetoothChatFragment extends Fragment{
 
         // Initialize the compose field with a listener for the return key
 
-        mOutEditText.setOnEditorActionListener(mWriteListener);
+   //     mOutEditText.setOnEditorActionListener(mWriteListener);
 
 
         // Initialize the send button with a listener that for click events
@@ -438,9 +438,11 @@ public class BluetoothChatFragment extends Fragment{
 
                 if (null != view) {
 
-                    TextView textView = view.findViewById(R.id.edit_text_out);
+                 //   TextView textView = view.findViewById(R.id.edit_text_out);
 
-                    String message = textView.getText().toString();
+                   // String message = textView.getText().toString();
+
+                    String message = "aaa";
 
                     sendMessage(message);
 
@@ -518,7 +520,7 @@ public class BluetoothChatFragment extends Fragment{
 
             mOutStringBuffer.setLength(0);
 
-            mOutEditText.setText(mOutStringBuffer);
+         //   mOutEditText.setText(mOutStringBuffer);
 
         }
 

@@ -731,7 +731,6 @@ id dialog_button
 id disableHome
 id discoverable
 id edit_query
-id edit_text_out
 id end
 id end_padder
 id expand_activities_button

@@ -22,7 +22,7 @@
     <ListView
         android:id="@+id/in"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="512dp"
         android:layout_weight="1"
         android:stackFromBottom="true"
         android:transcriptMode="alwaysScroll" />
@@ -30,22 +30,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/edit_text_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1" />
-
+        <!--        <EditText-->
+        <!--            android:id="@+id/edit_text_out"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="bottom"-->
+        <!--            android:layout_weight="1" />-->
 
 
         <Button
             android:id="@+id/button_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/send" />
+            android:rotationX="0"
+            android:text="@string/send"
+            android:translationX="50mm" />
+
     </LinearLayout>
 
 </LinearLayout>
