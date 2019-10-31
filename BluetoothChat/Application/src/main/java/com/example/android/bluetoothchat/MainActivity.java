@@ -181,7 +181,9 @@ public class MainActivity extends SampleActivityBase {
         android.util.Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
 
+        xySeries.resetData(new DataPoint[] {});
         xyValueArray=sortArray(xyValueArray);
+
 
 
         for(int i=0; i<xyValueArray.size();i++){
@@ -190,6 +192,7 @@ public class MainActivity extends SampleActivityBase {
 
                 double x = xyValueArray.get(i).getX();
                 double y = xyValueArray.get(i).getY();
+
                 xySeries.appendData(new DataPoint(x,y),true,1000);
 
             }catch (IllegalArgumentException e){
