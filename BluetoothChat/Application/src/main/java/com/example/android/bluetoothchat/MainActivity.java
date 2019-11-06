@@ -204,6 +204,12 @@ public class MainActivity extends SampleActivityBase {
 
 
 }
+
+
+        //Preencher a area abaixo
+
+        //xySeries.setDrawingCacheBackgroundColor(true);
+
         xySeries.setColor(Color.RED);
 
         xySeries.setSize(10f);
@@ -219,7 +225,7 @@ public class MainActivity extends SampleActivityBase {
 
 
 
-        //set manual x bounds
+        //set manual y bounds
 
         mScatterPlot.getViewport().setYAxisBoundsManual(true);
 
@@ -229,7 +235,7 @@ public class MainActivity extends SampleActivityBase {
 
 
 
-        //set manual y bounds
+        //set manual x bounds
 
         mScatterPlot.getViewport().setXAxisBoundsManual(true);
 
@@ -240,6 +246,8 @@ public class MainActivity extends SampleActivityBase {
 
 
         mScatterPlot.addSeries(xySeries);
+
+
 
 
 

@@ -682,10 +682,17 @@ public class BluetoothChatFragment extends Fragment{
 
                     String readMessage = new String(readBuf, 0, 80);
 
+                    //Teste para ver se estar funcioando
+
+                    Mensagem Teste1= new Mensagem();
+                    Teste1.setMensagem(readMessage.substring(15,15));
+                    String palavra= Teste1.getMessagem();
+
+
                     //Operator ID, inteiro de 0 a 9
                     Mensagem ID = new Mensagem();
                     ID.setMensagem(readMessage.substring(1, 3));
-                    String palavra = ID.getMessagem();
+
 
                     //Message counter, inteiro de 0 a 65535
                     Mensagem MessageCounter = new Mensagem();
@@ -759,19 +766,33 @@ public class BluetoothChatFragment extends Fragment{
 
 
                   //Loop inicial apenas para a primeira string nao ser lida
-                    if(i<=5) {
-                        hexX="00000";
-                        hexY="00000";
-                        i++;
-                    }
-                    else {
-                        hexX=PositionIMX.getMessagem();
-                        hexY=PositionIMX.getMessagem();
-                    }
 
-                    // Converter hexadecimal em decimal
-                    decimalX=Integer.parseInt(hexX,16);
-                    decimalY=Integer.parseInt(hexY,16);
+
+//if(palavra!="0"&&palavra!="1"&&palavra!="2"&&palavra!="3"&&palavra!="4"&&palavra!="5"&&
+//        palavra!="6"&&palavra!="7"&&palavra!="8"&&palavra!="9"&&palavra!="A"&&palavra!="B"&&
+//        palavra!="C"&&palavra!="D"&&palavra!="E"&&palavra!="F"){
+//
+//    mConversationArrayAdapter.add("No message");
+//}
+
+  //  else{
+
+        if(i<=1) {
+            hexX="00000";
+            hexY="00000";
+            i++;
+        }
+        else {
+            hexX=PositionIMX.getMessagem();
+            hexY=PositionIMX.getMessagem();
+   }
+
+        // Converter hexadecimal em decimal
+        decimalX=Integer.parseInt(hexX,16);
+        decimalY=Integer.parseInt(hexY,16);
+   // }
+
+
 
 
                     //#graphView

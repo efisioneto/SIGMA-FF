@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.series.PointsGraphSeries;
 
 import java.util.ArrayList;
@@ -20,16 +21,22 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    PointsGraphSeries<DataPoint> xySeries;
+    //PointsGraphSeries<DataPoint> xySeries;
+
+    LineGraphSeries<DataPoint> xySeries;
 
     private Button btnAddPt;
 
     private EditText mX,mY;
+    public double a,b,c,d,e,f,g,h,i,j;
 
     GraphView mScatterPlot;
 
     //make xyValue global
     private ArrayList<XYValue> xyValueArray;
+    private ArrayList<XYValue> CorrectArray;
+    private ArrayList<XYValue> NewArray;
+
 
 
 
@@ -45,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         mY = (EditText) findViewById(R.id.numY);
         mScatterPlot = (GraphView) findViewById(R.id.scatterPlot);
         xyValueArray = new ArrayList<>();
+        CorrectArray= new ArrayList<>();
+        NewArray= new ArrayList<>();
+
 
         init();
 
@@ -54,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     private void init (){
         //declare xySeries Object
 
-        xySeries = new PointsGraphSeries<>();
-
+        //xySeries = new PointsGraphSeries<>();
+        xySeries = new LineGraphSeries<>();
         btnAddPt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
                  Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
                  xyValueArray.add(new XYValue(x,y));
+                 NewArray.add(new XYValue(x,y));
+
                  init();
 
                 }else{
@@ -81,6 +93,42 @@ public class MainActivity extends AppCompatActivity {
         });
 
 if (xyValueArray.size()!=0){
+
+
+    a = NewArray.get(NewArray.size()-1).getX();
+    b = NewArray.get(NewArray.size()-1).getY();
+
+if(xyValueArray.size()>1) {
+
+    c = NewArray.get(NewArray.size()-2).getX();
+    d = NewArray.get(NewArray.size()-2).getY();
+
+
+}
+    if(xyValueArray.size()>2) {
+
+        e = NewArray.get(NewArray.size()-3).getX();
+        f = NewArray.get(NewArray.size()-3).getY();
+
+
+    }
+    if(xyValueArray.size()>3) {
+
+        g = NewArray.get(NewArray.size()-4).getX();
+        h = NewArray.get(NewArray.size()-4).getY();
+
+
+    }
+    if(xyValueArray.size()>5) {
+
+        i = NewArray.get(NewArray.size()-5).getX();
+        j = NewArray.get(NewArray.size()-5).getY();
+
+
+    }
+
+
+
 
  createScatterPlot();
 
@@ -98,16 +146,31 @@ if (xyValueArray.size()!=0){
         Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
 
-        xyValueArray=sortArray(xyValueArray);
+        CorrectArray=sortArray(xyValueArray);
 
         //adicionando dados
 
-        for(int i=0; i<xyValueArray.size();i++){
+        //for(int i=0; i<xyValueArray.size();i++){
+//        try {
+//
+//        xySeries.appendData(new DataPoint(a,b),true,1000);
+//
+//        }catch (IllegalArgumentException e){
+//            Log.e(TAG,"Deu ruim "+e.getMessage() );
+//
+//
+//        }
+        for(int i=0; i< CorrectArray.size();i++){
 
             try {
-                double x = xyValueArray.get(i).getX();
-                double y = xyValueArray.get(i).getY();
-                xySeries.appendData(new DataPoint(x,y),true,1000);
+                double x =  CorrectArray.get(i).getX();
+                double y =  CorrectArray.get(i).getY();
+
+                if(x==c&&y==d ||x==a&&y==b){
+                    xySeries.appendData(new DataPoint(x,y),true,1000);
+
+                }
+
 
            }catch (IllegalArgumentException e){
 
@@ -123,7 +186,16 @@ if (xyValueArray.size()!=0){
 
         xySeries.setColor(Color.RED);
 
-        xySeries.setSize(10f);
+      //  xySeries.setSize(10f);
+        xySeries.setThickness(10);
+
+        //make area under the graph
+        xySeries.setDrawBackground(false);
+
+        //Data points can be highlighted
+
+        xySeries.setDrawDataPoints(true);
+
 
 
 
