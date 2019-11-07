@@ -8,12 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
-import com.jjoe64.graphview.series.PointsGraphSeries;
 
 import java.util.ArrayList;
 
@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     LineGraphSeries<DataPoint> xySeries;
 
-    private Button btnAddPt;
-    private Button btnPlus;
+    private Button btnAddPt,btnRight,btnLeft;
+    private ImageButton btnUp,btnDown;
 
     private EditText mX,mY;
     public double x,y;
@@ -49,7 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
         //declare variables in onCreate
 
-        btnPlus = (Button) findViewById(R.id.ButtonPlus);
+        btnUp = (ImageButton) findViewById(R.id.ArrowUp);
+        btnDown = (ImageButton) findViewById(R.id.ArrowDown);
+        btnRight= (Button) findViewById(R.id.ArrowRight);
+        btnLeft = (Button) findViewById(R.id.ArrowLeft);
         btnAddPt = (Button) findViewById(R.id.btnAddPt);
         mX = (EditText) findViewById(R.id.numX);
         mY = (EditText) findViewById(R.id.numY);
@@ -70,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
         //xySeries = new PointsGraphSeries<>();
         xySeries = new LineGraphSeries<>();
 
-
-      btnPlus.setOnClickListener(new View.OnClickListener() {
+//Subindo no Grafico
+      btnUp.setOnClickListener(new View.OnClickListener() {
           @Override
-          public void onClick(View c) {
-              x=x+1;
-              y=y+1;
+          public void onClick(View up) {
+              x=x;
+              y=y+10;
 
               Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
               xyValueArray.add(new XYValue(x,y));
@@ -85,6 +88,54 @@ public class MainActivity extends AppCompatActivity {
 
           }
       });
+
+        //Indo pra Direita no Grafico
+        btnRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View right) {
+                x=x+10;
+                y=y;
+
+                Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
+                xyValueArray.add(new XYValue(x,y));
+                NewArray.add(new XYValue(x,y));
+
+                init();
+
+            }
+        });
+
+        //Descendo no Grafico
+        btnDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View down) {
+                x=x;
+                y=y-10;
+
+                Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
+                xyValueArray.add(new XYValue(x,y));
+                NewArray.add(new XYValue(x,y));
+
+                init();
+
+            }
+        });
+
+        //Indo pra esquerda no Grafico
+        btnLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View left) {
+                x=x-10;
+                y=y;
+
+                Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
+                xyValueArray.add(new XYValue(x,y));
+                NewArray.add(new XYValue(x,y));
+
+                init();
+
+            }
+        });
 
         btnAddPt.setOnClickListener(new View.OnClickListener() {
             @Override
