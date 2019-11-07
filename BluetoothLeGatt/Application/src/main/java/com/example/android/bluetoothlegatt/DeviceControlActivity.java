@@ -80,7 +80,11 @@ public class DeviceControlActivity extends Activity {
     private Runnable mTimer;
     private double graphLastXValue = 5d;
     private double yvalue = 5d;
+
+
     private LineGraphSeries<DataPoint> mSeries;
+
+
 
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {

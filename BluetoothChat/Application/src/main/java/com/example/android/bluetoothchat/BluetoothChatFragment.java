@@ -777,23 +777,52 @@ public class BluetoothChatFragment extends Fragment{
 
   //  else{
 
-        if(i<=1) {
-            hexX="00000";
-            hexY="00000";
-            i++;
-        }
-        else {
+//        if(i<=1) {
+//
+//
+//            hexX="00000";
+//            hexY="00000";
+//
+//
+//            i++;
+//        }
+
+//        if(palavra!="0"&&palavra!="1"&&palavra!="2"&&palavra!="3"&&palavra!="4"&&palavra!="5"&&
+//       palavra!="6"&&palavra!="7"&&palavra!="8"&&palavra!="9"&&palavra!="A"&&palavra!="B"
+//                &&palavra!="C"&&palavra!="D"&&palavra!="E"&&palavra!="F"){
+//
+//            mConversationArrayAdapter.add("No message");
+//
+////         hexX="00000";
+////         hexY="00000";
+//
+//
+//        }
+//        else {
+
+            try {
+
+
             hexX=PositionIMX.getMessagem();
             hexY=PositionIMX.getMessagem();
-   }
 
-        // Converter hexadecimal em decimal
-        decimalX=Integer.parseInt(hexX,16);
-        decimalY=Integer.parseInt(hexY,16);
-   // }
+            // Converter hexadecimal em decimal
+            decimalX=Integer.parseInt(hexX,16);
+            decimalY=Integer.parseInt(hexY,16);
+            double a =decimalX;
+            double b =decimalY;
 
+            mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
+            } catch (IllegalArgumentException e){
 
+                Log.e(TAG,"Deu ruim "+e.getMessage() );
+                mConversationArrayAdapter.add("No message");
 
+            }
+
+        //}
+
+                    break;
 
                     //#graphView
 //                    mTimer = new Runnable()
@@ -835,8 +864,6 @@ public class BluetoothChatFragment extends Fragment{
 
 
 
-                    double a =decimalX;
-                    double b =decimalY;
 
 
 
@@ -851,9 +878,6 @@ public class BluetoothChatFragment extends Fragment{
                     //System.out.println(decimal);
 
                     //Printar os dados
-                    mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
-
-                    break;
 
 
                 case Constants.MESSAGE_DEVICE_NAME:

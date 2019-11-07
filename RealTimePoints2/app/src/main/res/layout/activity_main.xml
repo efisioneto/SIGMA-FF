@@ -64,5 +64,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numX" />
 
+    <Button
+        android:id="@+id/ButtonPlus"
+        android:layout_width="81dp"
+        android:layout_height="42dp"
+        android:text="+"
+        tools:layout_editor_absoluteX="314dp"
+        tools:layout_editor_absoluteY="571dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

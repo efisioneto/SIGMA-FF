@@ -67,13 +67,22 @@ public class MainActivity extends SampleActivityBase {
     private boolean mLogShown;
 
     //Parte nova
+
+    public double a,b,c,d;
+
    // public ArrayList<XYValue> xyValueArray;
+    //choice Point ou line
+    //PointsGraphSeries<DataPoint> xySeries;
+    LineGraphSeries<DataPoint> xySeries;
 
     GraphView mScatterPlot;
-    PointsGraphSeries<DataPoint> xySeries;
 
     //make xyValue global
+
     private ArrayList<XYValue> xyValueArray;
+    private ArrayList<XYValue> OriginalArray;
+
+
 
 
     @Override
@@ -92,7 +101,7 @@ public class MainActivity extends SampleActivityBase {
         //graph = (GraphView) findViewById(R.id.graph);
         //grafico.initGraph(graph);
         //BluetoothChatFragment k = new BluetoothChatFragment();
-         xySeries = new PointsGraphSeries<>();
+         xySeries = new LineGraphSeries<>();
          init();
 
         mTimer = new Runnable(){
@@ -121,10 +130,21 @@ public class MainActivity extends SampleActivityBase {
                         x2= x1;
                         y2= y1;
                         xyValueArray.add(new XYValue(x2,y2));
+                        OriginalArray.add(new XYValue(x2,y2));
 
                         if(xyValueArray.size()!=0 && xyValueArray!=null){
 
-                            createScatterPlot();
+                            a = OriginalArray.get(OriginalArray.size()-1).getX();
+                            b = OriginalArray.get(OriginalArray.size()-1).getY();
+
+                            if(xyValueArray.size()>1) {
+
+                                c = OriginalArray.get(OriginalArray.size()-2).getX();
+                                d = OriginalArray.get(OriginalArray.size()-2).getY();
+
+                            }
+
+                                createScatterPlot();
 
                         }else{
                             Log.d(TAG, "No data plot");
@@ -193,7 +213,13 @@ public class MainActivity extends SampleActivityBase {
                 double x = xyValueArray.get(i).getX();
                 double y = xyValueArray.get(i).getY();
 
-                xySeries.appendData(new DataPoint(x,y),true,1000);
+                if(x==c&&y==d ||x==a&&y==b){
+                    xySeries.appendData(new DataPoint(x,y),true,1000);
+
+                }
+
+
+//                xySeries.appendData(new DataPoint(x,y),true,1000);
 
             }catch (IllegalArgumentException e){
 
@@ -212,7 +238,10 @@ public class MainActivity extends SampleActivityBase {
 
         xySeries.setColor(Color.RED);
 
-        xySeries.setSize(10f);
+       // xySeries.setSize(10f);
+        xySeries.setThickness(10);
+
+
         //set Scrollable and Scaleable
 
         mScatterPlot.getViewport().setScalable(true);
@@ -243,6 +272,12 @@ public class MainActivity extends SampleActivityBase {
 
         mScatterPlot.getViewport().setMinX(0);
 
+        //make area under the graph
+        xySeries.setDrawBackground(false);
+
+        //Data points can be highlighted
+
+        xySeries.setDrawDataPoints(true);
 
 
         mScatterPlot.addSeries(xySeries);

@@ -26,8 +26,10 @@ public class MainActivity extends AppCompatActivity {
     LineGraphSeries<DataPoint> xySeries;
 
     private Button btnAddPt;
+    private Button btnPlus;
 
     private EditText mX,mY;
+    public double x,y;
     public double a,b,c,d,e,f,g,h,i,j;
 
     GraphView mScatterPlot;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         //declare variables in onCreate
 
+        btnPlus = (Button) findViewById(R.id.ButtonPlus);
         btnAddPt = (Button) findViewById(R.id.btnAddPt);
         mX = (EditText) findViewById(R.id.numX);
         mY = (EditText) findViewById(R.id.numY);
@@ -66,14 +69,31 @@ public class MainActivity extends AppCompatActivity {
 
         //xySeries = new PointsGraphSeries<>();
         xySeries = new LineGraphSeries<>();
+
+
+      btnPlus.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View c) {
+              x=x+1;
+              y=y+1;
+
+              Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
+              xyValueArray.add(new XYValue(x,y));
+              NewArray.add(new XYValue(x,y));
+
+              init();
+
+          }
+      });
+
         btnAddPt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if(!mX.getText().toString().equals("")&&!mY.getText().toString().equals("")){
 
-                 double x= Double.parseDouble(mX.getText().toString());
-                 double y= Double.parseDouble(mY.getText().toString());
+                x= Double.parseDouble(mX.getText().toString());
+                y= Double.parseDouble(mY.getText().toString());
 
                  Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
                  xyValueArray.add(new XYValue(x,y));
