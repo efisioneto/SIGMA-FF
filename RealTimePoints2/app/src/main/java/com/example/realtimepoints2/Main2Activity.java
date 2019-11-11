@@ -16,7 +16,7 @@ public class Main2Activity extends AppCompatActivity {
     private Button button;
 
 
-    @SuppressLint("WrongViewCast")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

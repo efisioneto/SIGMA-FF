@@ -19,24 +19,25 @@
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.android.bluetoothchat.Launch" >
+        <activity
+            android:name="com.example.android.bluetoothchat.Launch"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.Light" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.bluetoothchat.Simulator" />
+        <activity
+            android:name="com.example.android.bluetoothchat.Simulator"
+            android:theme="@style/Theme.AppCompat.Light" />
         <activity
             android:name="com.example.android.bluetoothchat.MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.bluetoothchat.DeviceListActivity"
