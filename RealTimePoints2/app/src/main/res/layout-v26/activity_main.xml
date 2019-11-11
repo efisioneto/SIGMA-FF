@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/scatterPlot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddPt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="187dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/add_point"
+        app:layout_constraintBottom_toTopOf="@+id/numX"
+        app:layout_constraintEnd_toStartOf="@id/ArrowUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scatterPlot" />
+
+    <EditText
+        android:id="@+id/numX"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="47dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="@string/x"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/numY"
+        app:layout_constraintEnd_toStartOf="@+id/ArrowLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scatterPlot"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/numY"
+        android:layout_width="122dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="49dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="@string/y"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ArrowLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numX"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/ArrowLeft"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:text="@string/l"
+        app:layout_constraintBottom_toTopOf="@+id/ArrowDown"
+        app:layout_constraintEnd_toStartOf="@+id/ArrowRight"
+        app:layout_constraintStart_toEndOf="@+id/numX"
+        app:layout_constraintTop_toBottomOf="@id/ArrowUp" />
+
+    <Button
+        android:id="@+id/ArrowRight"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="68dp"
+        android:text="@string/r"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ArrowLeft"
+        app:layout_constraintTop_toBottomOf="@+id/scatterPlot" />
+
+    <ImageButton
+        android:id="@+id/ArrowUp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/ArrowLeft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numX"
+        app:layout_constraintTop_toBottomOf="@+id/scatterPlot"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/ArrowDown"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numY"
+        app:layout_constraintTop_toBottomOf="@id/ArrowUp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:contentDescription="@string/todo" />
+
+
+</RelativeLayout>

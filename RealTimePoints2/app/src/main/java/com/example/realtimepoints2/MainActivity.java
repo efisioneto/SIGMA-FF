@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init (){
+
         //declare xySeries Object
 
         //xySeries = new PointsGraphSeries<>();

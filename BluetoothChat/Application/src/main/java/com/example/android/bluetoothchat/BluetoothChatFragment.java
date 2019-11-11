@@ -764,42 +764,6 @@ public class BluetoothChatFragment extends Fragment{
                     CRC.setMensagem(readMessage.substring(69, 73));
                     //String hex="FE" ;
 
-
-                  //Loop inicial apenas para a primeira string nao ser lida
-
-
-//if(palavra!="0"&&palavra!="1"&&palavra!="2"&&palavra!="3"&&palavra!="4"&&palavra!="5"&&
-//        palavra!="6"&&palavra!="7"&&palavra!="8"&&palavra!="9"&&palavra!="A"&&palavra!="B"&&
-//        palavra!="C"&&palavra!="D"&&palavra!="E"&&palavra!="F"){
-//
-//    mConversationArrayAdapter.add("No message");
-//}
-
-  //  else{
-
-//        if(i<=1) {
-//
-//
-//            hexX="00000";
-//            hexY="00000";
-//
-//
-//            i++;
-//        }
-
-//        if(palavra!="0"&&palavra!="1"&&palavra!="2"&&palavra!="3"&&palavra!="4"&&palavra!="5"&&
-//       palavra!="6"&&palavra!="7"&&palavra!="8"&&palavra!="9"&&palavra!="A"&&palavra!="B"
-//                &&palavra!="C"&&palavra!="D"&&palavra!="E"&&palavra!="F"){
-//
-//            mConversationArrayAdapter.add("No message");
-//
-////         hexX="00000";
-////         hexY="00000";
-//
-//
-//        }
-//        else {
-
             try {
 
 
@@ -824,61 +788,7 @@ public class BluetoothChatFragment extends Fragment{
 
                     break;
 
-                    //#graphView
-//                    mTimer = new Runnable()
-//                    {
-//
-//                        public void run()
-//                        {
-//
-//
-//                           // BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
-//                         //   BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
-//
-//
-//
-//                           //double a =Xvalue.ValorX;
-//                           //double b =Yvalue.ValorY;
-//
-//
-//
-//
-////                            mSeries.appendData(new DataPoint(a, b),
-////                                  true, 22);
-//
-//                            //mSeries.appendData(new DataPoint(Xvalue.ValorX,Yvalue.ValorY),
-//                            //       true, 100);
-//
-//                            // mHandler.postDelayed(this, 330);
-//
-//
-//                /*mSeries.appendData(new DataPoint(graphLastXValue, getRandom()+speed_num),
-//                        true, 22);*/
-//
-//
-//
-//
-//                        }
-//                    };
-//                  //  mHandler.postDelayed(mTimer, 1000);
-
-
-
-
-
-
-                    //String valor= Integer.toString(decimal);
-                    // mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
-                    // mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX");
-//                    mConversationArrayAdapter.add("XXXXXX "+readMessage+"XXXXXX"+ID.getMessagem()
-//                            +MessageCounter.getMessagem()+StepCounter.getMessagem()+Flag.getMessagem());
-
-                    //mConversationArrayAdapter.add("X:"+PositionIMX.getMessagem()+" Y:"
-                    //      +PositionIMY.getMessagem()+"XX" +decimal);
-                    //System.out.println(decimal);
-
-                    //Printar os dados
-
+       
 
                 case Constants.MESSAGE_DEVICE_NAME:
 

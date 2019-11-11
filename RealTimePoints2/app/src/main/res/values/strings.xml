@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RealTimePoints2</string>
+    <string name="simulator">Simulator</string>
+    <string name="add_point">Add point</string>
+    <string name="y">y</string>
+    <string name="l">L</string>
+    <string name="r">R</string>
+    <string name="x">x</string>
+    <string name="todo">TODO</string>
+
 </resources>

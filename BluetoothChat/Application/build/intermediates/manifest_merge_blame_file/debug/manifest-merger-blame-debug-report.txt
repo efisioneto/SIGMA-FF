@@ -1,88 +1,87 @@
 1<?xml version="1.0" encoding="utf-8"?>
-2<!--
-3 Copyright 2014 The Android Open Source Project
-4
-5 Licensed under the Apache License, Version 2.0 (the "License");
-6 you may not use this file except in compliance with the License.
-7 You may obtain a copy of the License at
-8
-9     http://www.apache.org/licenses/LICENSE-2.0
-10
-11 Unless required by applicable law or agreed to in writing, software
-12 distributed under the License is distributed on an "AS IS" BASIS,
-13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-14 See the License for the specific language governing permissions and
-15 limitations under the License.
-16-->
-17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-18    package="com.example.android.bluetoothchat"
-19    android:versionCode="1"
-20    android:versionName="1.0" >
-21
-22    <uses-sdk
-23        android:minSdkVersion="14"
-23-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml
-24        android:targetSdkVersion="29" />
-24-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml
-25
-26    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
-27
-28    <uses-permission android:name="android.permission.BLUETOOTH" />
-28-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:26:5-68
-28-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:26:22-65
-29    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-29-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:27:5-74
-29-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:27:22-71
-30    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-30-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:28:5-81
-30-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:28:22-78
-31    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-31-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:29:5-78
-31-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:29:22-76
-32
-33    <application
-33-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:31:5-54:19
-34        android:allowBackup="true"
-34-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:32:9-35
-35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-35-->[androidx.core:core:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
-36        android:debuggable="true"
-37        android:icon="@drawable/ic_launcher"
-37-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:33:9-45
-38        android:label="@string/app_name"
-38-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:34:9-41
-39        android:testOnly="true"
-40        android:theme="@style/AppTheme" >
-40-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:35:9-40
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.android.bluetoothchat"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="14"
+8-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml
+10    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+11    <uses-permission android:name="android.permission.BLUETOOTH" />
+11-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:8:5-68
+11-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:8:22-65
+12    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+12-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:9:5-74
+12-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:9:22-71
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:10:5-81
+13-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:10:22-78
+14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+14-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:11:5-79
+14-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:11:22-76
+15
+16    <application
+16-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:13:5-42:19
+17        android:allowBackup="true"
+17-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:14:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.1.0] C:\Users\efisi\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@drawable/ic_launcher"
+20-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:15:9-45
+21        android:label="@string/app_name"
+21-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:16:9-41
+22        android:theme="@style/AppTheme" >
+22-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:17:9-40
+23        <activity android:name="com.example.android.bluetoothchat.Launch" >
+23-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:19:9-25:20
+23-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:19:19-41
+24            <intent-filter>
+24-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:20:13-24:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:21:17-69
+25-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:21:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:23:17-77
+27-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:23:27-74
+28            </intent-filter>
+29        </activity>
+30        <activity android:name="com.example.android.bluetoothchat.Simulator" />
+30-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:26:9-47
+30-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:26:19-44
+31        <activity
+31-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:27:9-36:20
+32            android:name="com.example.android.bluetoothchat.MainActivity"
+32-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:28:13-41
+33            android:configChanges="orientation|keyboardHidden"
+33-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:29:13-63
+34            android:label="@string/app_name" >
+34-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:30:13-45
+35            <intent-filter>
+35-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:20:13-24:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:21:17-69
+36-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:21:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:23:17-77
+38-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:23:27-74
+39            </intent-filter>
+40        </activity>
 41        <activity
-41-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:38:9-46:20
-42            android:name="com.example.android.bluetoothchat.MainActivity"
-42-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:39:13-41
+41-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:37:9-41:64
+42            android:name="com.example.android.bluetoothchat.DeviceListActivity"
+42-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:38:13-47
 43            android:configChanges="orientation|keyboardHidden"
-43-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:40:13-63
-44            android:label="@string/app_name" >
-44-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:41:13-45
-45            <intent-filter>
-45-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:42:13-45:29
-46                <action android:name="android.intent.action.MAIN" />
-46-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:43:17-69
-46-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:43:25-66
+43-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:39:13-63
+44            android:label="@string/select_device"
+44-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:40:13-50
+45            android:theme="@android:style/Theme.Holo.Dialog" />
+45-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:41:13-61
+46    </application>
 47
-48                <category android:name="android.intent.category.LAUNCHER" />
-48-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:44:17-77
-48-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:44:27-74
-49            </intent-filter>
-50        </activity>
-51        <activity
-51-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:48:9-52:64
-52            android:name="com.example.android.bluetoothchat.DeviceListActivity"
-52-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:49:13-47
-53            android:configChanges="orientation|keyboardHidden"
-53-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:50:13-63
-54            android:label="@string/select_device"
-54-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:51:13-50
-55            android:theme="@android:style/Theme.Holo.Dialog" />
-55-->C:\Users\efisi\SIGMA\SIGMA-FF\BluetoothChat\Application\src\main\AndroidManifest.xml:52:13-61
-56    </application>
-57
-58</manifest>
+48</manifest>

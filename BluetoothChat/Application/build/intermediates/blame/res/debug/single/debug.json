@@ -376,6 +376,10 @@
         "source": "C:\\Users\\efisi\\.gradle\\caches\\transforms-2\\files-2.1\\37ec02f661e3547c5499ecdfd9f3cd1f\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\res\\merged\\debug\\layout_activity_simulator.xml.flat",
+        "source": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\src\\main\\res\\layout\\activity_simulator.xml"
+    },
+    {
         "merged": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\efisi\\.gradle\\caches\\transforms-2\\files-2.1\\37ec02f661e3547c5499ecdfd9f3cd1f\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -1274,6 +1278,10 @@
     {
         "merged": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\efisi\\.gradle\\caches\\transforms-2\\files-2.1\\37ec02f661e3547c5499ecdfd9f3cd1f\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\res\\merged\\debug\\layout_activity_launch.xml.flat",
+        "source": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\src\\main\\res\\layout\\activity_launch.xml"
     },
     {
         "merged": "C:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
