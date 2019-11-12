@@ -22,28 +22,40 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     //PointsGraphSeries<DataPoint> xySeries;
+    //Criando uma array de dados
+    public LineGraphSeries<DataPoint>[] xySeries;
 
-    LineGraphSeries<DataPoint> xySeries;
-
-    private Button btnAddPt,btnRight,btnLeft;
+    private Button btnAddPt,btnRight,btnLeft,btnUpFloor,btnDownFloor;
     private ImageButton btnUp,btnDown;
 
     private EditText mX,mY;
     public double x,y;
     public double a,b,c,d,e,f,g,h,i,j;
 
-    GraphView mScatterPlot;
+
+    //Criando uma array de graficos
+    public int n=0;
+    public GraphView[] mScatterPlot;
 
     //make xyValue global
-    private ArrayList<XYValue> xyValueArray;
-    private ArrayList<XYValue> CorrectArray;
-    private ArrayList<XYValue> NewArray;
+    private ArrayList<XYValue>[] xyValueArray;
+    private ArrayList<XYValue>[] CorrectArray;
+    private ArrayList<XYValue>[] NewArray;
+
+    //Criando um inteiro que condicione a mudanca de andar
+    int andar=0;
+    int change=0;
+
 
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        mScatterPlot= new  GraphView[100];
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -56,10 +68,31 @@ public class MainActivity extends AppCompatActivity {
         btnAddPt = (Button) findViewById(R.id.btnAddPt);
         mX = (EditText) findViewById(R.id.numX);
         mY = (EditText) findViewById(R.id.numY);
-        mScatterPlot = (GraphView) findViewById(R.id.scatterPlot);
-        xyValueArray = new ArrayList<>();
-        CorrectArray= new ArrayList<>();
-        NewArray= new ArrayList<>();
+
+        try {
+        mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
+        }catch (NullPointerException e){
+
+            Log.e(TAG,"Deu ruim na array "+e.getMessage() );
+
+        }
+
+        xyValueArray= new ArrayList[100];
+        CorrectArray= new ArrayList[100];
+        NewArray= new ArrayList[100];
+
+
+        xyValueArray[0] = new ArrayList<>();
+        CorrectArray[0]= new ArrayList<>();
+        NewArray[0]= new ArrayList<>();
+
+        xyValueArray[1] = new ArrayList<>();
+        CorrectArray[1]= new ArrayList<>();
+        NewArray[1]= new ArrayList<>();
+
+        //Declare Variables to change the floor
+        btnUpFloor = (Button) findViewById(R.id.ChangeFloorUp);
+        btnDownFloor = (Button) findViewById(R.id.ChangeFloorDown);
 
 
         init();
@@ -72,34 +105,80 @@ public class MainActivity extends AppCompatActivity {
         //declare xySeries Object
 
         //xySeries = new PointsGraphSeries<>();
-        xySeries = new LineGraphSeries<>();
+        //xySeries = new LineGraphSeries<>()[100];
+
+        //Declarando as series
+        xySeries= new LineGraphSeries[100];
+        xySeries[0]= new LineGraphSeries<>();
+        xySeries[1]= new LineGraphSeries<>();
+
+
+
+//Subindo de andar
+        btnUpFloor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View upFloor) {
+
+                n=1;
+                andar=1;
+                Log.d(TAG,"Mudando de andar: " + n);
+                mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
+                init();
+
+            }
+        });
+
+//Descendo de andar
+                btnDownFloor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View upFloor) {
+                n=0;
+                andar=1;
+                Log.d(TAG,"Mudando de andar de andar: " + n);
+                mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
+                init();
+
+            }
+        });
+
+
+
 
 //Subindo no Grafico
       btnUp.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View up) {
               x=x;
-              y=y+10;
+              y=y+20;
+if(andar==1){
+    change=1;
+    andar=0;
 
-              Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
-              xyValueArray.add(new XYValue(x,y));
-              NewArray.add(new XYValue(x,y));
+}
+              Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
+              xyValueArray[n].add(new XYValue(x,y));
+              NewArray[n].add(new XYValue(x,y));
 
               init();
 
           }
       });
 
+
+
         //Indo pra Direita no Grafico
         btnRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View right) {
-                x=x+10;
+                x=x+20;
                 y=y;
-
-                Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
-                xyValueArray.add(new XYValue(x,y));
-                NewArray.add(new XYValue(x,y));
+                if(andar==1){
+                    change=1;
+                    andar=0;
+                }
+                Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
+                xyValueArray[n].add(new XYValue(x,y));
+                NewArray[n].add(new XYValue(x,y));
 
                 init();
 
@@ -111,11 +190,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View down) {
                 x=x;
-                y=y-10;
-
-                Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
-                xyValueArray.add(new XYValue(x,y));
-                NewArray.add(new XYValue(x,y));
+                y=y-20;
+                if(andar==1){
+                    change=1;
+                    andar=0;
+                }
+                Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
+                xyValueArray[n].add(new XYValue(x,y));
+                NewArray[n].add(new XYValue(x,y));
 
                 init();
 
@@ -126,12 +208,15 @@ public class MainActivity extends AppCompatActivity {
         btnLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View left) {
-                x=x-10;
+                x=x-20;
                 y=y;
-
-                Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
-                xyValueArray.add(new XYValue(x,y));
-                NewArray.add(new XYValue(x,y));
+                if(andar==1){
+                    change=1;
+                    andar=0;
+                }
+                Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
+                xyValueArray[n].add(new XYValue(x,y));
+                NewArray[n].add(new XYValue(x,y));
 
                 init();
 
@@ -148,8 +233,8 @@ public class MainActivity extends AppCompatActivity {
                 y= Double.parseDouble(mY.getText().toString());
 
                  Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
-                 xyValueArray.add(new XYValue(x,y));
-                 NewArray.add(new XYValue(x,y));
+                 xyValueArray[n].add(new XYValue(x,y));
+                 NewArray[n].add(new XYValue(x,y));
 
                  init();
 
@@ -164,37 +249,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-if (xyValueArray.size()!=0){
+if (xyValueArray[n].size()!=0){
 
 
-    a = NewArray.get(NewArray.size()-1).getX();
-    b = NewArray.get(NewArray.size()-1).getY();
+    a = NewArray[n].get(NewArray[n].size()-1).getX();
+    b = NewArray[n].get(NewArray[n].size()-1).getY();
 
-if(xyValueArray.size()>1) {
+if(xyValueArray[n].size()>1) {
 
-    c = NewArray.get(NewArray.size()-2).getX();
-    d = NewArray.get(NewArray.size()-2).getY();
+    c = NewArray[n].get(NewArray[n].size()-2).getX();
+    d = NewArray[n].get(NewArray[n].size()-2).getY();
 
 
 }
-    if(xyValueArray.size()>2) {
+    if(xyValueArray[n].size()>2) {
 
-        e = NewArray.get(NewArray.size()-3).getX();
-        f = NewArray.get(NewArray.size()-3).getY();
-
-
-    }
-    if(xyValueArray.size()>3) {
-
-        g = NewArray.get(NewArray.size()-4).getX();
-        h = NewArray.get(NewArray.size()-4).getY();
+        e = NewArray[n].get(NewArray[n].size()-3).getX();
+        f = NewArray[n].get(NewArray[n].size()-3).getY();
 
 
     }
-    if(xyValueArray.size()>5) {
+    if(xyValueArray[n].size()>3) {
 
-        i = NewArray.get(NewArray.size()-5).getX();
-        j = NewArray.get(NewArray.size()-5).getY();
+        g = NewArray[n].get(NewArray[n].size()-4).getX();
+        h = NewArray[n].get(NewArray[n].size()-4).getY();
+
+
+    }
+    if(xyValueArray[n].size()>5) {
+
+        i = NewArray[n].get(NewArray[n].size()-5).getX();
+        j = NewArray[n].get(NewArray[n].size()-5).getY();
 
 
     }
@@ -203,6 +288,7 @@ if(xyValueArray.size()>1) {
 
 
  createScatterPlot();
+
 
 }else {
 
@@ -218,7 +304,7 @@ if(xyValueArray.size()>1) {
         Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
 
-        CorrectArray=sortArray(xyValueArray);
+        CorrectArray[n]=sortArray(xyValueArray[n]);
 
         //adicionando dados
 
@@ -232,78 +318,107 @@ if(xyValueArray.size()>1) {
 //
 //
 //        }
-        for(int i=0; i< CorrectArray.size();i++){
+        for(int i=0; i< CorrectArray[n].size();i++){
 
             try {
-                double x =  CorrectArray.get(i).getX();
-                double y =  CorrectArray.get(i).getY();
+                double x =  CorrectArray[n].get(i).getX();
+                double y =  CorrectArray[n].get(i).getY();
+              if(change==0){
 
-                if(x==c&&y==d ||x==a&&y==b){
-                    xySeries.appendData(new DataPoint(x,y),true,1000);
-
+                  if(x==c&&y==d ||x==a&&y==b){
+                    xySeries[n].appendData(new DataPoint(x,y),true,1000);
+                  }
                 }
+
+                  else if(change==1) {
+
+
+                      if(x==a&&y==b){
+                          xySeries[n].appendData(new DataPoint(x,y),true,1000);
+
+                        }
+
+
+                      }
+
+
 
 
            }catch (IllegalArgumentException e){
 
                 Log.e(TAG,"Deu ruim "+e.getMessage() );
 
+            }catch (NullPointerException k){
+
+                Log.e(TAG,"Deu ruim no dado com array "+k.getMessage() );
+
             }
 
-        }
 
+
+
+        }
+        if(change==1){
+            change=0;
+        }
         //set some properties
 
         // xySeries.setShape(PointsGraphSeries.Shape.RECTANGLE);
 
-        xySeries.setColor(Color.RED);
+
+if (n==0){
+    xySeries[n].setColor(Color.RED);
+}else{
+    xySeries[n].setColor(Color.BLUE);
+}
+
 
       //  xySeries.setSize(10f);
-        xySeries.setThickness(10);
+        xySeries[n].setThickness(10);
 
         //make area under the graph
-        xySeries.setDrawBackground(false);
+        xySeries[n].setDrawBackground(false);
 
         //Data points can be highlighted
 
-        xySeries.setDrawDataPoints(true);
+        xySeries[n].setDrawDataPoints(true);
 
 
 
 
         //set Scrollable and Scaleable
 
-        mScatterPlot.getViewport().setScalable(true);
+        mScatterPlot[n].getViewport().setScalable(true);
 
-        mScatterPlot.getViewport().setScalableY(true);
+        mScatterPlot[n].getViewport().setScalableY(true);
 
-        mScatterPlot.getViewport().setScrollable(true);
+        mScatterPlot[n].getViewport().setScrollable(true);
 
-        mScatterPlot.getViewport().setScrollableY(true);
+        mScatterPlot[n].getViewport().setScrollableY(true);
 
 
 
         //set manual x bounds
 
-        mScatterPlot.getViewport().setYAxisBoundsManual(true);
+        mScatterPlot[n].getViewport().setYAxisBoundsManual(true);
 
-        mScatterPlot.getViewport().setMaxY(150);
+        mScatterPlot[n].getViewport().setMaxY(150);
 
-        mScatterPlot.getViewport().setMinY(-150);
+        mScatterPlot[n].getViewport().setMinY(-150);
 
 
 
         //set manual y bounds
 
-        mScatterPlot.getViewport().setXAxisBoundsManual(true);
+        mScatterPlot[n].getViewport().setXAxisBoundsManual(true);
 
-        mScatterPlot.getViewport().setMaxX(150);
+        mScatterPlot[n].getViewport().setMaxX(150);
 
-        mScatterPlot.getViewport().setMinX(-150);
+        mScatterPlot[n].getViewport().setMinX(-150);
 
 
 
-        mScatterPlot.addSeries(xySeries);
+        mScatterPlot[n].addSeries(xySeries[n]);
 
 
 
