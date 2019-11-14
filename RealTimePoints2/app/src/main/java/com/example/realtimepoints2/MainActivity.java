@@ -24,37 +24,29 @@ public class MainActivity extends AppCompatActivity {
     //PointsGraphSeries<DataPoint> xySeries;
     //Criando uma array de dados
     public LineGraphSeries<DataPoint>[] xySeries;
-
+    //Botoes que serao utilizados
     private Button btnAddPt,btnRight,btnLeft,btnUpFloor,btnDownFloor;
+    //Imagem que sera usada
     private ImageButton btnUp,btnDown;
-
+    //variaveis usadas para pegar os numeros que o usuario escreve
     private EditText mX,mY;
+    //Variaveis usadas para comparar valores
     public double x,y;
-    public double a,b,c,d,e,f,g,h,i,j;
-
-
+    public double NewArrayX1,NewArrayY1,NewArrayX2,NewArrayY2;
     //Criando uma array de graficos
     public int n=0;
     public GraphView[] mScatterPlot;
-
     //make xyValue global
     private ArrayList<XYValue>[] xyValueArray;
     private ArrayList<XYValue>[] CorrectArray;
     private ArrayList<XYValue>[] NewArray;
-
-    //Criando um inteiro que condicione a mudanca de andar
-    int andar=0;
-    int change=0;
-
-
-
-
+    //Criando um booleano que condicione a mudanca de andar
+    boolean ChangeFloor=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         mScatterPlot= new  GraphView[100];
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -119,11 +111,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View upFloor) {
 
+                ChangeFloor=true;
                 n=1;
-                andar=1;
+
                 Log.d(TAG,"Mudando de andar: " + n);
                 mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
-                init();
+
 
             }
         });
@@ -131,12 +124,11 @@ public class MainActivity extends AppCompatActivity {
 //Descendo de andar
                 btnDownFloor.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View upFloor) {
+            public void onClick(View DownFloor) {
+                ChangeFloor=true;
                 n=0;
-                andar=1;
                 Log.d(TAG,"Mudando de andar de andar: " + n);
                 mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
-                init();
 
             }
         });
@@ -150,11 +142,7 @@ public class MainActivity extends AppCompatActivity {
           public void onClick(View up) {
               x=x;
               y=y+20;
-if(andar==1){
-    change=1;
-    andar=0;
 
-}
               Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
               xyValueArray[n].add(new XYValue(x,y));
               NewArray[n].add(new XYValue(x,y));
@@ -172,10 +160,6 @@ if(andar==1){
             public void onClick(View right) {
                 x=x+20;
                 y=y;
-                if(andar==1){
-                    change=1;
-                    andar=0;
-                }
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
                 xyValueArray[n].add(new XYValue(x,y));
                 NewArray[n].add(new XYValue(x,y));
@@ -191,10 +175,6 @@ if(andar==1){
             public void onClick(View down) {
                 x=x;
                 y=y-20;
-                if(andar==1){
-                    change=1;
-                    andar=0;
-                }
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
                 xyValueArray[n].add(new XYValue(x,y));
                 NewArray[n].add(new XYValue(x,y));
@@ -210,10 +190,6 @@ if(andar==1){
             public void onClick(View left) {
                 x=x-20;
                 y=y;
-                if(andar==1){
-                    change=1;
-                    andar=0;
-                }
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
                 xyValueArray[n].add(new XYValue(x,y));
                 NewArray[n].add(new XYValue(x,y));
@@ -251,40 +227,16 @@ if(andar==1){
 
 if (xyValueArray[n].size()!=0){
 
-
-    a = NewArray[n].get(NewArray[n].size()-1).getX();
-    b = NewArray[n].get(NewArray[n].size()-1).getY();
+    NewArrayX1 = NewArray[n].get(NewArray[n].size()-1).getX();
+    NewArrayY1 = NewArray[n].get(NewArray[n].size()-1).getY();
 
 if(xyValueArray[n].size()>1) {
 
-    c = NewArray[n].get(NewArray[n].size()-2).getX();
-    d = NewArray[n].get(NewArray[n].size()-2).getY();
+    NewArrayX2 = NewArray[n].get(NewArray[n].size()-2).getX();
+    NewArrayY2 = NewArray[n].get(NewArray[n].size()-2).getY();
 
 
 }
-    if(xyValueArray[n].size()>2) {
-
-        e = NewArray[n].get(NewArray[n].size()-3).getX();
-        f = NewArray[n].get(NewArray[n].size()-3).getY();
-
-
-    }
-    if(xyValueArray[n].size()>3) {
-
-        g = NewArray[n].get(NewArray[n].size()-4).getX();
-        h = NewArray[n].get(NewArray[n].size()-4).getY();
-
-
-    }
-    if(xyValueArray[n].size()>5) {
-
-        i = NewArray[n].get(NewArray[n].size()-5).getX();
-        j = NewArray[n].get(NewArray[n].size()-5).getY();
-
-
-    }
-
-
 
 
  createScatterPlot();
@@ -299,49 +251,38 @@ if(xyValueArray[n].size()>1) {
 
     }
 
-    private void createScatterPlot() {
+        private void createScatterPlot() {
 
         Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
 
         CorrectArray[n]=sortArray(xyValueArray[n]);
 
-        //adicionando dados
-
-        //for(int i=0; i<xyValueArray.size();i++){
-//        try {
-//
-//        xySeries.appendData(new DataPoint(a,b),true,1000);
-//
-//        }catch (IllegalArgumentException e){
-//            Log.e(TAG,"Deu ruim "+e.getMessage() );
-//
-//
-//        }
         for(int i=0; i< CorrectArray[n].size();i++){
 
             try {
                 double x =  CorrectArray[n].get(i).getX();
                 double y =  CorrectArray[n].get(i).getY();
-              if(change==0){
 
-                  if(x==c&&y==d ||x==a&&y==b){
-                    xySeries[n].appendData(new DataPoint(x,y),true,1000);
-                  }
-                }
+                //Plotar apenas mais um ponto caso mude de andar
+                if(ChangeFloor==true){
 
-                  else if(change==1) {
+                      if(x==NewArrayX1&&y==NewArrayY1){
 
-
-                      if(x==a&&y==b){
                           xySeries[n].appendData(new DataPoint(x,y),true,1000);
-
-                        }
-
 
                       }
 
 
+                }
+                //Ligar dois pontos caso o andar seja o mesmo
+                  else if(ChangeFloor==false) {
+
+                      if(x==NewArrayX1&&y==NewArrayY1||x==NewArrayX2&&y==NewArrayY2){
+                        xySeries[n].appendData(new DataPoint(x,y),true,1000);
+                  }
+
+                      }
 
 
            }catch (IllegalArgumentException e){
@@ -354,14 +295,17 @@ if(xyValueArray[n].size()>1) {
 
             }
 
-
-
-
         }
-        if(change==1){
-            change=0;
-        }
-        //set some properties
+
+            //Caso o andar foi alterado e os pontos ja foram plotados
+            //deve-se informar que agora o andar eh mesmo
+            if(ChangeFloor==true){
+
+                ChangeFloor=false;
+            }
+
+
+            //set some properties
 
         // xySeries.setShape(PointsGraphSeries.Shape.RECTANGLE);
 
@@ -382,8 +326,6 @@ if (n==0){
         //Data points can be highlighted
 
         xySeries[n].setDrawDataPoints(true);
-
-
 
 
         //set Scrollable and Scaleable
@@ -419,6 +361,8 @@ if (n==0){
 
 
         mScatterPlot[n].addSeries(xySeries[n]);
+
+
 
 
 
@@ -524,6 +468,8 @@ if (n==0){
         return array;
 
     }
+
+
 
     private void toastMessage(String message){
 
