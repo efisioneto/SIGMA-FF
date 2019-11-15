@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public double x,y;
     public double NewArrayX1,NewArrayY1,NewArrayX2,NewArrayY2;
     //Criando uma array de graficos
+    //Representa o andar
     public int n=0;
     public GraphView[] mScatterPlot;
     //make xyValue global
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         btnUpFloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View upFloor) {
-
+                mScatterPlot[n].removeAllSeries();
                 ChangeFloor=true;
                 n=1;
 
@@ -122,9 +123,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 //Descendo de andar
-                btnDownFloor.setOnClickListener(new View.OnClickListener() {
+
+        btnDownFloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View DownFloor) {
+                mScatterPlot[n].removeAllSeries();
                 ChangeFloor=true;
                 n=0;
                 Log.d(TAG,"Mudando de andar de andar: " + n);
@@ -239,7 +242,7 @@ if(xyValueArray[n].size()>1) {
 }
 
 
- createScatterPlot();
+ createScatterPlot1();
 
 
 }else {
@@ -251,12 +254,22 @@ if(xyValueArray[n].size()>1) {
 
     }
 
-        private void createScatterPlot() {
+
+
+
+
+
+
+    private void createScatterPlot1() {
 
         Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
 
         CorrectArray[n]=sortArray(xyValueArray[n]);
+
+        if(ChangeFloor==true){
+createScatterPlot2();
+        }
 
         for(int i=0; i< CorrectArray[n].size();i++){
 
@@ -266,6 +279,7 @@ if(xyValueArray[n].size()>1) {
 
                 //Plotar apenas mais um ponto caso mude de andar
                 if(ChangeFloor==true){
+
 
                       if(x==NewArrayX1&&y==NewArrayY1){
 
@@ -310,14 +324,69 @@ if(xyValueArray[n].size()>1) {
         // xySeries.setShape(PointsGraphSeries.Shape.RECTANGLE);
 
 
-if (n==0){
-    xySeries[n].setColor(Color.RED);
-}else{
-    xySeries[n].setColor(Color.BLUE);
+            initGraph();
+
+    }
+
+    private void createScatterPlot2() {
+
+
+
+        Log.d(TAG, "Fazendo o grafico");
+        //Colocar a array na ordem
+
+ //       CorrectArray[n]=sortArray(xyValueArray[n]);
+
+
+        for(int i=0; i< CorrectArray[n].size();i++){
+
+            try {
+
+                double x =  CorrectArray[n].get(i).getX();
+                double y =  CorrectArray[n].get(i).getY();
+
+                if(x==NewArray[n].get(0).getX()
+                 &&y==NewArray[n].get(0).getY()
+                 ||x==NewArray[n].get(1).getX()
+                 &&y==NewArray[n].get(1).getY()){
+
+                    xySeries[n].appendData(new DataPoint(x,y),true,1000);
+
+                }
+
+
+
+            }catch (IllegalArgumentException e){
+
+                Log.e(TAG,"Deu ruim "+e.getMessage() );
+
+            }catch (NullPointerException k){
+
+                Log.e(TAG,"Deu ruim no dado com array "+k.getMessage() );
+
+            }
+
+        }
+        initGraph();
+
+
+
 }
 
 
-      //  xySeries.setSize(10f);
+
+    //Configuracoes do grafico
+    private void initGraph() {
+
+
+        if (n==0){
+            xySeries[n].setColor(Color.RED);
+        }else{
+            xySeries[n].setColor(Color.BLUE);
+        }
+
+
+        //  xySeries.setSize(10f);
         xySeries[n].setThickness(10);
 
         //make area under the graph
