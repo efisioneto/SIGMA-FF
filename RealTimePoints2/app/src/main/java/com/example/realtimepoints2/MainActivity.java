@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     //Criando um booleano que condicione a mudanca de andar
     boolean ChangeFloor=false;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -114,10 +115,9 @@ public class MainActivity extends AppCompatActivity {
                 mScatterPlot[n].removeAllSeries();
                 ChangeFloor=true;
                 n=1;
-
                 Log.d(TAG,"Mudando de andar: " + n);
                 mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
-
+                createScatterPlot2();
 
             }
         });
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 n=0;
                 Log.d(TAG,"Mudando de andar de andar: " + n);
                 mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
-
+               createScatterPlot2();
             }
         });
 
@@ -256,10 +256,6 @@ if(xyValueArray[n].size()>1) {
 
 
 
-
-
-
-
     private void createScatterPlot1() {
 
         Log.d(TAG, "Fazendo o grafico");
@@ -267,9 +263,6 @@ if(xyValueArray[n].size()>1) {
 
         CorrectArray[n]=sortArray(xyValueArray[n]);
 
-        if(ChangeFloor==true){
-createScatterPlot2();
-        }
 
         for(int i=0; i< CorrectArray[n].size();i++){
 
@@ -330,25 +323,28 @@ createScatterPlot2();
 
     private void createScatterPlot2() {
 
-
-
+        xySeries[n].resetData(new DataPoint[] {});
+        CorrectArray[n]=sortArray(xyValueArray[n]);
         Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
 
- //       CorrectArray[n]=sortArray(xyValueArray[n]);
+ //CorrectArray[n]=sortArray(xyValueArray[n]);
 
+//for (int j=0; j< NewArray[n].size()-1;j++){
 
-        for(int i=0; i< CorrectArray[n].size();i++){
+        for(int j=0; j< CorrectArray[n].size()-1;j++){
+
+            for(int i=0; i< CorrectArray[n].size();i++){
 
             try {
 
                 double x =  CorrectArray[n].get(i).getX();
                 double y =  CorrectArray[n].get(i).getY();
 
-                if(x==NewArray[n].get(0).getX()
-                 &&y==NewArray[n].get(0).getY()
-                 ||x==NewArray[n].get(1).getX()
-                 &&y==NewArray[n].get(1).getY()){
+//problema esta aqui
+                if(x==NewArray[n].get(j+1).getX()&&y==NewArray[n].get(j+1).getY()||
+                    x==NewArray[n].get(j).getX()&&y==NewArray[n].get(j).getY()
+                 ){
 
                     xySeries[n].appendData(new DataPoint(x,y),true,1000);
 
@@ -356,7 +352,8 @@ createScatterPlot2();
 
 
 
-            }catch (IllegalArgumentException e){
+            }
+          catch (IllegalArgumentException e){
 
                 Log.e(TAG,"Deu ruim "+e.getMessage() );
 
@@ -367,13 +364,19 @@ createScatterPlot2();
             }
 
         }
+
+
+
+           // xySeries[n].resetData(new DataPoint[] {});
+       // mScatterPlot[n].removeAllSeries();
+
+        }
+
         initGraph();
 
 
 
-}
-
-
+    }
 
     //Configuracoes do grafico
     private void initGraph() {
