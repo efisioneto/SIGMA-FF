@@ -1,4 +1,4 @@
-#Thu Nov 28 15:38:19 CET 2019
+#Thu Nov 28 16:14:34 CET 2019
 base.0=C\:\\Users\\efisi\\SIGMA\\SIGMA-FF\\BluetoothChat\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

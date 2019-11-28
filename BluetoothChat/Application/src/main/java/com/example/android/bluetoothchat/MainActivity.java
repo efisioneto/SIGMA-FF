@@ -52,37 +52,31 @@ import java.util.Random;
  * on other devices it's visibility is controlled by an item on the Action Bar.
  */
 public class MainActivity extends SampleActivityBase {
-    public LineGraphSeries<DataPoint> Series;
     public static final String TAG = "MainActivity";
-    public int floor= 0;
-    public int graphLastXValue = 0;
-    private final Handler mHandler = new Handler();
-    // private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
-    public Runnable mTimer;
-    public double yvalue = 5d;
 
-    public LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
+    //Determinate initial floor
+    public int floor= 0;
+
+    //Variables of run method
+    private final Handler mHandler = new Handler();
+    public Runnable mTimer;
 
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
 
-    //Parte nova
 
+    //Variables that represent the last 2 points
     public double OriginalArrayX1,OriginalArrayY1,OriginalArrayX2,OriginalArrayY2;
-   // public ArrayList<XYValue> xyValueArray;
+
     //choice Point ou line
     //PointsGraphSeries<DataPoint> xySeries;
-   // Separar os dados de xySeries em diferentes andares
-
     public LineGraphSeries<DataPoint>[] xySeries;
 
+    // Separate the different data in different floors
     public GraphView[] mScatterPlot;
 
-    //make xyValue global
 
-//    private ArrayList<XYValue> xyValueArray;
-//    private ArrayList<XYValue> OriginalArray;
-
+    // Create ArrayList of Original data e data will be sorted
     ArrayList<ArrayList<XYValue>> OriginalArray = new ArrayList<ArrayList<XYValue>>();
     ArrayList<XYValue> xyValueArray = new ArrayList<XYValue>();
 
@@ -92,40 +86,28 @@ public class MainActivity extends SampleActivityBase {
 
     @Override
    public void onCreate(Bundle savedInstanceState) {
-
-
-
         super.onCreate(savedInstanceState);
-        BluetoothChatFragment grafico = new BluetoothChatFragment();
-
         setContentView(R.layout.activity_main);
 
-        //Declarar variaveis
+        //Declare variables
         xySeries= new LineGraphSeries[100];
         xySeries[floor]= new LineGraphSeries<>();
+
         OriginalArray.add(new ArrayList<XYValue>());
-        mScatterPlot= new GraphView[100];
+        xyValueArray = new ArrayList<>();
+
         try {
+            mScatterPlot= new GraphView[100];
             mScatterPlot[floor] = (GraphView) findViewById(R.id.graph);
         }catch (NullPointerException e){
 
-            android.util.Log.e(TAG,"Deu ruim na array "+e.getMessage() );
-
+            android.util.Log.e(TAG,"Its wrong "+e.getMessage() );
         }
 
-
-        xyValueArray = new ArrayList<>();
-
-        //Parte antiga
-        //graph = (GraphView) findViewById(R.id.graph);
-        //grafico.initGraph(graph);
-        //BluetoothChatFragment k = new BluetoothChatFragment();
-         //xySeries[piano] = new LineGraphSeries<>();
-         //init();
-
         mTimer = new Runnable(){
-         double x2= 5d;
-         double y2= 5d;
+        //variables that do not allow data to be repeated
+         double PreviousDataX= 5d;
+         double PreviousDataY= 5d;
 
 
             @Override
@@ -138,14 +120,15 @@ public class MainActivity extends SampleActivityBase {
 
                     BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
 
-                    double x1= Xvalue.ValorX;
-                    double y1= Yvalue.ValorY;
+                    double NextDataX= Xvalue.ValorX;
+                    double NextDataY= Yvalue.ValorY;
 
-                    if(x1 !=x2 || y1 !=y2 ){
+                    //Data does not repeat if same as above
+                    if(NextDataX !=PreviousDataX || NextDataY !=PreviousDataY ){
 
-                        x2= x1;
-                        y2= y1;
-                        OriginalArray.get(floor).add(new XYValue(x2,y2));
+                        PreviousDataX= NextDataX;
+                        PreviousDataY= NextDataY;
+                        OriginalArray.get(floor).add(new XYValue(NextDataX,NextDataY));
 
                         if (OriginalArray.get(floor).size()!=0){
 
@@ -158,7 +141,7 @@ public class MainActivity extends SampleActivityBase {
                                 OriginalArrayY2 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-2).getY();
 
                             }
-
+                               //Create graph
                                 createScatterPlot();
 
                         }else{
@@ -172,27 +155,14 @@ public class MainActivity extends SampleActivityBase {
                 }catch (NullPointerException ignored){
 
 
-
                 }
-
-
-
-
-           //     graphLastXValue += 1.0;
-
-
 
               mHandler.postDelayed(this, 330);
             }
 
-
         };
 
-
       mHandler.postDelayed(mTimer, 1500);
-
-
-
 
 
         if (savedInstanceState == null) {
@@ -203,17 +173,12 @@ public class MainActivity extends SampleActivityBase {
         }
         }
 
-//    private void init (){
-//
-//    }
-
     public void createScatterPlot() {
-        android.util.Log.d(TAG, "Fazendo o grafico");
-        //Colocar a array na ordem
+        android.util.Log.d(TAG, "Create the graph");
 
       // xySeries[floor].resetData(new DataPoint[] {});
 
-
+        //Reset data sorted
         xyValueArray.clear();
 
         for (int i = 0; i < OriginalArray.get(floor).size(); i++) {
@@ -223,9 +188,8 @@ public class MainActivity extends SampleActivityBase {
             xyValueArray.add(new XYValue(x, y));
 
         }
-
+        //Sort data
         sortArray(xyValueArray);
-
 
         for(int i=0; i<xyValueArray.size();i++){
 
@@ -240,8 +204,6 @@ public class MainActivity extends SampleActivityBase {
                     android.util.Log.d(TAG, "New Data: "+ x+ " "+ y);
 
                 }
-//                xySeries.appendData(new DataPoint(x,y),true,1000);
-
             }catch (IllegalArgumentException e){
 
                 Log.e(TAG,"Deu ruim "+e.getMessage() );
@@ -249,6 +211,7 @@ public class MainActivity extends SampleActivityBase {
             }
 
      }
+        //Chart Features
         initGraph();
 
     }
@@ -258,10 +221,10 @@ public class MainActivity extends SampleActivityBase {
         android.util.Log.d(TAG, "Plotting data: ");
 
         xySeries[floor].setColor(Color.RED);
+        
+       //xySeries[floor].setSize(10f);// if there is Data Point
 
-       //xySeries[floor].setSize(10f);
-
-        xySeries[floor].setThickness(10);
+        xySeries[floor].setThickness(10);//if there is Data Series
 
         //set Scrollable and Scaleable
 
@@ -276,7 +239,6 @@ public class MainActivity extends SampleActivityBase {
 
         //set manual x bounds
 
-
         mScatterPlot[floor].getViewport().setYAxisBoundsManual(true);
 
         mScatterPlot[floor].getViewport().setMaxY(2000000);
@@ -287,27 +249,12 @@ public class MainActivity extends SampleActivityBase {
 
         mScatterPlot[floor].getViewport().setXAxisBoundsManual(true);
 
-
-
         mScatterPlot[floor].getViewport().setMaxX(2000000);
-
-
 
         mScatterPlot[floor].getViewport().setMinX(0);
 
         mScatterPlot[floor].addSeries(xySeries[floor]);
 
-    }
-
-    //#graphView
-    double mLastRandom = 2;
-    // String sharedFact = mDataField.getText().toString();
-    //double yvalue = Double.parseDouble(data);
-    Random mRand = new Random();
-    private double getRandom()
-    {
-        mLastRandom += mRand.nextDouble()*0.05 - 0.05;
-        return mLastRandom ;
     }
 
     @Override

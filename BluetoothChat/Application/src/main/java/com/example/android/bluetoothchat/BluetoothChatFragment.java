@@ -622,7 +622,7 @@ public class BluetoothChatFragment extends Fragment{
 
         public void handleMessage(Message msg) {
 
-
+//#0B0065003D0001FFDB30013B00236FFE9EFFC3FFEE1763975506FC6E971F06B25BC08484
 
 
             FragmentActivity activity = getActivity();
