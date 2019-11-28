@@ -767,8 +767,8 @@ public class BluetoothChatFragment extends Fragment{
             try {
 
 
-            hexX=PositionIMX.getMessagem();
-            hexY=PositionIMX.getMessagem();
+            hexX=PositionIX.getMessagem();
+            hexY=PositionIY.getMessagem();
 
             // Converter hexadecimal em decimal
             decimalX=Integer.parseInt(hexX,16);

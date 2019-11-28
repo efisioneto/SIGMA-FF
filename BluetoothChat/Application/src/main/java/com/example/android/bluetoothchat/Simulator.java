@@ -248,6 +248,15 @@ public class Simulator extends AppCompatActivity {
 
         }
 
+
+        initGraph();
+
+
+
+    }
+
+    private void initGraph() {
+
         //set some properties
 
         // xySeries.setShape(PointsGraphSeries.Shape.RECTANGLE);
@@ -304,6 +313,8 @@ public class Simulator extends AppCompatActivity {
 
 
     }
+
+
 
 
     private ArrayList<XYValue> sortArray(ArrayList<XYValue> array){

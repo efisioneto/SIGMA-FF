@@ -38,17 +38,17 @@ public class MainActivity extends AppCompatActivity {
     private EditText mX,mY;
     //Variaveis usadas para comparar valores
     public double x,y;
-    public double NewArrayX1,NewArrayY1,NewArrayX2,NewArrayY2;
+    public double OriginalArrayX1,OriginalArrayY1,OriginalArrayX2,OriginalArrayY2;
     //Criando uma array de graficos
     //Representa o andar
-    public int n=0;
+    public int floor=0;
 
     //ArrayList<GraphView> mScatterPlot = new ArrayList<GraphView>();
     public GraphView[] mScatterPlot;
     //make xyValue global
  // private ArrayList<XYValue>[] xyValueArray;
 // private ArrayList<XYValue>[] CorrectArray;
-//private ArrayList<XYValue>[] NewArray;
+//private ArrayList<XYValue>[] OriginalArray;
     //Criando um booleano que condicione a mudanca de andar
     boolean ChangeFloor=false;
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
    //Teste de novo programa
 
-    ArrayList<ArrayList<XYValue>> NewArray = new ArrayList<ArrayList<XYValue>>();
+    ArrayList<ArrayList<XYValue>> OriginalArray = new ArrayList<ArrayList<XYValue>>();
     ArrayList<XYValue> xyValueArray = new ArrayList<XYValue>();
 
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         mY = (EditText) findViewById(R.id.numY);
 
         try {
-        mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
+        mScatterPlot[floor] = (GraphView) findViewById(R.id.scatterPlot);
         }catch (NullPointerException e){
 
             Log.e(TAG,"Deu ruim na array "+e.getMessage() );
@@ -93,23 +93,23 @@ public class MainActivity extends AppCompatActivity {
 
 //       xyValueArray= new ArrayList[100];
 //      //  CorrectArray= new ArrayList[100];
-//        NewArray= new ArrayList[100];
+//        OriginalArray= new ArrayList[100];
 //
 //
 //       xyValueArray[0] = new ArrayList<>(100);
 //      //  CorrectArray[0]= new ArrayList<>(100);
-//       NewArray[0]= new ArrayList<>(100);
+//       OriginalArray[0]= new ArrayList<>(100);
 //
 //        xyValueArray[1] = new ArrayList<>();
 //      // CorrectArray[1]= new ArrayList<>();
-//        NewArray[1]= new ArrayList<>();
+//        OriginalArray[1]= new ArrayList<>();
 
         //Create values for OriginalFloor1
         ArrayList<XYValue> OriginalFloor1 = new ArrayList<>();
-        NewArray.add(new ArrayList<XYValue>());
+        OriginalArray.add(new ArrayList<XYValue>());
         //Create values for OriginalFloor2
         //ArrayList<XYValue> OriginalFloor2 = new ArrayList<>();
-        //NewArray.add(new ArrayList<XYValue>());
+        //OriginalArray.add(new ArrayList<XYValue>());
 
         //Create values for Floor1
         //ArrayList<XYValue> Floor1 = new ArrayList<>();
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Declarando as series
         xySeries= new LineGraphSeries[100];
-       xySeries[n]= new LineGraphSeries<>();
+       xySeries[floor]= new LineGraphSeries<>();
         //xySeries[1]= new LineGraphSeries<>();
 
 
@@ -153,18 +153,18 @@ public class MainActivity extends AppCompatActivity {
         btnUpFloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View upFloor) {
-                mScatterPlot[n].removeAllSeries();
+                mScatterPlot[floor].removeAllSeries();
                 ChangeFloor=true;
-                n+=1;
-                Log.d(TAG,"Mudando de andar: " + n);
-                mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
-                if (n>NewArray.size()-1){
-                    NewArray.add(new ArrayList<XYValue>());
-                    xySeries[n] = new LineGraphSeries<>() ;
+                floor+=1;
+                Log.d(TAG,"Mudando de andar: " + floor);
+                mScatterPlot[floor] = (GraphView) findViewById(R.id.scatterPlot);
+                if (floor>OriginalArray.size()-1){
+                    OriginalArray.add(new ArrayList<XYValue>());
+                    xySeries[floor] = new LineGraphSeries<>() ;
                     createScatterPlot1();
                 }
                 else {
-                    xySeries[n] = new LineGraphSeries<>() ;
+                    xySeries[floor] = new LineGraphSeries<>() ;
                     createScatterPlot2();
                 }
             }
@@ -175,14 +175,14 @@ public class MainActivity extends AppCompatActivity {
         btnDownFloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View DownFloor) {
-                mScatterPlot[n].removeAllSeries();
+                mScatterPlot[floor].removeAllSeries();
                 ChangeFloor=true;
-                if(n!=0){
-                    n-=1;
+                if(floor!=0){
+                    floor-=1;
                 }
-                Log.d(TAG,"Mudando de andar de andar: " + n);
-                mScatterPlot[n] = (GraphView) findViewById(R.id.scatterPlot);
-                xySeries[n]=new LineGraphSeries<>();
+                Log.d(TAG,"Mudando de andar de andar: " + floor);
+                mScatterPlot[floor] = (GraphView) findViewById(R.id.scatterPlot);
+                xySeries[floor]=new LineGraphSeries<>();
                createScatterPlot2();
             }
         });
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
 
               Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
      //   xyValueArray[n].add(new XYValue(x,y));
-              NewArray.get(n).add(new XYValue(x,y));
+              OriginalArray.get(floor).add(new XYValue(x,y));
 
 
 
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
                 y=y;
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
    //    xyValueArray[n].add(new XYValue(x,y));
-                NewArray.get(n).add(new XYValue(x,y));
+                OriginalArray.get(floor).add(new XYValue(x,y));
 
                 init();
 
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
                 y=y-20;
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
 //              xyValueArray[n].add(new XYValue(x,y));
-                NewArray.get(n).add(new XYValue(x,y));
+                OriginalArray.get(floor).add(new XYValue(x,y));
 
                 init();
 
@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
                 y=y;
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
    //       xyValueArray[n].add(new XYValue(x,y));
-                NewArray.get(n).add(new XYValue(x,y));
+                OriginalArray.get(floor).add(new XYValue(x,y));
 
                 init();
 
@@ -266,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
 
                  Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
     //          xyValueArray[n].add(new XYValue(x,y));
-                    NewArray.get(n).add(new XYValue(x,y));
+                    OriginalArray.get(floor).add(new XYValue(x,y));
 
                  init();
 
@@ -279,15 +279,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-if (NewArray.get(n).size()!=0){
+if (OriginalArray.get(floor).size()!=0){
 
-    NewArrayX1 = NewArray.get(n).get(NewArray.get(n).size()-1).getX();
-    NewArrayY1 = NewArray.get(n).get(NewArray.get(n).size()-1).getY();
+    OriginalArrayX1 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-1).getX();
+    OriginalArrayY1 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-1).getY();
 
-if(NewArray.get(n).size()>1) {
+if(OriginalArray.get(floor).size()>1) {
 
-    NewArrayX2 = NewArray.get(n).get(NewArray.get(n).size()-2).getX();
-    NewArrayY2 = NewArray.get(n).get(NewArray.get(n).size()-2).getY();
+    OriginalArrayX2 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-2).getX();
+    OriginalArrayY2 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-2).getY();
 
 }
 
@@ -310,24 +310,24 @@ if(NewArray.get(n).size()>1) {
         Log.d(TAG, "Fazendo o grafico");
 
 
-//        for(int i=0; i<NewArray[n].size();i++){
+//        for(int i=0; i<OriginalArray[n].size();i++){
 //
-//           double x= NewArray[n].get(i).getX();
-//           double y =NewArray[n].get(i).getY();
+//           double x= OriginalArray[n].get(i).getX();
+//           double y =OriginalArray[n].get(i).getY();
 //           xyValueArray[n].set(i, new XYValue(x,y));
 //
 //        }
 
-    //    xyValueArray[n] = NewArray[n];
+    //    xyValueArray[n] = OriginalArray[n];
 
 
         xyValueArray.clear();
 
 
-        for (int i = 0; i < NewArray.get(n).size(); i++) {
+        for (int i = 0; i < OriginalArray.get(floor).size(); i++) {
 
-            double x = NewArray.get(n).get(i).getX();
-            double y = NewArray.get(n).get(i).getY();
+            double x = OriginalArray.get(floor).get(i).getX();
+            double y = OriginalArray.get(floor).get(i).getY();
             xyValueArray.add(new XYValue(x, y));
 
         }
@@ -337,12 +337,12 @@ if(NewArray.get(n).size()>1) {
 
         sortArray(xyValueArray);
 
-        System.out.println("NewArray:");
-        for (int i = 0; i < NewArray.size(); i++) {
-            for (int j = 0; j < NewArray.get(i).size(); j++) {
+        System.out.println("OriginalArray:");
+        for (int i = 0; i < OriginalArray.size(); i++) {
+            for (int j = 0; j < OriginalArray.get(i).size(); j++) {
 
-                final double x = NewArray.get(i).get(j).getX();
-                final double y = NewArray.get(i).get(j).getY();
+                final double x = OriginalArray.get(i).get(j).getX();
+                final double y = OriginalArray.get(i).get(j).getY();
 
                 // System.out.print(aLists.get(i).get(j) + " ");
 
@@ -370,7 +370,7 @@ if(NewArray.get(n).size()>1) {
         //Colocar a array na ordem
   //xyValueArray[n]=sortArray(xyValueArray[n]);
 
-//        if (xyValueArray[n] == NewArray[n]) {
+//        if (xyValueArray[n] == OriginalArray[n]) {
 //
 //            Log.d(TAG, "estranho2");
 //
@@ -387,10 +387,10 @@ if(NewArray.get(n).size()>1) {
                 //Plotar apenas mais um ponto caso mude de andar
                 if(ChangeFloor==true){
 
-                      if(x==NewArrayX1&&y==NewArrayY1){
+                      if(x==OriginalArrayX1&&y==OriginalArrayY1){
 
 
-                          xySeries[n].appendData(new DataPoint(x,y),true,1000);
+                          xySeries[floor].appendData(new DataPoint(x,y),true,1000);
 
                       }
 
@@ -398,8 +398,8 @@ if(NewArray.get(n).size()>1) {
                 //Ligar dois pontos caso o andar seja o mesmo
                   else  {
 
-                      if(x==NewArrayX1&&y==NewArrayY1||x==NewArrayX2&&y==NewArrayY2){
-                        xySeries[n].appendData(new DataPoint(x,y),true,1000);
+                      if(x==OriginalArrayX1&&y==OriginalArrayY1||x==OriginalArrayX2&&y==OriginalArrayY2){
+                        xySeries[floor].appendData(new DataPoint(x,y),true,1000);
 
                           Log.d(TAG, "New Data: "+ x+ " "+ y);
                       }
@@ -441,10 +441,10 @@ if(NewArray.get(n).size()>1) {
 
         xyValueArray.clear();
 
-        for (int i = 0; i < NewArray.get(n).size(); i++) {
+        for (int i = 0; i < OriginalArray.get(floor).size(); i++) {
 
-            double x = NewArray.get(n).get(i).getX();
-            double y = NewArray.get(n).get(i).getY();
+            double x = OriginalArray.get(floor).get(i).getX();
+            double y = OriginalArray.get(floor).get(i).getY();
             xyValueArray.add(new XYValue(x, y));
 
         }
@@ -454,12 +454,12 @@ if(NewArray.get(n).size()>1) {
         Log.d(TAG, "Refazendo o grafico");
         sortArray(xyValueArray);
 
-        System.out.println("Refazendo NewArray:");
-        for (int i = 0; i < NewArray.size(); i++) {
-            for (int j = 0; j < NewArray.get(i).size(); j++) {
+        System.out.println("Refazendo OriginalArray:");
+        for (int i = 0; i < OriginalArray.size(); i++) {
+            for (int j = 0; j < OriginalArray.get(i).size(); j++) {
 
-                final double x = NewArray.get(i).get(j).getX();
-                final double y = NewArray.get(i).get(j).getY();
+                final double x = OriginalArray.get(i).get(j).getX();
+                final double y = OriginalArray.get(i).get(j).getY();
 
                 // System.out.print(aLists.get(i).get(j) + " ");
 
@@ -486,10 +486,10 @@ if(NewArray.get(n).size()>1) {
 
 //        xySeries[n].resetData(new DataPoint[] {});
 //
-//        for (int i = 0; i < NewArray.get(0).size(); i++) {
+//        for (int i = 0; i < OriginalArray.get(0).size(); i++) {
 //
-//            double x = NewArray.get(n).get(i).getX();
-//            double y = NewArray.get(n).get(i).getY();
+//            double x = OriginalArray.get(n).get(i).getX();
+//            double y = OriginalArray.get(n).get(i).getY();
 //            xyValueArray.get(n).add(new XYValue(0, 0));
 //            xyValueArray.get(n).set(i,new XYValue (x,y));
 //
@@ -499,13 +499,13 @@ if(NewArray.get(n).size()>1) {
 
     //    sortArray(xyValueArray.get(n));
 
-//for (int j=0; j< NewArray[n].size()-1;j++){
+//for (int j=0; j< OriginalArray[n].size()-1;j++){
 
-        for(int j=0; j< NewArray.get(n).size()-1;j++){
-            double x1=NewArray.get(n).get(j).getX();
-            double x2=NewArray.get(n).get(j+1).getX();
-            double y1=NewArray.get(n).get(j).getY();
-            double y2=NewArray.get(n).get(j+1).getY();
+        for(int j=0; j< OriginalArray.get(floor).size()-1;j++){
+            double x1=OriginalArray.get(floor).get(j).getX();
+            double x2=OriginalArray.get(floor).get(j+1).getX();
+            double y1=OriginalArray.get(floor).get(j).getY();
+            double y2=OriginalArray.get(floor).get(j+1).getY();
             for(int i=0; i< xyValueArray.size();i++){
 
             try {
@@ -516,7 +516,7 @@ if(NewArray.get(n).size()>1) {
 //problema esta aqui
                 if(x==x1&&y==y1||x==x2&&y==y2){
                     Log.d(TAG, "New: "+ x+ " "+ y);
-                    xySeries[n].appendData(new DataPoint(x,y),true,1000);
+                    xySeries[floor].appendData(new DataPoint(x,y),true,1000);
 
                 }
 
@@ -551,57 +551,57 @@ if(NewArray.get(n).size()>1) {
     private void initGraph() {
 
 
-        if (n==0){
-            xySeries[n].setColor(Color.RED);
+        if (floor==0){
+            xySeries[floor].setColor(Color.RED);
         }else{
-            xySeries[n].setColor(Color.BLUE);
+            xySeries[floor].setColor(Color.BLUE);
         }
 
 
         //  xySeries.setSize(10f);
-        xySeries[n].setThickness(10);
+        xySeries[floor].setThickness(10);
 
         //make area under the graph
-        xySeries[n].setDrawBackground(false);
+        xySeries[floor].setDrawBackground(false);
 
         //Data points can be highlighted
 
-        xySeries[n].setDrawDataPoints(true);
+        xySeries[floor].setDrawDataPoints(true);
 
 
         //set Scrollable and Scaleable
 
-        mScatterPlot[n].getViewport().setScalable(true);
+        mScatterPlot[floor].getViewport().setScalable(true);
 
-        mScatterPlot[n].getViewport().setScalableY(true);
+        mScatterPlot[floor].getViewport().setScalableY(true);
 
-        mScatterPlot[n].getViewport().setScrollable(true);
+        mScatterPlot[floor].getViewport().setScrollable(true);
 
-        mScatterPlot[n].getViewport().setScrollableY(true);
+        mScatterPlot[floor].getViewport().setScrollableY(true);
 
 
 
         //set manual x bounds
 
-        mScatterPlot[n].getViewport().setYAxisBoundsManual(true);
+        mScatterPlot[floor].getViewport().setYAxisBoundsManual(true);
 
-        mScatterPlot[n].getViewport().setMaxY(150);
+        mScatterPlot[floor].getViewport().setMaxY(150);
 
-        mScatterPlot[n].getViewport().setMinY(-150);
+        mScatterPlot[floor].getViewport().setMinY(-150);
 
 
 
         //set manual y bounds
 
-        mScatterPlot[n].getViewport().setXAxisBoundsManual(true);
+        mScatterPlot[floor].getViewport().setXAxisBoundsManual(true);
 
-        mScatterPlot[n].getViewport().setMaxX(150);
+        mScatterPlot[floor].getViewport().setMaxX(150);
 
-        mScatterPlot[n].getViewport().setMinX(-150);
+        mScatterPlot[floor].getViewport().setMinX(-150);
 
 
 
-        mScatterPlot[n].addSeries(xySeries[n]);
+        mScatterPlot[floor].addSeries(xySeries[floor]);
 
 
 

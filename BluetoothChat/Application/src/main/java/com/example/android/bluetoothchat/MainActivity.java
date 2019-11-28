@@ -54,7 +54,7 @@ import java.util.Random;
 public class MainActivity extends SampleActivityBase {
     public LineGraphSeries<DataPoint> Series;
     public static final String TAG = "MainActivity";
-
+    public int floor= 0;
     public int graphLastXValue = 0;
     private final Handler mHandler = new Handler();
     // private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
@@ -68,41 +68,60 @@ public class MainActivity extends SampleActivityBase {
 
     //Parte nova
 
-    public double a,b,c,d;
-
+    public double OriginalArrayX1,OriginalArrayY1,OriginalArrayX2,OriginalArrayY2;
    // public ArrayList<XYValue> xyValueArray;
     //choice Point ou line
     //PointsGraphSeries<DataPoint> xySeries;
-    LineGraphSeries<DataPoint> xySeries;
+   // Separar os dados de xySeries em diferentes andares
 
-    GraphView mScatterPlot;
+    public LineGraphSeries<DataPoint>[] xySeries;
+
+    public GraphView[] mScatterPlot;
 
     //make xyValue global
 
-    private ArrayList<XYValue> xyValueArray;
-    private ArrayList<XYValue> OriginalArray;
+//    private ArrayList<XYValue> xyValueArray;
+//    private ArrayList<XYValue> OriginalArray;
+
+    ArrayList<ArrayList<XYValue>> OriginalArray = new ArrayList<ArrayList<XYValue>>();
+    ArrayList<XYValue> xyValueArray = new ArrayList<XYValue>();
+
 
 
 
 
     @Override
    public void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         BluetoothChatFragment grafico = new BluetoothChatFragment();
 
         setContentView(R.layout.activity_main);
 
         //Declarar variaveis
+        xySeries= new LineGraphSeries[100];
+        xySeries[floor]= new LineGraphSeries<>();
+        OriginalArray.add(new ArrayList<XYValue>());
+        mScatterPlot= new GraphView[100];
+        try {
+            mScatterPlot[floor] = (GraphView) findViewById(R.id.graph);
+        }catch (NullPointerException e){
 
-        mScatterPlot = (GraphView) findViewById(R.id.graph);
+            android.util.Log.e(TAG,"Deu ruim na array "+e.getMessage() );
+
+        }
+
+
         xyValueArray = new ArrayList<>();
 
         //Parte antiga
         //graph = (GraphView) findViewById(R.id.graph);
         //grafico.initGraph(graph);
         //BluetoothChatFragment k = new BluetoothChatFragment();
-         xySeries = new LineGraphSeries<>();
-         init();
+         //xySeries[piano] = new LineGraphSeries<>();
+         //init();
 
         mTimer = new Runnable(){
          double x2= 5d;
@@ -112,9 +131,6 @@ public class MainActivity extends SampleActivityBase {
             @Override
             public void run()
             {
-
-
-
 
                 try{
 
@@ -129,18 +145,17 @@ public class MainActivity extends SampleActivityBase {
 
                         x2= x1;
                         y2= y1;
-                        xyValueArray.add(new XYValue(x2,y2));
-                        OriginalArray.add(new XYValue(x2,y2));
+                        OriginalArray.get(floor).add(new XYValue(x2,y2));
 
-                        if(xyValueArray.size()!=0 && xyValueArray!=null){
+                        if (OriginalArray.get(floor).size()!=0){
 
-                            a = OriginalArray.get(OriginalArray.size()-1).getX();
-                            b = OriginalArray.get(OriginalArray.size()-1).getY();
+                            OriginalArrayX1 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-1).getX();
+                            OriginalArrayY1 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-1).getY();
 
-                            if(xyValueArray.size()>1) {
+                            if(OriginalArray.get(floor).size()>1) {
 
-                                c = OriginalArray.get(OriginalArray.size()-2).getX();
-                                d = OriginalArray.get(OriginalArray.size()-2).getY();
+                                OriginalArrayX2 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-2).getX();
+                                OriginalArrayY2 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-2).getY();
 
                             }
 
@@ -188,22 +203,28 @@ public class MainActivity extends SampleActivityBase {
         }
         }
 
-    private void init (){
-
-
-
-
-
-
-    }
+//    private void init (){
+//
+//    }
 
     public void createScatterPlot() {
         android.util.Log.d(TAG, "Fazendo o grafico");
         //Colocar a array na ordem
 
-        xySeries.resetData(new DataPoint[] {});
-        xyValueArray=sortArray(xyValueArray);
+      // xySeries[floor].resetData(new DataPoint[] {});
 
+
+        xyValueArray.clear();
+
+        for (int i = 0; i < OriginalArray.get(floor).size(); i++) {
+
+            double x = OriginalArray.get(floor).get(i).getX();
+            double y = OriginalArray.get(floor).get(i).getY();
+            xyValueArray.add(new XYValue(x, y));
+
+        }
+
+        sortArray(xyValueArray);
 
 
         for(int i=0; i<xyValueArray.size();i++){
@@ -213,12 +234,12 @@ public class MainActivity extends SampleActivityBase {
                 double x = xyValueArray.get(i).getX();
                 double y = xyValueArray.get(i).getY();
 
-                if(x==c&&y==d ||x==a&&y==b){
-                    xySeries.appendData(new DataPoint(x,y),true,1000);
+                if(x==OriginalArrayX1&&y==OriginalArrayY1||x==OriginalArrayX2&&y==OriginalArrayY2){
+
+                    xySeries[floor].appendData(new DataPoint(x,y),true,1000);
+                    android.util.Log.d(TAG, "New Data: "+ x+ " "+ y);
 
                 }
-
-
 //                xySeries.appendData(new DataPoint(x,y),true,1000);
 
             }catch (IllegalArgumentException e){
@@ -227,66 +248,54 @@ public class MainActivity extends SampleActivityBase {
 
             }
 
+     }
+        initGraph();
 
+    }
 
-}
+    private void initGraph() {
 
+        android.util.Log.d(TAG, "Plotting data: ");
 
-        //Preencher a area abaixo
+        xySeries[floor].setColor(Color.RED);
 
-        //xySeries.setDrawingCacheBackgroundColor(true);
+       //xySeries[floor].setSize(10f);
 
-        xySeries.setColor(Color.RED);
-
-       // xySeries.setSize(10f);
-        xySeries.setThickness(10);
-
+        xySeries[floor].setThickness(10);
 
         //set Scrollable and Scaleable
 
-        mScatterPlot.getViewport().setScalable(true);
+        mScatterPlot[floor].getViewport().setScalable(true);
 
-        mScatterPlot.getViewport().setScalableY(true);
+        mScatterPlot[floor].getViewport().setScalableY(true);
 
-        mScatterPlot.getViewport().setScrollable(true);
+        mScatterPlot[floor].getViewport().setScrollable(true);
 
-        mScatterPlot.getViewport().setScrollableY(true);
-
-
-
-        //set manual y bounds
-
-        mScatterPlot.getViewport().setYAxisBoundsManual(true);
-
-        mScatterPlot.getViewport().setMaxY(2000000);
-
-        mScatterPlot.getViewport().setMinY(0);
-
+        mScatterPlot[floor].getViewport().setScrollableY(true);
 
 
         //set manual x bounds
 
-        mScatterPlot.getViewport().setXAxisBoundsManual(true);
 
-        mScatterPlot.getViewport().setMaxX(2000000);
+        mScatterPlot[floor].getViewport().setYAxisBoundsManual(true);
 
-        mScatterPlot.getViewport().setMinX(0);
+        mScatterPlot[floor].getViewport().setMaxY(2000000);
 
-        //make area under the graph
-        xySeries.setDrawBackground(false);
+        mScatterPlot[floor].getViewport().setMinY(0);
 
-        //Data points can be highlighted
+        //set manual y bounds
 
-        xySeries.setDrawDataPoints(true);
-
-
-        mScatterPlot.addSeries(xySeries);
+        mScatterPlot[floor].getViewport().setXAxisBoundsManual(true);
 
 
 
+        mScatterPlot[floor].getViewport().setMaxX(2000000);
 
 
 
+        mScatterPlot[floor].getViewport().setMinX(0);
+
+        mScatterPlot[floor].addSeries(xySeries[floor]);
 
     }
 
