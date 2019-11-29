@@ -119,7 +119,7 @@ public class MainActivity extends SampleActivityBase {
                     BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
 
                     BluetoothChatFragment.Decimal Yvalue= new BluetoothChatFragment.Decimal();
-
+                    //A undidade enviada eh em dm
                     double NextDataX= Xvalue.ValorX;
                     double NextDataY= Yvalue.ValorY;
 
@@ -221,7 +221,7 @@ public class MainActivity extends SampleActivityBase {
         android.util.Log.d(TAG, "Plotting data: ");
 
         xySeries[floor].setColor(Color.RED);
-        
+
        //xySeries[floor].setSize(10f);// if there is Data Point
 
         xySeries[floor].setThickness(10);//if there is Data Series
@@ -241,17 +241,18 @@ public class MainActivity extends SampleActivityBase {
 
         mScatterPlot[floor].getViewport().setYAxisBoundsManual(true);
 
-        mScatterPlot[floor].getViewport().setMaxY(2000000);
+        // Maximo aceitavel para o grafico ficar bom
+        mScatterPlot[floor].getViewport().setMaxY(200000);
 
-        mScatterPlot[floor].getViewport().setMinY(0);
+        mScatterPlot[floor].getViewport().setMinY(-200000);
 
         //set manual y bounds
 
         mScatterPlot[floor].getViewport().setXAxisBoundsManual(true);
 
-        mScatterPlot[floor].getViewport().setMaxX(2000000);
+        mScatterPlot[floor].getViewport().setMaxX(200000);
 
-        mScatterPlot[floor].getViewport().setMinX(0);
+        mScatterPlot[floor].getViewport().setMinX(-200000);
 
         mScatterPlot[floor].addSeries(xySeries[floor]);
 
@@ -323,6 +324,11 @@ public class MainActivity extends SampleActivityBase {
 
      */
 
+
+
+
+
+
     private ArrayList<XYValue> sortArray(ArrayList<XYValue> array){
 
         /*
@@ -390,8 +396,8 @@ public class MainActivity extends SampleActivityBase {
                 }
 
 
-
-                else if(array.get(m).getX() > array.get(m-1).getX()){
+//CHANGE HERE
+                else if(array.get(m).getX() >= array.get(m-1).getX()){
 
                     count++;
 

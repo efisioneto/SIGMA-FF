@@ -99,6 +99,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.GridLabelRenderer;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -767,12 +768,15 @@ public class BluetoothChatFragment extends Fragment{
             try {
 
 
-            hexX=PositionIX.getMessagem();
-            hexY=PositionIY.getMessagem();
+            hexX=PositionIMX.getMessagem();
+            hexY=PositionIMY.getMessagem();
 
             // Converter hexadecimal em decimal
-            decimalX=Integer.parseInt(hexX,16);
-            decimalY=Integer.parseInt(hexY,16);
+//            decimalX=Integer.parseInt(hexX,16);
+//            decimalY=Integer.parseInt(hexY,16);
+             decimalX= (int) hexToDec(hexX);
+             decimalY= (int) hexToDec(hexY);
+
             double a =decimalX;
             double b =decimalY;
 
@@ -1102,6 +1106,47 @@ public class BluetoothChatFragment extends Fragment{
        int ValorY = decimalY;
 
     }
+
+    public static Number hexToDec(String hex) {
+        if (hex == null) {
+            throw new NullPointerException("hexToDec: hex String is null.");
+        }
+
+// You may want to do something different with the empty string.
+        if (hex.equals("")) { return Byte.valueOf("0"); }
+
+// If you want to pad "FFF" to "0FFF" do it here.
+
+        hex = hex.toUpperCase();
+
+// Check if high bit is set.
+        boolean isNegative =
+                hex.startsWith("8") || hex.startsWith("9") ||
+                        hex.startsWith("A") || hex.startsWith("B") ||
+                        hex.startsWith("C") || hex.startsWith("D") ||
+                        hex.startsWith("E") || hex.startsWith("F");
+
+        BigInteger temp;
+
+        if (isNegative) {
+            // Negative number
+            temp = new BigInteger(hex, 16);
+            BigInteger subtrahend = BigInteger.ONE.shiftLeft(hex.length() * 4);
+            temp = temp.subtract(subtrahend);
+        } else {
+            // Positive number
+            temp = new BigInteger(hex, 16);
+        }
+
+// Cut BigInteger down to size.
+        if (hex.length() <= 2) { return (Byte)temp.byteValue(); }
+        if (hex.length() <= 4) { return (Short)temp.shortValue(); }
+        if (hex.length() <= 8) { return (Integer)temp.intValue(); }
+        if (hex.length() <= 16) { return (Long)temp.longValue(); }
+        return temp;
+    }
+
+
 
 
 }

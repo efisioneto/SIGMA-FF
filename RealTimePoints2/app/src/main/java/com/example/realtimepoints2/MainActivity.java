@@ -624,7 +624,7 @@ if(OriginalArray.get(floor).size()>1) {
 
         int count = 0;
 
-     //   Log.d(TAG, "sortArray: Sorting the XYArray.");
+        Log.d(TAG, "sortArray: Sorting the XYArray.");
 
 
 
@@ -638,7 +638,7 @@ if(OriginalArray.get(floor).size()>1) {
 
             }
 
-        //   Log.d(TAG, "sortArray: m = " + m);
+          Log.d(TAG, "sortArray: m = " + m);
 
             try{
 
@@ -677,8 +677,17 @@ if(OriginalArray.get(floor).size()>1) {
                 }
 
 
+//CHANGE HERE
 
-                else if(array.get(m).getX() > array.get(m-1).getX()){
+//                else if(array.get(m).getX() >= array.get(m-1).getX()){
+//
+//                    count++;
+//
+//                    //        Log.d(TAG, "sortArray: count = " + count);
+//
+//                }
+
+                else if(array.get(m).getX() >= array.get(m-1).getX()){
 
                     count++;
 
