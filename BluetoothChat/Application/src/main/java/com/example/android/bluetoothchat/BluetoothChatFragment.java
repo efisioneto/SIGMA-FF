@@ -103,6 +103,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static com.example.android.bluetoothchat.Constants.MESSAGE_READ;
 
 
 /**
@@ -112,7 +113,8 @@ import java.util.Random;
  */
 
 public class BluetoothChatFragment extends Fragment{
-
+    String mNewBuf= new String();
+    String IntermedBuf= new String();
     public double graphLastXValue = 5d;
 
   // private LineGraphSeries<DataPoint> series= new LineGraphSeries<DataPoint>();
@@ -625,7 +627,6 @@ public class BluetoothChatFragment extends Fragment{
 
 //#0B0065003D0001FFDB30013B00236FFE9EFFC3FFEE1763975506FC6E971F06B25BC08484
 
-
             FragmentActivity activity = getActivity();
 
             switch (msg.what) {
@@ -663,10 +664,10 @@ public class BluetoothChatFragment extends Fragment{
                 case Constants.MESSAGE_WRITE:
 
                     byte[] writeBuf = (byte[]) msg.obj;
-
+                    String writeMessage = new String(writeBuf);
                     // construct a string from the buffer
 
-                    String writeMessage = new String(writeBuf);
+
                     //String writeMessage="aaa";
 
                     mConversationArrayAdapter.add(writeMessage);
@@ -675,112 +676,150 @@ public class BluetoothChatFragment extends Fragment{
 
                 case Constants.MESSAGE_READ:
 
+//                     try {
+//                            Thread.sleep(1 * 1000);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+
+
                     byte[] readBuf = (byte[]) msg.obj;
+                   // String readMessage = new String(readBuf,0 , 100);
+                    String readMessage = new String(readBuf, 0, msg.arg1);
 
-                    // construct a string from the valid bytes in the buffer
+                    if(readMessage.charAt(0)=='#'||i==1){
 
-                    // String readMessage = new String(readBuf, 0, msg.arg1);
+                    System.out.println("readMessage: "+readMessage);
 
-                    String readMessage = new String(readBuf, 0, 80);
-
-                    //Teste para ver se estar funcioando
-
-                    Mensagem Teste1= new Mensagem();
-                    Teste1.setMensagem(readMessage.substring(15,15));
-                    String palavra= Teste1.getMessagem();
-
-
-                    //Operator ID, inteiro de 0 a 9
-                    Mensagem ID = new Mensagem();
-                    ID.setMensagem(readMessage.substring(1, 3));
+                    mNewBuf += readMessage;
+                    i=1;
+                    if(mNewBuf.length()==74 &&mNewBuf.charAt(73)=='\n'){
+                      //  mConversationArrayAdapter.add(mNewBuf);
+                        System.out.print("mNewBuf: "+mNewBuf);
+                        Mensagem Teste1= new Mensagem();
+                        Teste1.setMensagem(mNewBuf.substring(15,15));
+                        String palavra= Teste1.getMessagem();
 
 
-                    //Message counter, inteiro de 0 a 65535
-                    Mensagem MessageCounter = new Mensagem();
-                    MessageCounter.setMensagem(readMessage.substring(3, 7));
-
-                    //Step Counter, inteiro de 0 a 65535
-                    Mensagem StepCounter = new Mensagem();
-                    StepCounter.setMensagem(readMessage.substring(7, 11));
-
-                    //Flag x 16: bit0: initial stance OK, bit1: no magnetic calibration, bit2: operator KO,
-                    // bit3: high temperature
-                    Mensagem Flag = new Mensagem();
-                    Flag.setMensagem(readMessage.substring(11, 15));
-
-                    // Position estimation given by integration of inertial and magnetic data, X (North), LSB 0.1 m,
-                    // value from -52.4288 km to +52.4288 km
-                    Mensagem PositionIMX = new Mensagem();
-                    PositionIMX.setMensagem(readMessage.substring(15, 20));
-
-                    // Position estimation given by integration of inertial and magnetic data, Y (East) , LSB 0.1 m,
-                    // value from -52.4288 km to +52.4288 km
-                    Mensagem PositionIMY = new Mensagem();
-                    PositionIMY.setMensagem(readMessage.substring(20, 25));
-
-                    //Position estimation given by integration of inertial data only, X (North) , LSB 0.1 m,
-                    // value from -52.4288 km to +52.4288 km 8
-                    Mensagem PositionIX = new Mensagem();
-                    PositionIX.setMensagem(readMessage.substring(25, 30));
-
-                    // Position estimation given by integration of inertial data only, Y (East) , LSB 0.1 m,
-                    // value from -52.4288 km to +52.4288 km
-                    Mensagem PositionIY = new Mensagem();
-                    PositionIY.setMensagem(readMessage.substring(30, 35));
-
-                    //Altitude estimation given by integration of inertial data only, Z (Down) , LSB 0.1 m,
-                    // value from -3276.8 m to +3276.8 m
-                    Mensagem PositionIZ = new Mensagem();
-                    PositionIZ.setMensagem(readMessage.substring(35, 39));
-
-                    //Altitude estimation given by pressometer, Z (Down), LSB 0.1 m, value from -3276.8 m to +3276.8 m
-                    Mensagem Altitude = new Mensagem();
-                    Altitude.setMensagem(readMessage.substring(39, 43));
-
-                    // Latitude estimation from GPS, LSB = 2^-29 rad (nearly 1.2 c at sea level),
-                    // value from –PI/2 to +PI/2 rad
-                    Mensagem Latitude = new Mensagem();
-                    Latitude.setMensagem(readMessage.substring(43, 51));
-
-                    // Longitude estimation from GPS, LSB = 2^-29 rad (nearly 1.2 c at sea level),
-                    // value from –PI to +PI rad
-                    Mensagem Longitude = new Mensagem();
-                    Longitude.setMensagem(readMessage.substring(51, 59));
-
-                    //GPS estimation quality, value from 0 to 99
-                    Mensagem GPS = new Mensagem();
-                    GPS.setMensagem(readMessage.substring(59, 61));
-
-                    //North alignment angle of inertial path, LSB 2^-13 rad, value from –PI to PI rad
-                    Mensagem Angle = new Mensagem();
-                    Angle.setMensagem(readMessage.substring(61, 65));
-
-                    //Yaw drift of inertial path, in rotation per step, LSB 2^-19 rad,
-                    // value from –3.56 to 3.56 rad
-                    Mensagem Drift = new Mensagem();
-                    Drift.setMensagem(readMessage.substring(65, 69));
-
-                    //CRC-CCITT
-                    Mensagem CRC = new Mensagem();
-                    CRC.setMensagem(readMessage.substring(69, 73));
-                    //String hex="FE" ;
-
-            try {
+                        //Operator ID, inteiro de 0 a 9
+                        Mensagem ID = new Mensagem();
+                        ID.setMensagem(mNewBuf.substring(1, 3));
 
 
-            hexX=PositionIMX.getMessagem();
-            hexY=PositionIMY.getMessagem();
+                        //Message counter, inteiro de 0 a 65535
+                        Mensagem MessageCounter = new Mensagem();
+                        MessageCounter.setMensagem(mNewBuf.substring(3, 7));
 
-            // Converter hexadecimal em decimal
+                        //Step Counter, inteiro de 0 a 65535
+                        Mensagem StepCounter = new Mensagem();
+                        StepCounter.setMensagem(mNewBuf.substring(7, 11));
+
+                        //Flag x 16: bit0: initial stance OK, bit1: no magnetic calibration, bit2: operator KO,
+                        // bit3: high temperature
+                        Mensagem Flag = new Mensagem();
+                        Flag.setMensagem(mNewBuf.substring(11, 15));
+
+                        // Position estimation given by integration of inertial and magnetic data, X (North), LSB 0.1 m,
+                        // value from -52.4288 km to +52.4288 km
+                        Mensagem PositionIMX = new Mensagem();
+                        PositionIMX.setMensagem(mNewBuf.substring(15, 20));
+
+                        // Position estimation given by integration of inertial and magnetic data, Y (East) , LSB 0.1 m,
+                        // value from -52.4288 km to +52.4288 km
+                        Mensagem PositionIMY = new Mensagem();
+                        PositionIMY.setMensagem(mNewBuf.substring(20, 25));
+
+                        //Position estimation given by integration of inertial data only, X (North) , LSB 0.1 m,
+                        // value from -52.4288 km to +52.4288 km 8
+                        Mensagem PositionIX = new Mensagem();
+                        PositionIX.setMensagem(mNewBuf.substring(25, 30));
+
+                        // Position estimation given by integration of inertial data only, Y (East) , LSB 0.1 m,
+                        // value from -52.4288 km to +52.4288 km
+                        Mensagem PositionIY = new Mensagem();
+                        PositionIY.setMensagem(mNewBuf.substring(30, 35));
+
+                        //Altitude estimation given by integration of inertial data only, Z (Down) , LSB 0.1 m,
+                        // value from -3276.8 m to +3276.8 m
+                        Mensagem PositionIZ = new Mensagem();
+                        PositionIZ.setMensagem(mNewBuf.substring(35, 39));
+
+                        //Altitude estimation given by pressometer, Z (Down), LSB 0.1 m, value from -3276.8 m to +3276.8 m
+                        Mensagem Altitude = new Mensagem();
+                        Altitude.setMensagem(mNewBuf.substring(39, 43));
+
+                        // Latitude estimation from GPS, LSB = 2^-29 rad (nearly 1.2 c at sea level),
+                        // value from –PI/2 to +PI/2 rad
+                        Mensagem Latitude = new Mensagem();
+                        Latitude.setMensagem(mNewBuf.substring(43, 51));
+
+                        // Longitude estimation from GPS, LSB = 2^-29 rad (nearly 1.2 c at sea level),
+                        // value from –PI to +PI rad
+                        Mensagem Longitude = new Mensagem();
+                        Longitude.setMensagem(mNewBuf.substring(51, 59));
+
+                        //GPS estimation quality, value from 0 to 99
+                        Mensagem GPS = new Mensagem();
+                        GPS.setMensagem(mNewBuf.substring(59, 61));
+
+                        //North alignment angle of inertial path, LSB 2^-13 rad, value from –PI to PI rad
+                        Mensagem Angle = new Mensagem();
+                        Angle.setMensagem(mNewBuf.substring(61, 65));
+
+                        //Yaw drift of inertial path, in rotation per step, LSB 2^-19 rad,
+                        // value from –3.56 to 3.56 rad
+                        Mensagem Drift = new Mensagem();
+                        Drift.setMensagem(mNewBuf.substring(65, 69));
+
+                        //CRC-CCITT
+                        Mensagem CRC = new Mensagem();
+                        CRC.setMensagem(mNewBuf.substring(69, 73));
+                        //String hex="FE" ;
+                        hexX=PositionIMX.getMessagem();
+                        hexY=PositionIMY.getMessagem();
+
+                        decimalX= (int) hexToDec(hexX);
+                        decimalY= (int) hexToDec(hexY);
+
+                        double a =decimalX;
+                        double b =decimalY;
+
+                        //mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
+                        mConversationArrayAdapter.add(mNewBuf);
+
+                        mNewBuf="";
+                        i=0;
+                    }
+            }
+                    if(mNewBuf.length()>74){
+
+                        System.out.print("mNewBuf: DEU RUIM\n");
+                        mNewBuf="";
+                    }
+         //           String readMessage = new String(readBuf, 0, 80);
+
+              //      Teste para ver se estar funcioando
+
+
+
+
+
+                    try {
+
+
+
+
+    //         Converter hexadecimal em decimal
 //            decimalX=Integer.parseInt(hexX,16);
 //            decimalY=Integer.parseInt(hexY,16);
-             decimalX= (int) hexToDec(hexX);
-             decimalY= (int) hexToDec(hexY);
 
-            double a =decimalX;
-            double b =decimalY;
 
-            mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
+
+
+
+
+               // System.out.println(readMessage);
+          //  mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
             } catch (IllegalArgumentException e){
 
                 Log.e(TAG,"Deu ruim "+e.getMessage() );

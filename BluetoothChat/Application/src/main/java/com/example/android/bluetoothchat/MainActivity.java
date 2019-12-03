@@ -98,7 +98,7 @@ public class MainActivity extends SampleActivityBase {
 
         try {
             mScatterPlot= new GraphView[100];
-            mScatterPlot[floor] = (GraphView) findViewById(R.id.graph);
+          //  mScatterPlot[floor] = (GraphView) findViewById(R.id.graph);
         }catch (NullPointerException e){
 
             android.util.Log.e(TAG,"Its wrong "+e.getMessage() );
@@ -128,7 +128,7 @@ public class MainActivity extends SampleActivityBase {
 
                         PreviousDataX= NextDataX;
                         PreviousDataY= NextDataY;
-                        OriginalArray.get(floor).add(new XYValue(NextDataX,NextDataY));
+                     //   OriginalArray.get(floor).add(new XYValue(NextDataX,NextDataY));
 
                         if (OriginalArray.get(floor).size()!=0){
 
@@ -142,7 +142,7 @@ public class MainActivity extends SampleActivityBase {
 
                             }
                                //Create graph
-                                createScatterPlot();
+                              //  createScatterPlot();
 
                         }else{
                             Log.d(TAG, "No data plot");
