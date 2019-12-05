@@ -90,15 +90,14 @@ public class MainActivity extends SampleActivityBase {
         setContentView(R.layout.activity_main);
 
         //Declare variables
-        xySeries= new LineGraphSeries[100];
-        xySeries[floor]= new LineGraphSeries<>();
+
 
         OriginalArray.add(new ArrayList<XYValue>());
         xyValueArray = new ArrayList<>();
 
         try {
             mScatterPlot= new GraphView[100];
-          //  mScatterPlot[floor] = (GraphView) findViewById(R.id.graph);
+            mScatterPlot[floor] = (GraphView) findViewById(R.id.graph);
         }catch (NullPointerException e){
 
             android.util.Log.e(TAG,"Its wrong "+e.getMessage() );
@@ -113,7 +112,8 @@ public class MainActivity extends SampleActivityBase {
             @Override
             public void run()
             {
-
+                xySeries= new LineGraphSeries[100];
+                xySeries[floor]= new LineGraphSeries<>();
                 try{
 
                     BluetoothChatFragment.Decimal Xvalue= new BluetoothChatFragment.Decimal();
@@ -128,7 +128,7 @@ public class MainActivity extends SampleActivityBase {
 
                         PreviousDataX= NextDataX;
                         PreviousDataY= NextDataY;
-                     //   OriginalArray.get(floor).add(new XYValue(NextDataX,NextDataY));
+                       OriginalArray.get(floor).add(new XYValue(NextDataX,NextDataY));
 
                         if (OriginalArray.get(floor).size()!=0){
 
@@ -142,7 +142,7 @@ public class MainActivity extends SampleActivityBase {
 
                             }
                                //Create graph
-                              //  createScatterPlot();
+                               createScatterPlot();
 
                         }else{
                             Log.d(TAG, "No data plot");
@@ -173,13 +173,24 @@ public class MainActivity extends SampleActivityBase {
         }
         }
 
-    public void createScatterPlot() {
-        android.util.Log.d(TAG, "Create the graph");
+    private void createScatterPlot() {
 
-      // xySeries[floor].resetData(new DataPoint[] {});
+        android.util.Log.d(TAG, "Fazendo o grafico");
 
-        //Reset data sorted
+
+//        for(int i=0; i<OriginalArray[n].size();i++){
+//
+//           double x= OriginalArray[n].get(i).getX();
+//           double y =OriginalArray[n].get(i).getY();
+//           xyValueArray[n].set(i, new XYValue(x,y));
+//
+//        }
+
+        //    xyValueArray[n] = OriginalArray[n];
+
+
         xyValueArray.clear();
+
 
         for (int i = 0; i < OriginalArray.get(floor).size(); i++) {
 
@@ -188,37 +199,108 @@ public class MainActivity extends SampleActivityBase {
             xyValueArray.add(new XYValue(x, y));
 
         }
-        //Sort data
+
+
+        //Colocar a array na ordem
+
         sortArray(xyValueArray);
 
-        for(int i=0; i<xyValueArray.size();i++){
+        System.out.println("OriginalArray:");
+        for (int i = 0; i < OriginalArray.size(); i++) {
+            for (int j = 0; j < OriginalArray.get(i).size(); j++) {
+
+                final double x = OriginalArray.get(i).get(j).getX();
+                final double y = OriginalArray.get(i).get(j).getY();
+
+                // System.out.print(aLists.get(i).get(j) + " ");
+
+                System.out.print("(" + x + ", " + y + ") ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("xyValueArray:");
+
+        for (int i = 0; i < xyValueArray.size(); i++) {
+
+
+            final double x = xyValueArray.get(i).getX();
+            final double y = xyValueArray.get(i).getY();
+
+            // System.out.print(aLists.get(i).get(j) + " ");
+
+            System.out.print("(" + x + ", " + y + ") ");
+
+        }
+        System.out.println();
+
+
+        //Colocar a array na ordem
+        //xyValueArray[n]=sortArray(xyValueArray[n]);
+
+//        if (xyValueArray[n] == OriginalArray[n]) {
+//
+//            Log.d(TAG, "estranho2");
+//
+//        }else{
+//            Log.d(TAG, "Confirmei minha ideia");
+//        }
+
+        for(int i=0; i< xyValueArray.size();i++){
 
             try {
+                double x =  xyValueArray.get(i).getX();
+                double y =  xyValueArray.get(i).getY();
 
-                double x = xyValueArray.get(i).getX();
-                double y = xyValueArray.get(i).getY();
+                //Plotar apenas mais um ponto caso mude de andar
 
-                if(x==OriginalArrayX1&&y==OriginalArrayY1||x==OriginalArrayX2&&y==OriginalArrayY2){
 
-                    xySeries[floor].appendData(new DataPoint(x,y),true,1000);
-                    android.util.Log.d(TAG, "New Data: "+ x+ " "+ y);
+                    if(x==OriginalArrayX1&&y==OriginalArrayY1){
+
+
+                        xySeries[floor].appendData(new DataPoint(x,y),true,1000);
+
+                    }
+
+
+                //Ligar dois pontos caso o andar seja o mesmo
+                else  {
+
+                    if(x==OriginalArrayX1&&y==OriginalArrayY1||x==OriginalArrayX2&&y==OriginalArrayY2){
+                        xySeries[floor].appendData(new DataPoint(x,y),true,1000);
+
+                        android.util.Log.d(TAG, "New Data: "+ x+ " "+ y);
+                    }
 
                 }
+
+
             }catch (IllegalArgumentException e){
 
-                Log.e(TAG,"Deu ruim "+e.getMessage() );
+                android.util.Log.e(TAG,"Deu ruim "+e.getMessage() );
+
+            }catch (NullPointerException k){
+
+                android.util.Log.e(TAG,"Deu ruim no dado com array "+k.getMessage() );
 
             }
 
-     }
-        //Chart Features
+        }
+
+
+
+        //set some properties
+
+        // xySeries.setShape(PointsGraphSeries.Shape.RECTANGLE);
+
+
         initGraph();
 
     }
 
     private void initGraph() {
 
-        android.util.Log.d(TAG, "Plotting data: ");
+   //     android.util.Log.d(TAG, "Plotting data: ");
 
         xySeries[floor].setColor(Color.RED);
 
@@ -242,17 +324,17 @@ public class MainActivity extends SampleActivityBase {
         mScatterPlot[floor].getViewport().setYAxisBoundsManual(true);
 
         // Maximo aceitavel para o grafico ficar bom
-        mScatterPlot[floor].getViewport().setMaxY(200000);
+        mScatterPlot[floor].getViewport().setMaxY(40);
 
-        mScatterPlot[floor].getViewport().setMinY(-200000);
+        mScatterPlot[floor].getViewport().setMinY(-40);
 
         //set manual y bounds
 
         mScatterPlot[floor].getViewport().setXAxisBoundsManual(true);
 
-        mScatterPlot[floor].getViewport().setMaxX(200000);
+        mScatterPlot[floor].getViewport().setMaxX(40);
 
-        mScatterPlot[floor].getViewport().setMinX(-200000);
+        mScatterPlot[floor].getViewport().setMinX(-40);
 
         mScatterPlot[floor].addSeries(xySeries[floor]);
 
@@ -343,7 +425,7 @@ public class MainActivity extends SampleActivityBase {
 
         int count = 0;
 
-        android.util.Log.d(TAG, "sortArray: Sorting the XYArray.");
+   //     android.util.Log.d(TAG, "sortArray: Sorting the XYArray.");
 
 
 
@@ -357,7 +439,7 @@ public class MainActivity extends SampleActivityBase {
 
             }
 
-            android.util.Log.d(TAG, "sortArray: m = " + m);
+         //   android.util.Log.d(TAG, "sortArray: m = " + m);
 
             try{
 
@@ -391,17 +473,17 @@ public class MainActivity extends SampleActivityBase {
 
                     count++;
 
-                    android.util.Log.d(TAG, "sortArray: count = " + count);
+             //       android.util.Log.d(TAG, "sortArray: count = " + count);
 
                 }
 
 
 //CHANGE HERE
-                else if(array.get(m).getX() >= array.get(m-1).getX()){
+                else if(array.get(m).getX() > array.get(m-1).getX()){
 
                     count++;
 
-                    android.util.Log.d(TAG, "sortArray: count = " + count);
+         //           android.util.Log.d(TAG, "sortArray: count = " + count);
 
                 }
 

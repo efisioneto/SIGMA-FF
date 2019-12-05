@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
                     createScatterPlot1();
                 }
                 else {
-                    xySeries[floor] = new LineGraphSeries<>() ;
+                 //   xySeries[floor] = new LineGraphSeries<>() ;
                     createScatterPlot2();
                 }
             }
@@ -175,14 +175,14 @@ public class MainActivity extends AppCompatActivity {
         btnDownFloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View DownFloor) {
-                mScatterPlot[floor].removeAllSeries();
+               mScatterPlot[floor].removeAllSeries();
                 ChangeFloor=true;
                 if(floor!=0){
                     floor-=1;
                 }
                 Log.d(TAG,"Mudando de andar de andar: " + floor);
                 mScatterPlot[floor] = (GraphView) findViewById(R.id.scatterPlot);
-                xySeries[floor]=new LineGraphSeries<>();
+             //   xySeries[floor]=new LineGraphSeries<>();
                createScatterPlot2();
             }
         });
@@ -438,7 +438,6 @@ if(OriginalArray.get(floor).size()>1) {
 
     private void createScatterPlot2() {
 
-
         xyValueArray.clear();
 
         for (int i = 0; i < OriginalArray.get(floor).size(); i++) {
@@ -502,10 +501,16 @@ if(OriginalArray.get(floor).size()>1) {
 //for (int j=0; j< OriginalArray[n].size()-1;j++){
 
         for(int j=0; j< OriginalArray.get(floor).size()-1;j++){
+
+            xySeries= new LineGraphSeries[100];
+            xySeries[floor]= new LineGraphSeries<>();
+
+
             double x1=OriginalArray.get(floor).get(j).getX();
             double x2=OriginalArray.get(floor).get(j+1).getX();
             double y1=OriginalArray.get(floor).get(j).getY();
             double y2=OriginalArray.get(floor).get(j+1).getY();
+
             for(int i=0; i< xyValueArray.size();i++){
 
             try {
@@ -534,14 +539,14 @@ if(OriginalArray.get(floor).size()>1) {
             }
 
         }
-
+            initGraph();
 
            // xySeries[n].resetData(new DataPoint[] {});
        // mScatterPlot[n].removeAllSeries();
 
         }
 
-        initGraph();
+
 
 
 
@@ -624,7 +629,7 @@ if(OriginalArray.get(floor).size()>1) {
 
         int count = 0;
 
-        Log.d(TAG, "sortArray: Sorting the XYArray.");
+   //     Log.d(TAG, "sortArray: Sorting the XYArray.");
 
 
 
@@ -638,7 +643,7 @@ if(OriginalArray.get(floor).size()>1) {
 
             }
 
-          Log.d(TAG, "sortArray: m = " + m);
+  //        Log.d(TAG, "sortArray: m = " + m);
 
             try{
 

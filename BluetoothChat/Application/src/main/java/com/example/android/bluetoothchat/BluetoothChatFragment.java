@@ -689,13 +689,13 @@ public class BluetoothChatFragment extends Fragment{
 
                     if(readMessage.charAt(0)=='#'||i==1){
 
-                    System.out.println("readMessage: "+readMessage);
+               //     System.out.println("readMessage: "+readMessage);
 
                     mNewBuf += readMessage;
                     i=1;
                     if(mNewBuf.length()==74 &&mNewBuf.charAt(73)=='\n'){
                       //  mConversationArrayAdapter.add(mNewBuf);
-                        System.out.print("mNewBuf: "+mNewBuf);
+                  //      System.out.print("mNewBuf: "+mNewBuf);
                         Mensagem Teste1= new Mensagem();
                         Teste1.setMensagem(mNewBuf.substring(15,15));
                         String palavra= Teste1.getMessagem();
@@ -784,8 +784,8 @@ public class BluetoothChatFragment extends Fragment{
                         double a =decimalX;
                         double b =decimalY;
 
-                        //mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
-                        mConversationArrayAdapter.add(mNewBuf);
+                        mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
+                        //mConversationArrayAdapter.add(mNewBuf);
 
                         mNewBuf="";
                         i=0;
