@@ -105,6 +105,14 @@ import java.util.Random;
 
 import static com.example.android.bluetoothchat.Constants.MESSAGE_READ;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+
+
 
 /**
 
@@ -627,6 +635,7 @@ public class BluetoothChatFragment extends Fragment{
 
 //#0B0065003D0001FFDB30013B00236FFE9EFFC3FFEE1763975506FC6E971F06B25BC08484
 
+
             FragmentActivity activity = getActivity();
 
             switch (msg.what) {
@@ -676,6 +685,7 @@ public class BluetoothChatFragment extends Fragment{
 
                 case Constants.MESSAGE_READ:
 
+
 //                     try {
 //                            Thread.sleep(1 * 1000);
 //                        } catch (InterruptedException e) {
@@ -683,17 +693,49 @@ public class BluetoothChatFragment extends Fragment{
 //                        }
 
 
-                    byte[] readBuf = (byte[]) msg.obj;
-                   // String readMessage = new String(readBuf,0 , 100);
-                    String readMessage = new String(readBuf, 0, msg.arg1);
+//                   //Ideia de Fausto para receber a string completa.
+//                    int length =74;
+//                   //socketInputStream never returns -1 unless connection is broken
+//                    while ((length = socketInputStream.read(buffer)) != -1) {
+//                        largeDataOutputStream.write(buffer, 0, length);
+//                        if (progress >= dataSize) {
+//                            break; //Break loop if progress reaches the limit
+//                        }
+//                    }
 
-                    if(readMessage.charAt(0)=='#'||i==1){
+
+
+
+
+                    byte[] readBuf = (byte[]) msg.obj;
+
+                    int length;
+
+                    while ((length = msg.arg1) != -1) {
+
+                        String readMessage = new String(readBuf, 0, length);
+                   //     mNewBuf = new String(readBuf, 0, length);
+                        mNewBuf += readMessage;
+
+                        if (mNewBuf.length() >= 74) {
+                            break; //Break loop if progress reaches the limit
+
+                    }
+                    }
+
+                   // String readMessage = new String(readBuf,0 , 100);
+                    //String readMessage = new String(readBuf, 0, msg.arg1);
+
+
+
+
+     //               if(readMessage.charAt(0)=='#'||i==1){
 
                //     System.out.println("readMessage: "+readMessage);
 
-                    mNewBuf += readMessage;
+       //             mNewBuf += readMessage;
                     i=1;
-                    if(mNewBuf.length()==74 &&mNewBuf.charAt(73)=='\n'){
+ //                   if(mNewBuf.length()==74 &&mNewBuf.charAt(73)=='\n'){
                       //  mConversationArrayAdapter.add(mNewBuf);
                   //      System.out.print("mNewBuf: "+mNewBuf);
                         Mensagem Teste1= new Mensagem();
@@ -789,8 +831,8 @@ public class BluetoothChatFragment extends Fragment{
 
                         mNewBuf="";
                         i=0;
-                    }
-            }
+            //        }
+         //   }
                     if(mNewBuf.length()>74){
 
                         System.out.print("mNewBuf: DEU RUIM\n");

@@ -52,7 +52,7 @@ import java.util.Random;
  * on other devices it's visibility is controlled by an item on the Action Bar.
  */
 public class MainActivity extends SampleActivityBase {
-    public static final String TAG = "MainActivity";
+    public static final String TAG = "MainA ctivity";
 
     //Determinate initial floor
     public int floor= 0;
@@ -308,6 +308,14 @@ public class MainActivity extends SampleActivityBase {
 
         xySeries[floor].setThickness(10);//if there is Data Series
 
+
+        //make area under the graph
+        xySeries[floor].setDrawBackground(false);
+
+        //Data points can be highlighted
+        xySeries[floor].setDrawDataPoints(true);
+
+
         //set Scrollable and Scaleable
 
         mScatterPlot[floor].getViewport().setScalable(true);
@@ -479,7 +487,7 @@ public class MainActivity extends SampleActivityBase {
 
 
 //CHANGE HERE
-                else if(array.get(m).getX() > array.get(m-1).getX()){
+                else if(array.get(m).getX() >= array.get(m-1).getX()){
 
                     count++;
 
