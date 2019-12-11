@@ -776,6 +776,7 @@ id btnAddPt
 id buttonPanel
 id button_scan
 id button_send
+id button_send2
 id cancel_action
 id center
 id center_horizontal

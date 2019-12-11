@@ -489,6 +489,17 @@ public class BluetoothChatService {
             byte[] buffer = new byte[1024];
             int bytes;
 
+
+            try
+            {
+                Thread.sleep(1000);
+            }
+            catch(InterruptedException ex)
+            {
+                Thread.currentThread().interrupt();
+            }
+
+
             // Keep listening to the InputStream while connected
             while (mState == STATE_CONNECTED) {
                 try {

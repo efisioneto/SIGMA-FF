@@ -45,6 +45,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 
 import android.graphics.Color;
+import android.icu.util.TimeZone;
 import android.os.Bundle;
 
 import android.os.Handler;
@@ -187,8 +188,8 @@ public class BluetoothChatFragment extends Fragment{
 
     private BluetoothChatService mChatService = null;
 
-    private String hexX, hexY;
-    public static int  decimalX,decimalY;
+    private String hexX, hexY,hexZ,step,hexAltitude;
+    public static int  decimalX,decimalY,decimalZ,decimalSteps,decimalAltitude;
     public int i =0;
 
 //    public void initGraph(GraphView graph)
@@ -685,7 +686,6 @@ public class BluetoothChatFragment extends Fragment{
 
                 case Constants.MESSAGE_READ:
 
-
 //                     try {
 //                            Thread.sleep(1 * 1000);
 //                        } catch (InterruptedException e) {
@@ -694,7 +694,7 @@ public class BluetoothChatFragment extends Fragment{
 
 
 //                   //Ideia de Fausto para receber a string completa.
-//                    int length =74;
+//                    int length ;
 //                   //socketInputStream never returns -1 unless connection is broken
 //                    while ((length = socketInputStream.read(buffer)) != -1) {
 //                        largeDataOutputStream.write(buffer, 0, length);
@@ -703,39 +703,26 @@ public class BluetoothChatFragment extends Fragment{
 //                        }
 //                    }
 
-
-
+                  //  byte[] readBuf = (byte[]) msg.obj;
+//                    int length;
+//                    //socketInputStream never returns -1 unless connection is broken
+//                  while ((length = msg.arg1) != -1) {
+//
+//
+//                  }
 
 
                     byte[] readBuf = (byte[]) msg.obj;
-
-                    int length;
-
-                    while ((length = msg.arg1) != -1) {
-
-                        String readMessage = new String(readBuf, 0, length);
-                   //     mNewBuf = new String(readBuf, 0, length);
-                        mNewBuf += readMessage;
-
-                        if (mNewBuf.length() >= 74) {
-                            break; //Break loop if progress reaches the limit
-
-                    }
-                    }
-
                    // String readMessage = new String(readBuf,0 , 100);
-                    //String readMessage = new String(readBuf, 0, msg.arg1);
+                    String readMessage = new String(readBuf, 0, msg.arg1);
 
-
-
-
-     //               if(readMessage.charAt(0)=='#'||i==1){
+                    if(readMessage.charAt(0)=='#'||i==1){
 
                //     System.out.println("readMessage: "+readMessage);
 
-       //             mNewBuf += readMessage;
+                    mNewBuf += readMessage;
                     i=1;
- //                   if(mNewBuf.length()==74 &&mNewBuf.charAt(73)=='\n'){
+                    if(mNewBuf.length()==74 &&mNewBuf.charAt(73)=='\n'){
                       //  mConversationArrayAdapter.add(mNewBuf);
                   //      System.out.print("mNewBuf: "+mNewBuf);
                         Mensagem Teste1= new Mensagem();
@@ -819,20 +806,52 @@ public class BluetoothChatFragment extends Fragment{
                         //String hex="FE" ;
                         hexX=PositionIMX.getMessagem();
                         hexY=PositionIMY.getMessagem();
+                        hexZ=PositionIZ.getMessagem();
+                        hexAltitude=Altitude.getMessagem();
+                        step=MessageCounter.getMessagem();
 
-                        decimalX= (int) hexToDec(hexX);
-                        decimalY= (int) hexToDec(hexY);
+//                        decimalX= (int) hexToDec(hexX);
+//                        decimalY= (int) hexToDec(hexY);
+
+                        decimalX= 0;
+                        decimalY= 0;
+                        decimalZ= ((short) hexToDec(hexZ))*(-1);
+                        decimalAltitude= ((short) hexToDec(hexAltitude))*(-1);
+                        //decimalSteps= (short) hexToDec(step);
+                        decimalSteps= Integer.parseInt(step,16);
 
                         double a =decimalX;
                         double b =decimalY;
 
-                        mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY);
+                        if (decimalSteps <100){
+                            mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY+" Z:"+decimalZ+
+                                    " Altitude:"+decimalAltitude+" Steps:"+decimalSteps +  " Calibration");
+                        }
+
+                        if (decimalSteps ==100){
+
+                        mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY+" Z:"+decimalZ+
+                                " Altitude:"+decimalAltitude+" Steps:"+decimalSteps+ " Calibration OK");
+
+
+                        }if (decimalSteps >100){
+
+                            mConversationArrayAdapter.add("X:"+decimalX+" Y:"+decimalY+" Z:"+decimalZ+
+                                    " Altitude:"+decimalAltitude+" Steps:"+decimalSteps);
+
+
+                        }
+
+
+//                        System.out.println(" Z:"+decimalZ+ " Altitude "+ decimalAltitude+
+//                                " Steps:"+decimalSteps);
                         //mConversationArrayAdapter.add(mNewBuf);
 
                         mNewBuf="";
                         i=0;
-            //        }
-         //   }
+                    }
+            }
+
                     if(mNewBuf.length()>74){
 
                         System.out.print("mNewBuf: DEU RUIM\n");
