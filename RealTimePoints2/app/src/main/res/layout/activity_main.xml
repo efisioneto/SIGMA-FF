@@ -7,6 +7,44 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/ArrowUp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="137dp"
+        android:text="U"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ArrowLeft"
+        app:layout_constraintTop_toBottomOf="@+id/scatterPlot" />
+
+    <Button
+        android:id="@+id/ArrowDown"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="10dp"
+        android:text="D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ArrowLeft"
+        app:layout_constraintTop_toBottomOf="@+id/scatterPlot" />
+
     <com.jjoe64.graphview.GraphView
         android:id="@+id/scatterPlot"
         android:layout_width="match_parent"
@@ -41,26 +79,6 @@
         android:layout_marginTop="67dp"
         android:layout_marginEnd="47dp"
         android:layout_marginBottom="88dp"
-        android:autofillHints=""
-        android:background="@android:drawable/editbox_background"
-        android:ems="10"
-        android:hint="@string/x"
-        android:inputType="numberSigned"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/numY"
-        app:layout_constraintEnd_toStartOf="@+id/ArrowLeft"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scatterPlot" />
-
-    <EditText
-        android:id="@+id/numZ"
-        android:layout_width="121dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="153dp"
-        android:layout_marginBottom="150dp"
         android:autofillHints=""
         android:background="@android:drawable/editbox_background"
         android:ems="10"
@@ -151,39 +169,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ArrowLeft"
         app:layout_constraintTop_toBottomOf="@+id/scatterPlot" />
-
-    <ImageButton
-        android:id="@+id/ArrowUp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="131dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toTopOf="@+id/ArrowLeft"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/numX"
-        app:layout_constraintTop_toBottomOf="@+id/scatterPlot"
-        app:srcCompat="@android:drawable/arrow_up_float" />
-
-    <ImageButton
-        android:id="@+id/ArrowDown"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginBottom="13dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/numY"
-        app:layout_constraintTop_toBottomOf="@id/ArrowUp"
-        app:srcCompat="@android:drawable/arrow_down_float" />
 
 
 </RelativeLayout>

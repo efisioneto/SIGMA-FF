@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
   //  ArrayList<ArrayList<LineGraphSeries<DataPoint>>> xySeries = new ArrayList<ArrayList<LineGraphSeries<DataPoint>>>();
 
     //Botoes que serao utilizados
-    private Button btnAddPt,btnRight,btnLeft,btnUpFloor,btnDownFloor;
+    private Button btnAddPt,btnRight,btnLeft,btnUpFloor,btnDownFloor,btnUp,btnDown;
     //Imagem que sera usada
-    private ImageButton btnUp,btnDown;
+
     //variaveis usadas para pegar os numeros que o usuario escreve
     private EditText mX,mY;
     //Variaveis usadas para comparar valores
@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
         //declare variables in onCreate
 
-        btnUp = (ImageButton) findViewById(R.id.ArrowUp);
-        btnDown = (ImageButton) findViewById(R.id.ArrowDown);
+        btnUp = (Button) findViewById(R.id.ArrowUp);
+        btnDown = (Button) findViewById(R.id.ArrowDown);
         btnRight= (Button) findViewById(R.id.ArrowRight);
         btnLeft = (Button) findViewById(R.id.ArrowLeft);
         btnAddPt = (Button) findViewById(R.id.btnAddPt);

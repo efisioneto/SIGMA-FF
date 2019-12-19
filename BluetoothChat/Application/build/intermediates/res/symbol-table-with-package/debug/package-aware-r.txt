@@ -704,6 +704,8 @@ id ArrowLeft
 id ArrowRight
 id ArrowUp
 id CTRL
+id ChangeFloorDown
+id ChangeFloorUp
 id FUNCTION
 id META
 id RealPoints

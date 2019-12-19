@@ -147,5 +147,43 @@
         app:layout_constraintStart_toEndOf="@+id/ArrowLeft"
         app:layout_constraintTop_toBottomOf="@+id/scatterPlot" />
 
+    <Button
+        android:id="@+id/ChangeFloorUp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="77dp"
+        android:text="up"
+        app:layout_constraintBottom_toTopOf="@+id/ArrowDown"
+        app:layout_constraintEnd_toStartOf="@+id/ArrowRight"
+        app:layout_constraintStart_toEndOf="@+id/numX"
+        app:layout_constraintTop_toBottomOf="@id/ArrowUp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="205dp" />
+
+
+    <Button
+        android:id="@+id/ChangeFloorDown"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="18dp"
+        android:text="down"
+        app:layout_constraintBottom_toTopOf="@+id/ArrowDown"
+        app:layout_constraintEnd_toStartOf="@+id/ArrowRight"
+        app:layout_constraintStart_toEndOf="@+id/numX"
+        app:layout_constraintTop_toBottomOf="@id/ArrowUp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="205dp" />
+
+
 
 </RelativeLayout>
