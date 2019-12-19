@@ -80,18 +80,12 @@ public class MainActivity extends SampleActivityBase {
     ArrayList<ArrayList<XYValue>> OriginalArray = new ArrayList<ArrayList<XYValue>>();
     ArrayList<XYValue> xyValueArray = new ArrayList<XYValue>();
 
-
-
-
-
     @Override
    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //Declare variables
-
-
         OriginalArray.add(new ArrayList<XYValue>());
         xyValueArray = new ArrayList<>();
 
@@ -176,19 +170,6 @@ public class MainActivity extends SampleActivityBase {
     private void createScatterPlot() {
 
         android.util.Log.d(TAG, "Fazendo o grafico");
-
-
-//        for(int i=0; i<OriginalArray[n].size();i++){
-//
-//           double x= OriginalArray[n].get(i).getX();
-//           double y =OriginalArray[n].get(i).getY();
-//           xyValueArray[n].set(i, new XYValue(x,y));
-//
-//        }
-
-        //    xyValueArray[n] = OriginalArray[n];
-
-
         xyValueArray.clear();
 
 
@@ -202,7 +183,6 @@ public class MainActivity extends SampleActivityBase {
 
 
         //Colocar a array na ordem
-
         sortArray(xyValueArray);
 
         System.out.println("OriginalArray:");
@@ -211,8 +191,6 @@ public class MainActivity extends SampleActivityBase {
 
                 final double x = OriginalArray.get(i).get(j).getX();
                 final double y = OriginalArray.get(i).get(j).getY();
-
-                // System.out.print(aLists.get(i).get(j) + " ");
 
                 System.out.print("(" + x + ", " + y + ") ");
             }
@@ -227,24 +205,11 @@ public class MainActivity extends SampleActivityBase {
             final double x = xyValueArray.get(i).getX();
             final double y = xyValueArray.get(i).getY();
 
-            // System.out.print(aLists.get(i).get(j) + " ");
-
             System.out.print("(" + x + ", " + y + ") ");
 
         }
         System.out.println();
 
-
-        //Colocar a array na ordem
-        //xyValueArray[n]=sortArray(xyValueArray[n]);
-
-//        if (xyValueArray[n] == OriginalArray[n]) {
-//
-//            Log.d(TAG, "estranho2");
-//
-//        }else{
-//            Log.d(TAG, "Confirmei minha ideia");
-//        }
 
         for(int i=0; i< xyValueArray.size();i++){
 
@@ -253,15 +218,12 @@ public class MainActivity extends SampleActivityBase {
                 double y =  xyValueArray.get(i).getY();
 
                 //Plotar apenas mais um ponto caso mude de andar
-
-
                     if(x==OriginalArrayX1&&y==OriginalArrayY1){
 
 
                         xySeries[floor].appendData(new DataPoint(x,y),true,1000);
 
                     }
-
 
                 //Ligar dois pontos caso o andar seja o mesmo
                 else  {
@@ -286,12 +248,6 @@ public class MainActivity extends SampleActivityBase {
             }
 
         }
-
-
-
-        //set some properties
-
-        // xySeries.setShape(PointsGraphSeries.Shape.RECTANGLE);
 
 
         initGraph();

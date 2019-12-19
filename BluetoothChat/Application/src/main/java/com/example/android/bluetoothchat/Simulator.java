@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
@@ -21,41 +20,26 @@ public class Simulator extends AppCompatActivity {
 
     private static final String TAG = "Simulator";
 
-    //PointsGraphSeries<DataPoint> xySeries;
     //Criando uma array de dados
-
     public LineGraphSeries<DataPoint>[] xySeries;
-
-    //LineGraphSeries<DataPoint> xySeries = new LineGraphSeries<DataPoint>();
-
-      //  ArrayList<ArrayList<LineGraphSeries<DataPoint>>> xySeries = new ArrayList<ArrayList<LineGraphSeries<DataPoint>>>();
 
     //Botoes que serao utilizados
     private Button btnAddPt,btnRight,btnLeft,btnUpFloor,btnDownFloor,btnUp,btnDown;
-    //Imagem que sera usada
 
     //variaveis usadas para pegar os numeros que o usuario escreve
     private EditText mX,mY;
+
     //Variaveis usadas para comparar valores
     public double x,y;
     public double OriginalArrayX1,OriginalArrayY1,OriginalArrayX2,OriginalArrayY2;
-    //Criando uma array de graficos
+
     //Representa o andar
     public int floor=0;
 
-    //ArrayList<GraphView> mScatterPlot = new ArrayList<GraphView>();
     public GraphView[] mScatterPlot;
-    //make xyValue global
-    // private ArrayList<XYValue>[] xyValueArray;
-// private ArrayList<XYValue>[] CorrectArray;
-//private ArrayList<XYValue>[] OriginalArray;
+
     //Criando um booleano que condicione a mudanca de andar
     boolean ChangeFloor=false;
-
-    //Here aList is an ArrayList of ArrayLists
-    //ArrayList<ArrayList<Integer> > aLists= new ArrayList<ArrayList<Integer>();
-
-    //Teste de novo programa
 
     ArrayList<ArrayList<XYValue>> OriginalArray = new ArrayList<ArrayList<XYValue>>();
     ArrayList<XYValue> xyValueArray = new ArrayList<XYValue>();
@@ -66,13 +50,10 @@ public class Simulator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         mScatterPlot= new GraphView[100];
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simulator);
 
         //declare variables in onCreate
-
         btnUp = (Button) findViewById(R.id.ArrowUp);
         btnDown = (Button) findViewById(R.id.ArrowDown);
         btnRight= (Button) findViewById(R.id.ArrowRight);
@@ -89,67 +70,24 @@ public class Simulator extends AppCompatActivity {
 
         }
 
-
-
-//       xyValueArray= new ArrayList[100];
-//      //  CorrectArray= new ArrayList[100];
-//        OriginalArray= new ArrayList[100];
-//
-//
-//       xyValueArray[0] = new ArrayList<>(100);
-//      //  CorrectArray[0]= new ArrayList<>(100);
-//       OriginalArray[0]= new ArrayList<>(100);
-//
-//        xyValueArray[1] = new ArrayList<>();
-//      // CorrectArray[1]= new ArrayList<>();
-//        OriginalArray[1]= new ArrayList<>();
-
         //Create values for OriginalFloor1
         ArrayList<XYValue> OriginalFloor1 = new ArrayList<>();
         OriginalArray.add(new ArrayList<XYValue>());
-        //Create values for OriginalFloor2
-        //ArrayList<XYValue> OriginalFloor2 = new ArrayList<>();
-        //OriginalArray.add(new ArrayList<XYValue>());
-
-        //Create values for Floor1
-        //ArrayList<XYValue> Floor1 = new ArrayList<>();
-        // xyValueArray.add(new ArrayList<XYValue>());
-        //Create values for Floor2
-        //ArrayList<XYValue> Floor2 = new ArrayList<>();
-        //  xyValueArray.add(new ArrayList<XYValue>());
-
 
         //Declare Variables to change the floor
         btnUpFloor = (Button) findViewById(R.id.ChangeFloorUp);
         btnDownFloor = (Button) findViewById(R.id.ChangeFloorDown);
-
-//        xySeries.add(new ArrayList<LineGraphSeries<DataPoint>>());
-//        xySeries.add(new ArrayList<LineGraphSeries<DataPoint>>());
-
-        //xySeries.add(new LineGraphSeries<DataPoint>());
-        //xySeries.add(new LineGraphSeries<DataPoint>());
-
-
         init();
 
 
     }
 
     private void init (){
-
-        //declare xySeries Object
-
-        //xySeries = new PointsGraphSeries<>();
-        //xySeries = new LineGraphSeries<>()[100];
-
         //Declarando as series
         xySeries= new LineGraphSeries[100];
         xySeries[floor]= new LineGraphSeries<>();
-        //xySeries[1]= new LineGraphSeries<>();
 
-
-
-//Subindo de andar
+        //Subindo de andar
         btnUpFloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View upFloor) {
@@ -164,14 +102,12 @@ public class Simulator extends AppCompatActivity {
                     createScatterPlot1();
                 }
                 else {
-                    //   xySeries[floor] = new LineGraphSeries<>() ;
                     createScatterPlot2();
                 }
             }
         });
 
-//Descendo de andar
-
+        //Descendo de andar
         btnDownFloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View DownFloor) {
@@ -182,7 +118,6 @@ public class Simulator extends AppCompatActivity {
                 }
                 Log.d(TAG,"Mudando de andar de andar: " + floor);
                 mScatterPlot[floor] = (GraphView) findViewById(R.id.scatterPlot);
-                //   xySeries[floor]=new LineGraphSeries<>();
                 createScatterPlot2();
             }
         });
@@ -190,7 +125,7 @@ public class Simulator extends AppCompatActivity {
 
 
 
-//Subindo no Grafico
+        //Subindo no Grafico
         btnUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View up) {
@@ -198,7 +133,6 @@ public class Simulator extends AppCompatActivity {
                 y=y+20;
 
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
-                //   xyValueArray[n].add(new XYValue(x,y));
                 OriginalArray.get(floor).add(new XYValue(x,y));
 
 
@@ -217,7 +151,6 @@ public class Simulator extends AppCompatActivity {
                 x=x+20;
                 y=y;
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
-                //    xyValueArray[n].add(new XYValue(x,y));
                 OriginalArray.get(floor).add(new XYValue(x,y));
 
                 init();
@@ -232,7 +165,6 @@ public class Simulator extends AppCompatActivity {
                 x=x;
                 y=y-20;
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
-//              xyValueArray[n].add(new XYValue(x,y));
                 OriginalArray.get(floor).add(new XYValue(x,y));
 
                 init();
@@ -247,7 +179,6 @@ public class Simulator extends AppCompatActivity {
                 x=x-20;
                 y=y;
                 Log.d(TAG,"Adicionadando os valores: " + x+ " + "+y);
-                //       xyValueArray[n].add(new XYValue(x,y));
                 OriginalArray.get(floor).add(new XYValue(x,y));
 
                 init();
@@ -258,14 +189,12 @@ public class Simulator extends AppCompatActivity {
         btnAddPt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(!mX.getText().toString().equals("")&&!mY.getText().toString().equals("")){
 
                     x= Double.parseDouble(mX.getText().toString());
                     y= Double.parseDouble(mY.getText().toString());
 
                     Log.d(TAG,"Adicionadando os valore: " + x+ " + "+y);
-                    //          xyValueArray[n].add(new XYValue(x,y));
                     OriginalArray.get(floor).add(new XYValue(x,y));
 
                     init();
@@ -280,20 +209,15 @@ public class Simulator extends AppCompatActivity {
         });
 
         if (OriginalArray.get(floor).size()!=0){
-
             OriginalArrayX1 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-1).getX();
             OriginalArrayY1 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-1).getY();
 
             if(OriginalArray.get(floor).size()>1) {
-
                 OriginalArrayX2 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-2).getX();
                 OriginalArrayY2 = OriginalArray.get(floor).get(OriginalArray.get(floor).size()-2).getY();
-
             }
 
-
             createScatterPlot1();
-
 
         }else {
 
@@ -309,18 +233,6 @@ public class Simulator extends AppCompatActivity {
 
         Log.d(TAG, "Fazendo o grafico");
 
-
-//        for(int i=0; i<OriginalArray[n].size();i++){
-//
-//           double x= OriginalArray[n].get(i).getX();
-//           double y =OriginalArray[n].get(i).getY();
-//           xyValueArray[n].set(i, new XYValue(x,y));
-//
-//        }
-
-        //    xyValueArray[n] = OriginalArray[n];
-
-
         xyValueArray.clear();
 
 
@@ -334,7 +246,6 @@ public class Simulator extends AppCompatActivity {
 
 
         //Colocar a array na ordem
-
         sortArray(xyValueArray);
 
         System.out.println("OriginalArray:");
@@ -358,25 +269,9 @@ public class Simulator extends AppCompatActivity {
 
             final double x = xyValueArray.get(i).getX();
             final double y = xyValueArray.get(i).getY();
-
-            // System.out.print(aLists.get(i).get(j) + " ");
-
             System.out.print("(" + x + ", " + y + ") ");
-
         }
         System.out.println();
-
-
-        //Colocar a array na ordem
-        //xyValueArray[n]=sortArray(xyValueArray[n]);
-
-//        if (xyValueArray[n] == OriginalArray[n]) {
-//
-//            Log.d(TAG, "estranho2");
-//
-//        }else{
-//            Log.d(TAG, "Confirmei minha ideia");
-//        }
 
         for(int i=0; i< xyValueArray.size();i++){
 
@@ -388,8 +283,6 @@ public class Simulator extends AppCompatActivity {
                 if(ChangeFloor==true){
 
                     if(x==OriginalArrayX1&&y==OriginalArrayY1){
-
-
                         xySeries[floor].appendData(new DataPoint(x,y),true,1000);
 
                     }
@@ -425,12 +318,6 @@ public class Simulator extends AppCompatActivity {
 
             ChangeFloor=false;
         }
-
-
-        //set some properties
-
-        // xySeries.setShape(PointsGraphSeries.Shape.RECTANGLE);
-
 
         initGraph();
 
@@ -474,31 +361,12 @@ public class Simulator extends AppCompatActivity {
             final double x = xyValueArray.get(i).getX();
             final double y = xyValueArray.get(i).getY();
 
-            // System.out.print(aLists.get(i).get(j) + " ");
-
             System.out.print("(" + x + ", " + y + ") ");
 
         }
         System.out.println();
 
-
-
-//        xySeries[n].resetData(new DataPoint[] {});
-//
-//        for (int i = 0; i < OriginalArray.get(0).size(); i++) {
-//
-//            double x = OriginalArray.get(n).get(i).getX();
-//            double y = OriginalArray.get(n).get(i).getY();
-//            xyValueArray.get(n).add(new XYValue(0, 0));
-//            xyValueArray.get(n).set(i,new XYValue (x,y));
-//
-//        }
-
         //Colocar a array na ordem
-
-        //    sortArray(xyValueArray.get(n));
-
-//for (int j=0; j< OriginalArray[n].size()-1;j++){
 
         for(int j=0; j< OriginalArray.get(floor).size()-1;j++){
 
@@ -518,7 +386,6 @@ public class Simulator extends AppCompatActivity {
                     double x =  xyValueArray.get(i).getX();
                     double y =   xyValueArray.get(i).getY();
 
-//problema esta aqui
                     if(x==x1&&y==y1||x==x2&&y==y2){
                         Log.d(TAG, "New: "+ x+ " "+ y);
                         xySeries[floor].appendData(new DataPoint(x,y),true,1000);
@@ -540,9 +407,6 @@ public class Simulator extends AppCompatActivity {
 
             }
             initGraph();
-
-            // xySeries[n].resetData(new DataPoint[] {});
-            // mScatterPlot[n].removeAllSeries();
 
         }
 
